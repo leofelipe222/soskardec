@@ -1,9 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from eventos.models import Evento
 
 # Create your views here.
 def index(request):
-    # Render index template
+    # Render index template, shows 3 eventos only
+    # eventos = Evento.objects.order_by('-event_date').filter(is_published=True)[:3]
+
+    # context = {
+    #     'eventos': eventos
+    # }
+    # return render(request, 'pages/index.html', context)
     return render(request, 'pages/index.html')
 
 def sobre(request):
