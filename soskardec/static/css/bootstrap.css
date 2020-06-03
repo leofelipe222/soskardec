@@ -324,8 +324,9 @@ h6, .h6 {
   font-size: 1rem; }
 
 .lead {
+  margin-top: 20px;
   font-size: 1.25rem;
-  font-weight: 300; }
+  font-weight: 400; }
 
 .display-1 {
   font-size: 6rem;
@@ -344,8 +345,9 @@ h6, .h6 {
 
 .display-4 {
   font-size: 3.5rem;
-  font-weight: 300;
-  line-height: 1.2; }
+  font-weight: 400;
+  line-height: 1.2;
+  padding-bottom: 20px; }
 
 hr {
   margin-top: 1rem;
@@ -1626,7 +1628,8 @@ fieldset:disabled a.btn {
 .btn-primary {
   color: #fff;
   background-color: #10284e;
-  border-color: #10284e; }
+  border-color: #10284e;
+  opacity: 0.9; }
   .btn-primary:hover {
     color: #fff;
     background-color: #09182e;
@@ -5200,7 +5203,8 @@ button.bg-dark:focus {
 
 .mt-4,
 .my-4 {
-  margin-top: 1.5rem !important; }
+  margin-top: 1.5rem !important;
+  text-align: justify; }
 
 .mr-4,
 .mx-4 {
@@ -6123,7 +6127,8 @@ button.bg-dark:focus {
   text-align: right !important; }
 
 .text-center {
-  text-align: center !important; }
+  text-align: center !important;
+  opacity: 0.9; }
 
 @media (min-width: 576px) {
   .text-sm-left {

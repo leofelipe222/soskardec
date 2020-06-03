@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load humanize %}
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<body>
-  <section id="showcase-inner" class="py-5 text-white">
+  <section id="showcase-inner" class="py-4 text-primary">
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
-          <h1 class="display-4">Spiritist Organization of Seattle</h1>
-          <p class="lead">Criado em setembro de 2013, o Grupo de Estudos da Doutrina Espirita – Spiritist Organization of Seattle –  é uma associação filantrópica, voluntaria e sem fins lucrativos. Voltado para atividades doutrinarias o grupo SOS KARDEC tem como missão promover o estudo, a difusão e a prática do Espiritismo no seu tríplice aspecto: científico, filosófico e religioso, com base nas obras codificadas por Allan Kardec.</p>
+          <h1 class="display-4">Atividades da Casa</h1>
+          <p class="lead">“Notemos igualmente que é nos centros espíritas verdadeiramente sérios que se
+            fazem os mais sinceros adeptos, porque os assistentes são tocados pela boa
+            impressão que recebem. "Allan Kardec"</p>
         </div>
       </div>
     </div>
@@ -21,10 +21,10 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="index.html">
+            <a href="{% url 'index' %}">
               <i class="fas fa-home"></i> Home</a>
           </li>
-          <li class="breadcrumb-item active"> About</li>
+          <li class="breadcrumb-item active"> Atividades</li>
         </ol>
       </nav>
     </div>
@@ -34,89 +34,49 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8">
-          <h2>We Search For The Perfect Home</h2>
-          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
-          <img src="assets/img/about.jpg" alt="">
-          <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis esse officia repudiandae ad saepe ex, amet
-            neque quod accusamus rem quia magnam magni dolorum facilis ullam minima perferendis? Exercitationem at quaerat
-            commodi id libero eveniet harum perferendis laborum molestias quia.</p>
+          <div class="flex-container">
+            <h2>Atendimento Fraterno</h2>
+            <p class="mt-4">Oferecemos apoio àqueles que buscam na Doutrina Espírita o abrigo para as suas aflições. É uma relação de ajuda que consiste num encontro fraternal entre aquele que tem carências a      serem supridas e o tarefeiro atendente, capacitado para ouvi-lo e orientá-lo quanto aos recursos que a Doutrina Espírita coloca ao seu alcance.
+            <br><br>Geralmente a pessoa que vai até o Centro Espírita busca palavras de conforto e um direcionamento. Com base na Doutrina Espírita, as conversas fazem você mesmo refletir sobre as questões que te afligem.<br><br>
+            </p>
+            <h2>Palestras Públicas</h2>
+            <p class="mt-4">Oferecemos apoio àqueles que buscam na Doutrina Espírita o abrigo para as suas aflições. É uma relação de ajuda que consiste num encontro fraternal entre aquele que tem carências a      serem supridas e o tarefeiro atendente, capacitado para ouvi-lo e orientá-lo quanto aos recursos que a Doutrina Espírita coloca ao seu alcance.
+            <br><br>Geralmente a pessoa que vai até o Centro Espírita busca palavras de conforto e um direcionamento. Com base na Doutrina Espírita, as conversas fazem você mesmo refletir sobre as questões que te afligem.<br><br>
+            </p>
+  
+            <h2>Estudo Doutrinário</h2>
+            <p class="mt-4">O Estudo Sistematizado da Doutrina Espírita (ESDE) surgiu como ferramenta didática de estudo do Espiritismo, oferecendo oportunidade de ampliação do conhecimento da base fundamental da Doutrina nos aspectos científico, filosófico e religioso.<br><br>
+            </p>
+  
+            <h2>Evangelização Infantil e Jovens</h2>
+            <p class="mt-4">A denominação de Evangelização Espírita Infanto-Juvenil, se dá à transmissão do conhecimento espírita e da moral evangélica pregada por Jesus. Como a preocupação não é somente com a transmissão de conhecimentos mas, sobretudo, com a formação moral, e como a formação moral se inspira no Evangelho, parece-nos muito apropriada à denominação de "evangelização espírita" dada a essa tarefa, por expressar, na sua abrangência, exatamente o que se realiza em nossos agrupamentos de crianças e jovens.<br><br>
+            </p>
+  
+            <h2>Passes</h2>
+            <p class="mt-4">Passe é uma transmissão conjunta, ou mista, de fluidos magnéticos – provenientes do encarnado –  e de fluidos espirituais – oriundos dos benfeitores espirituais, não devendo ser considerada uma simples transmissão de energia animal (magnetização).<br><br>
+            </p>
+  
+            <h2>Clube do Livro Espírita</h2>
+            <p class="mt-4">Um clube do livro, também conhecido como clube de leitura, é um clube social onde pessoas normalmente se encontram para discutir sobre um livro (ou capítulos individuais) que acabaram de ler, expressando suas opiniões, críticas, etc. O objetivo é promover o conhecimento através de uma discussão saudável e edificante do livro em questão.<br><br>
+            </p>
+
+            <h2>Culto no Lar</h2>
+            <p class="mt-4">Orientações de como implantar o Culto no Lar, que é um encontro semanal, sendo previamente marcado o dia e a hora, (devendo ser repetido sempre no mesmo dia e hora da semana) com o objetivo de reunir a família em torno dos ensinamentos evangélicos, à luz do Espiritismo, e sob a assistência dos Benfeitores Espirituais.<br><br>
+            </p>
+  
+          </div>
         </div>
         <div class="col-md-4">
           <div class="card">
-            <img class="card-img-top" src="assets/img/realtors/kyle.jpg" alt="Seller of the month">
+            <img class="card-img-top" src="{% static 'img/atendimento_fraterno_img_1.jpg' %}" alt="Fraternidate">
             <div class="card-body">
-              <h5 class="card-title">Seller Of The Month</h5>
-              <h6 class="text-secondary">Kyle Brown</h6>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nesciunt amet, illo itaque similique repellat.
-                content.
-              </p>
+              <h5 class="card-title">Estamos aqui para ajudar!</h5>
+              <!-- <h6 class="text-secondary">Kyle Brown</h6> -->
+              <p class="card-text">O atendimento fraterno no Centro Espírita é uma oportunidade de falarmos sem julgamentos ou medos.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Work -->
-  <section id="work" class="bg-dark text-white text-center">
-    <h2 class="display-4">We Work For You</h2>
-    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit aperiam, unde aliquid at similique!</h4>
-    <hr>
-    <a href="listings.html" class="btn btn-secondary text-white btn-lg">View Our Featured Listings</a>
-  </section>
-
-  <!-- Team -->
-  <section id="team" class="py-5">
-    <div class="container">
-      <h2 class="text-center">Our Team</h2>
-      <div class="row text-center">
-        <div class="col-md-4">
-          <img src="assets/img/realtors/kyle.jpg" alt="" class="rounded-circle mb-3">
-          <h4>Kyle Brown</h4>
-          <p class="text-success">
-            <i class="fas fa-award text-success mb-3"></i> Realtor</p>
-          <hr>
-          <p>
-            <i class="fas fa-phone"></i> (555)-555-5555</p>
-          <p>
-            <i class="fas fa-envelope-open"></i> kyle@btrealestate.co</p>
-        </div>
-
-        <div class="col-md-4">
-          <img src="assets/img/realtors/mark.jpg" alt="" class="rounded-circle mb-3">
-          <h4>Mark Hudson</h4>
-          <p class="text-success">Realtor</p>
-          <hr>
-          <p>
-            <i class="fas fa-phone"></i> (444)-444-4444</p>
-          <p>
-            <i class="fas fa-envelope-open"></i> mark@btrealestate.co</p>
-        </div>
-
-        <div class="col-md-4">
-          <img src="assets/img/realtors/jenny.jpg" alt="" class="rounded-circle mb-3">
-          <h4>Jenny Johnson</h4>
-          <p class="text-success">Realtor</p>
-          <hr>
-          <p>
-            <i class="fas fa-phone"></i> (333)-333-3333</p>
-          <p>
-            <i class="fas fa-envelope-open"></i> jenny@btrealestate.co</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer id="main-footer" class="py-4 bg-primary text-white text-center">
-    Copyright &copy;
-    <span class="year"></span> BT Real Estate
-  </footer>
-
-  <script src="assets/js/jquery-3.3.1.min.js "></script>
-  <script src="assets/js/bootstrap.bundle.min.js "></script>
-  <script src="assets/js/main.js "></script>
-</body>
-
-</html>
 {% endblock %}

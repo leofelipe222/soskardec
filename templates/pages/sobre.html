@@ -1,11 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load humanize %}
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-
-<body>
-  <section id="showcase-inner" class="py-5 text-white">
+  <section id="showcase-inner" class="py-4 text-primary">
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
@@ -22,7 +19,7 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="index.html">
+            <a href="{% url 'index' %}">
               <i class="fas fa-home"></i> Home</a>
           </li>
           <li class="breadcrumb-item active"> Quem Somos</li>
@@ -35,12 +32,11 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8">
-          <h2>SOS - KARDEC</h2>
-          <p class="lead">Criado em setembro de 2013, o Grupo de Estudos da Doutrina Espirita – Spiritist Organization of Seattle –  é uma associação filantrópica, voluntária e sem fins lucrativos. Voltado para atividades doutrinarias. O grupo SOS KARDEC tem como missão promover o estudo, a difusão e a prática do Espiritismo no seu tríplice aspecto: científico, filosófico e religioso, com base nas obras codificadas por Allan Kardec.</p>
-          <img src="assets/img/about.jpg" alt="">
-          <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis esse officia repudiandae ad saepe ex, amet
-            neque quod accusamus rem quia magnam magni dolorum facilis ullam minima perferendis? Exercitationem at quaerat
-            commodi id libero eveniet harum perferendis laborum molestias quia.</p>
+          <h3>SOS - KARDEC</h3>
+          <p class="mt-4">O grupo SOS KARDEC tem como missão promover o estudo, a difusão e a prática do Espiritismo no seu tríplice aspecto: científico, filosófico e religioso, com base nas obras codificadas por Allan Kardec.</p>
+          <h2>Nossa História</h2>
+          <p class="mt-4">Criado em setembro de 2013, o Grupo de Estudos da Doutrina Espirita – Spiritist Organization of Seattle –  é uma associação filantrópica, voluntária e sem fins lucrativos. Voltado para atividades doutrinárias.</p>
+          <p class="mt-4">Case tenha alguma pergunta ou alguma dúvida, entre em contato conosco. </p>
         </div>
         <div class="col-md-4">
           <div class="card">
@@ -53,70 +49,48 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Work -->
-  <section id="work" class="bg-dark text-white text-center">
-    <h2 class="display-4">We Work For You</h2>
-    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit aperiam, unde aliquid at similique!</h4>
-    <hr>
-    <a href="listings.html" class="btn btn-secondary text-white btn-lg">View Our Featured Listings</a>
-  </section>
-
-  <!-- Team -->
-  <section id="team" class="py-5">
-    <div class="container">
-      <h2 class="text-center">Our Team</h2>
-      <div class="row text-center">
-        <div class="col-md-4">
-          <img src="assets/img/realtors/kyle.jpg" alt="" class="rounded-circle mb-3">
-          <h4>Kyle Brown</h4>
-          <p class="text-success">
-            <i class="fas fa-award text-success mb-3"></i> Realtor</p>
-          <hr>
-          <p>
-            <i class="fas fa-phone"></i> (555)-555-5555</p>
-          <p>
-            <i class="fas fa-envelope-open"></i> kyle@btrealestate.co</p>
-        </div>
-
-        <div class="col-md-4">
-          <img src="assets/img/realtors/mark.jpg" alt="" class="rounded-circle mb-3">
-          <h4>Mark Hudson</h4>
-          <p class="text-success">Realtor</p>
-          <hr>
-          <p>
-            <i class="fas fa-phone"></i> (444)-444-4444</p>
-          <p>
-            <i class="fas fa-envelope-open"></i> mark@btrealestate.co</p>
-        </div>
-
-        <div class="col-md-4">
-          <img src="assets/img/realtors/jenny.jpg" alt="" class="rounded-circle mb-3">
-          <h4>Jenny Johnson</h4>
-          <p class="text-success">Realtor</p>
-          <hr>
-          <p>
-            <i class="fas fa-phone"></i> (333)-333-3333</p>
-          <p>
-            <i class="fas fa-envelope-open"></i> jenny@btrealestate.co</p>
+        <div class="col-md-3">
+          <!-- Message button -->
+          <button class="btn-primary btn-block btn-lg" data-toggle="modal" data-target="#inquiryModal">Perguntas?</button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer id="main-footer" class="py-4 bg-primary text-white text-center">
-    Copyright &copy;
-    <span class="year"></span> BT Real Estate
-  </footer>
+  <!-- Message Form -->
+  <div class="modal fade" id="inquiryModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="inquiryModalLabel">Messagem</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="name" class="col-form-label">Nome:</label>
+              <input type="text" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="col-form-label">Email:</label>
+              <input type="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="phone" class="col-form-label">Telefone:</label>
+              <input type="text" name="phone" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="message" class="col-form-label">Mensagem:</label>
+              <textarea name="message" class="form-control"></textarea>
+            </div>
+            <hr>
+            <input type="submit" value="Enviar" class="btn btn-primary btn-block">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <script src="assets/js/jquery-3.3.1.min.js "></script>
-  <script src="assets/js/bootstrap.bundle.min.js "></script>
-  <script src="assets/js/main.js "></script>
-</body>
-
-</html>
 {% endblock %}

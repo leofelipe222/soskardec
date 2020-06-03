@@ -1,14 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load humanize%}
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<body>
-  <section id="showcase-inner" class="py-5 text-white">
+  <section id="showcase-inner" class="py-4 text-primary">
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
-          <h1 class="display-4">CONHEÇA O ESPIRITISMO</h1>
+          <h1 class="display-4">Conheça o Espiritismo</h1>
           <p class="lead">"O Espiritismo é uma ciência que trata da natureza, origem e destino dos Espíritos, e de suas relações com o mundo corporal." Allan Kardec</p>
         </div>
       </div>
@@ -21,7 +19,7 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="index.html">
+            <a href="{% url 'index' %}">
               <i class="fas fa-home"></i> Home</a>
           </li>
           <li class="breadcrumb-item active"> Espiritismo</li>
@@ -35,18 +33,14 @@
       <div class="row">
         <div class="col-md-8">
           <h2>Doutrina Espírita ou Espiritismo</h2>
-          <img src="assets/img/about.jpg" alt="">
-          <p class="mt-4">O que é
-
+          <p class="mt-4">DEFINIÇÃO<br><br>
             É o conjunto de princípios e leis, revelados pelos Espíritos Superiores, contidos nas obras de Allan Kardec que constituem a Codificação Espírita: O Livro dos Espíritos, O Livro dos Médiuns, O Evangelho segundo o Espiritismo, O Céu e o Inferno e A Gênese.
             "O Espiritismo é uma ciência que trata da natureza, origem e destino dos Espíritos, bem como de suas relações com o mundo corporal." Allan Kardec (O que é o Espiritismo - Preâmbulo).
-            "O Espiritismo realiza o que Jesus disse do Consolador prometido: conhecimento das coisas, fazendo que o homem saiba donde vem, para onde vai e por que está na Terra; atrai para os verdadeiros princípios da lei de Deus e consola pela fé e pela esperança." Allan Kardec (O Evangelho segundo o Espiritismo - cap. VI - 4).
-            O que revela
+            "O Espiritismo realiza o que Jesus disse do Consolador prometido: conhecimento das coisas, fazendo que o homem saiba donde vem, para onde vai e por que está na Terra; atrai para os verdadeiros princípios da lei de Deus e consola pela fé e pela esperança." Allan Kardec (O Evangelho segundo o Espiritismo - cap. VI - 4).<br><br>
             
-            Revela o que somos, de onde viemos, para onde vamos, qual o objetivo da nossa existência e qual a razão da dor e do sofrimento.
-            O que Ensina
+            REVELAÇÃO<br><br>Revela o que somos, de onde viemos, para onde vamos, qual o objetivo da nossa existência e qual a razão da dor e do sofrimento.<br><br>
             
-            Deus é a inteligência suprema, causa primeira de todas as coisas. É eterno, imutável, imaterial, único, onipotente, soberanamente justo e bom.
+            ENSINAMENTO<br><br>Deus é a inteligência suprema, causa primeira de todas as coisas. É eterno, imutável, imaterial, único, onipotente, soberanamente justo e bom.
             O Universo é criação de Deus. Abrange todos os seres racionais e irracionais, animados e inanimados, materiais e imateriais.
             Todas as leis da Natureza são leis divinas, pois que Deus é o seu autor. Abrangem tanto as leis físicas como as leis morais.
             Os Espíritos são criados simples e ignorantes. Evoluem, intelectual e moralmente, passando de uma ordem inferior para outra mais elevada, até a perfeição, onde gozam de inalterável felicidade.
@@ -55,21 +49,19 @@
             No Universo há outros mundos habitados, com seres de diferentes graus de evolução: iguais, mais evoluídos e menos evoluídos que os homens.
             Jesus é o guia e modelo para toda a Humanidade. E a Doutrina que ensinou e exemplificou é a expressão mais pura da Lei de Deus.
             A moral do Cristo, contida no Evangelho, é o roteiro para a evolução segura de todos os homens, e a sua prática é a solução para todos os problemas humanos e o objetivo a ser atingido pela Humanidade.
-            O homem tem o livre-arbítrio para agir, mas responde pelas conseqüências de suas ações.
-            Prática Espírita
+            O homem tem o livre-arbítrio para agir, mas responde pelas conseqüências de suas ações. <br><br>
             
+            PRÁTICA ESPÍRITA<br><br>
             Toda a prática espírita é gratuita, como orienta o princípio moral do Evangelho: "Dai de graça o que de graça recebestes".
             A prática espírita é realizada com simplicidade, sem nenhum culto exterior, dentro do princípio cristão de que Deus deve ser adorado em espírito e verdade.</p>
         </div>
         <div class="col-md-4">
           <div class="card">
-            <img class="card-img-top" src="assets/img/realtors/kyle.jpg" alt="Seller of the month">
+            <img class="card-img-top" src="{% static 'img/chicoxavier1.jpg' %}" alt="">
             <div class="card-body">
-              <h5 class="card-title">Seller Of The Month</h5>
-              <h6 class="text-secondary">Kyle Brown</h6>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nesciunt amet, illo itaque similique repellat.
-                content.
-              </p>
+              <h5 class="card-title">Quem é Chico Xavier?</h5>
+              <p class="card-text">Foi um médium, filantropo e um dos mais importantes expoentes do Espiritismo.</p>
+              <h6 class="text-secondary"><a href="https://pt.wikipedia.org/wiki/Chico_Xavier" target="_blank">Saiba Mais...</a></h6>
             </div>
           </div>
         </div>
@@ -77,66 +69,4 @@
     </div>
   </section>
 
-  <!-- Work -->
-  <section id="work" class="bg-dark text-white text-center">
-    <h2 class="display-4">We Work For You</h2>
-    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit aperiam, unde aliquid at similique!</h4>
-    <hr>
-    <a href="listings.html" class="btn btn-secondary text-white btn-lg">View Our Featured Listings</a>
-  </section>
-
-  <!-- Team -->
-  <section id="team" class="py-5">
-    <div class="container">
-      <h2 class="text-center">Our Team</h2>
-      <div class="row text-center">
-        <div class="col-md-4">
-          <img src="assets/img/realtors/kyle.jpg" alt="" class="rounded-circle mb-3">
-          <h4>Kyle Brown</h4>
-          <p class="text-success">
-            <i class="fas fa-award text-success mb-3"></i> Realtor</p>
-          <hr>
-          <p>
-            <i class="fas fa-phone"></i> (555)-555-5555</p>
-          <p>
-            <i class="fas fa-envelope-open"></i> kyle@btrealestate.co</p>
-        </div>
-
-        <div class="col-md-4">
-          <img src="assets/img/realtors/mark.jpg" alt="" class="rounded-circle mb-3">
-          <h4>Mark Hudson</h4>
-          <p class="text-success">Realtor</p>
-          <hr>
-          <p>
-            <i class="fas fa-phone"></i> (444)-444-4444</p>
-          <p>
-            <i class="fas fa-envelope-open"></i> mark@btrealestate.co</p>
-        </div>
-
-        <div class="col-md-4">
-          <img src="assets/img/realtors/jenny.jpg" alt="" class="rounded-circle mb-3">
-          <h4>Jenny Johnson</h4>
-          <p class="text-success">Realtor</p>
-          <hr>
-          <p>
-            <i class="fas fa-phone"></i> (333)-333-3333</p>
-          <p>
-            <i class="fas fa-envelope-open"></i> jenny@btrealestate.co</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer id="main-footer" class="py-4 bg-primary text-white text-center">
-    Copyright &copy;
-    <span class="year"></span> BT Real Estate
-  </footer>
-
-  <script src="assets/js/jquery-3.3.1.min.js "></script>
-  <script src="assets/js/bootstrap.bundle.min.js "></script>
-  <script src="assets/js/main.js "></script>
-</body>
-
-</html>
 {% endblock %}

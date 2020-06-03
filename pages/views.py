@@ -1,17 +1,21 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from eventos.models import Evento
+from eventos.choices import state_choices
 
 # Create your views here.
 def index(request):
-    # Render index template, shows 3 eventos only
-    # eventos = Evento.objects.order_by('-event_date').filter(is_published=True)[:3]
-
-    # context = {
-    #     'eventos': eventos
-    # }
-    # return render(request, 'pages/index.html', context)
     return render(request, 'pages/index.html')
+
+def busca(request):
+    # Render index template, shows 3 eventos only
+    eventos = Evento.objects.order_by('-event_date').filter(is_published=True)
+
+    context = {
+        'state_choices': state_choices,
+        'eventos': eventos,
+    }
+    return render(request, 'pages/eventos/busca.html', context)
 
 def sobre(request):
     # Render sobre template

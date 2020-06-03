@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
+{% load static %}
 {% load humanize %}
-
 {% block content %}
-<section id="showcase-inner" class="py-5 text-white">
+<section id="showcase-inner" class="py-4 text-primary">
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
           <h1 class="display-4">Histórico de Eventos</h1>
-          <p class="lead">A lista de eventos abaixo, organizados pelo Spiritist Organization of Seatte, mostra um pouco do nosso trabalho. Temos diversos tipos de eventos voltados para a nossa comunidade e arrecadação de fundos da nossa instituição.</p>
+          <p class="lead">A lista de eventos abaixo, organizados pelo Spiritist Organization of Seatte, mostra um pouco do nosso trabalho. Temos diversos tipos de eventos voltados para a nossa comunidade e arrecadação de fundos para as nossas atividades assistenciais.</p>
         </div>
       </div>
     </div>
@@ -24,6 +24,8 @@
           </li>
           <li class="breadcrumb-item active">Nossos Eventos</li>
         </ol>
+        <hr>
+        <a href="{% url 'busca' %}" class="btn btn-primary btn-block">Procurar Eventos</a>
       </nav>
     </div>
   </section>
@@ -48,32 +50,23 @@
                   <div class="listing-heading text-center">
                     <h4 class="text-primary">{{ evento.title }}</h4>
                     <p>
-                      <i class="fas fa-map-marker text-secondary"></i> {{ evento.city }} {{ evento.state }}, {{ evento.zipcode }}</p>
+                      <i class="fas fa-map-marker text-dark"></i> {{ evento.city }} {{ evento.state }}, {{ evento.zipcode }}</p>
                   </div>
                   <hr>
-                  <div class="row py-2 text-secondary">
+                  <div class="row py-2 text-dark">
                     <div class="col-12">
                       <i class="fas fa-th-large"></i> Tipo: {{ evento.event_type }}</div>
-                    <!-- <div class="col-6">
-                      <i class="fas fa-car"></i> Garage: 2</div> -->
                   </div>
-                  <!--
-                  <div class="row py-2 text-secondary">
-                    <div class="col-6">
-                      <i class="fas fa-bed"></i> Bedrooms: 3</div>
-                    <div class="col-6">
-                      <i class="fas fa-bath"></i> Bathrooms: 2</div>
-                  </div> -->
-                  <div class="row py-2 text-secondary">
+                  <div class="row py-2 text-dark">
                     <div class="col-12">
                       <i class="fas fa-user"></i> Responsável: {{ evento.volunteer }}</div>
                   </div>
-                  <div class="row text-secondary pb-2">
+                  <div class="row text-dark pb-2">
                     <div class="col-6">
                       <i class="fas fa-clock"></i> {{ evento.event_date | timesince }}</div>
                   </div>
                   <hr>
-                  <a href="{% url 'evento' evento.id %}" class="btn btn-primary btn-block">More Info</a>
+                  <a href="{% url 'evento' evento.id %}" class="btn btn-primary btn-block">Mais Fotos</a>
                 </div>
               </div>
             </div>

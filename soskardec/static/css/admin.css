@@ -2,6 +2,7 @@
     height: 50px;
     background: #10284e;
     color: #fff;
+    opacity: 0.9;
 }
 
 #branding h1 {
@@ -29,4 +30,5 @@ div.breadcrumbs a {
 .button, input[type=submit], input[type=button], .submit-row input, a.button {
     background: #10284e;
     color: #fff;
+    opacity: 0.9;
 }

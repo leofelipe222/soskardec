@@ -1,47 +1,106 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
+{% load static %}
 {% load humanize %}
 {% block content %}
 <!-- Showcase -->
-  <!-- Alerts -->
-    <section id="showcase">
-        <div class="container text-center">
-          <div class="home-search p-5">
-            <div class="overlay p-5">
-              <h1 class="display-4 mb-4">
-                Property Searching Just Got So Easy
-              </h1>
-              <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quas, asperiores eveniet vel nostrum magnam
-                voluptatum tempore! Consectetur, id commodi!</p>
-            </div>
+<section id="showcase-inner" class="py-4 text-primary">
+  <div class="row text-center">
+    <div class="container">
+      <div class="col-md-12">
+          <img src="{% static 'img/sos_logo.png' %}" class="main-logo">
+          <h1 class="display-4">Spiritist Organization of Seattle</h1>
+          <p class="lead">Nascer, morrer, renascer ainda e progredir sempre, tal é a lei.</p>
+        </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section id="showcase" class="py-0 text-primary">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-12">
+        <img src="{% static 'img/mainbanner1.jpg' %}" class="main-logo">
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section id="about" class="py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h2>We Search For The Perfect Home</h2>
+        <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
+        <img src="assets/img/about.jpg" alt="">
+        <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis esse officia repudiandae ad saepe ex, amet
+          neque quod accusamus rem quia magnam magni dolorum facilis ullam minima perferendis? Exercitationem at quaerat
+          commodi id libero eveniet harum perferendis laborum molestias quia.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'img/kardec_img_2.jpg' %}" alt="Allan Kardec">
+          <div class="card-body">
+            <h5 class="card-title">Doutrina Espírita Kardecista</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nesciunt amet, illo itaque similique repellat.
+              content.
+            </p>
+            <h6 class="text-secondary">Saiba Mais...</h6>
           </div>
         </div>
-    </section>
-                
-      <section id="services" class="py-5 bg-secondary text-white">
-        <div class="container">
-          <div class="row text-center">
-            <div class="col-md-4">
-              <i class="fas fa-comment fa-4x mr-4"></i>
-              <hr>
-              <h3>Consulting Services</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-                hic dignissimos ratione ea quae.</p>
-            </div>
-            <div class="col-md-4">
-              <i class="fas fa-home fa-4x mr-4"></i>
-              <hr>
-              <h3>Propery Management</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-                hic dignissimos ratione ea quae.</p>
-            </div>
-            <div class="col-md-4">
-              <i class="fas fa-suitcase fa-4x mr-4"></i>
-              <hr>
-              <h3>Renting & Selling</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-                hic dignissimos ratione ea quae.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Work -->
+<section id="work" class="bg-dark text-white text-center">
+  <h2 class="display-4">We Work For You</h2>
+  <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit aperiam, unde aliquid at similique!</h4>
+  <hr>
+  <a href="listings.html" class="btn btn-secondary text-white btn-lg">View Our Featured Listings</a>
+</section>
+
+<!-- Team -->
+<section id="team" class="py-5">
+  <div class="container">
+    <h2 class="text-center">Our Team</h2>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <img src="{% static 'img/h-h1banner.jpg' %}" alt="" class="rounded-circle mb-3">
+        <h4>Kyle Brown</h4>
+        <p class="text-success">
+          <i class="fas fa-award text-success mb-3"></i> Realtor</p>
+        <hr>
+        <p>
+          <i class="fas fa-phone"></i> (555)-555-5555</p>
+        <p>
+          <i class="fas fa-envelope-open"></i> kyle@btrealestate.co</p>
+      </div>
+
+      <div class="col-md-4">
+        <img src="{% static 'img/kardec_img_1.jpeg' %}" alt="" class="rounded-circle mb-3">
+        <h4>Mark Hudson</h4>
+        <p class="text-success">Realtor</p>
+        <hr>
+        <p>
+          <i class="fas fa-phone"></i> (444)-444-4444</p>
+        <p>
+          <i class="fas fa-envelope-open"></i> mark@btrealestate.co</p>
+      </div>
+
+      <div class="col-md-4">
+        <img src="{% static 'img/' %}"" alt="" class="rounded-circle mb-3">
+        <h4>Jenny Johnson</h4>
+        <p class="text-success">Realtor</p>
+        <hr>
+        <p>
+          <i class="fas fa-phone"></i> (333)-333-3333</p>
+        <p>
+          <i class="fas fa-envelope-open"></i> jenny@btrealestate.co</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% endblock %}

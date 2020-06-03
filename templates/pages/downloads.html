@@ -1,14 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load humanize %}
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<body>
-  <section id="showcase-inner" class="py-5 text-white">
+  <section id="showcase-inner" class="py-4 text-primary">
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
-          <h1 class="display-4">Spiritist Organization of Seattle</h1>
+          <h1 class="display-4">Nosso Acervo Espírita</h1>
           <p class="lead">Criado em setembro de 2013, o Grupo de Estudos da Doutrina Espirita – Spiritist Organization of Seattle –  é uma associação filantrópica, voluntaria e sem fins lucrativos. Voltado para atividades doutrinarias o grupo SOS KARDEC tem como missão promover o estudo, a difusão e a prática do Espiritismo no seu tríplice aspecto: científico, filosófico e religioso, com base nas obras codificadas por Allan Kardec.</p>
         </div>
       </div>
@@ -21,10 +19,10 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="index.html">
+            <a href="{% url 'index' %}">
               <i class="fas fa-home"></i> Home</a>
           </li>
-          <li class="breadcrumb-item active"> About</li>
+          <li class="breadcrumb-item active"> Downloads</li>
         </ol>
       </nav>
     </div>
@@ -106,17 +104,4 @@
       </div>
     </div>
   </section>
-
-  <!-- Footer -->
-  <footer id="main-footer" class="py-4 bg-primary text-white text-center">
-    Copyright &copy;
-    <span class="year"></span> BT Real Estate
-  </footer>
-
-  <script src="assets/js/jquery-3.3.1.min.js "></script>
-  <script src="assets/js/bootstrap.bundle.min.js "></script>
-  <script src="assets/js/main.js "></script>
-</body>
-
-</html>
 {% endblock %}
