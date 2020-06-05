@@ -35,6 +35,8 @@ INSTALLED_APPS = [
     'eventos.apps.EventosConfig',
     'voluntarios.apps.VoluntariosConfig',
     'accounts.apps.AccountsConfig',
+    'contacts.apps.ContactsConfig',
+    'downloads.apps.DownloadsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -138,3 +140,17 @@ STATICFILES_DIRS = [
 # Media Folder Settings
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+#Messages
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
+
+# Email configuration
+EMAIL_USE_SSL = True
+EMAIL_PORT = 465
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+ACCOUNT_EMAIL_VERIFICATION = 'none'

@@ -15,7 +15,8 @@ def busca(request):
         'state_choices': state_choices,
         'eventos': eventos,
     }
-    return render(request, 'pages/eventos/busca.html', context)
+
+    return render(request, 'eventos/busca.html', context)
 
 def sobre(request):
     # Render sobre template

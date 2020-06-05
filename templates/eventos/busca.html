@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load humanize %}
+{% block title %} | Busca de Eventos {% endblock %}
 {% block content %}
 
 <section id="showcase-inner" class="showcase-search text-primary py-4">
@@ -19,21 +20,26 @@
             <div class="form-row">
               <div class="col-md-8 mb-3 offset-md-2">
                 <label class="sr-only">Keywords</label>
-                <input type="text" name="keywords" class="form-control" placeholder="Palavras-chave (doações, franternos, etc)">
+                <input type="text" name="keywords" class="form-control" placeholder="Palavra-chave (doações, franternos, etc)" value="{{values.keywords}}">
               </div>
             </div>
             <!-- Form Row 2 -->
             <div class="form-row">
               <div class="col-md-4 mb-3 offset-md-2"> <!-- offset-md-2 align the form in center horizontally -->
                 <label class="sr-only">City</label>
-                <input type="text" name="city" class="form-control" placeholder="Cidade">
+                <input type="text" name="city" class="form-control" placeholder="Cidade" value="{{values.city}}">
             </div>
             <div class="col-md-4 mb-3">
               <label class="sr-only">State</label>
                 <select name="state" class="form-control">
                     <option selected="true" disabled="disabled">Estado</option>
                     {% for key,value in state_choices.items %}
-                        <option value="{{ key }}">{{ value }}</option>
+                      <!-- This prevens the user selection in dropdown menu -->
+                        <option value="{{key}}"
+                        {% if key == values.state %}
+                          selected
+                        {% endif %}
+                        >{{value}}</option>
                     {% endfor %}
                 </select>
             </div>
@@ -56,7 +62,7 @@
               <i class="fas fa-home"></i> Home</a>
           </li>
           <li class="breadcrumb-item">
-            <a href="{% url 'busca'%}">Busca de Eventos</a>
+            <a href="{% url 'busca' %}">Busca de Eventos</a>
           </li>
           <li class="breadcrumb-item active">Resultados da Busca</li>
         </ol>
@@ -112,6 +118,7 @@
           </div>
         {% endif %}
 
+      <!-- Pagination -->
       <div class="row">
         <div class="col-md-12">
           {% if eventos.has_other_pages %}

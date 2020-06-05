@@ -31,28 +31,33 @@ def evento(request, evento_id):
 def busca(request):
 
     # Adding query_set lists
-    query_set_list = Evento.objects.order_by('-event_date')
+    query_set_list = Evento.objects.order_by('-event_date').filter(is_published=True)
 
-    #Keywords filter
+    # Keywords filter
     if 'keywords' in request.GET:
         keywords = request.GET['keywords']
         if keywords:
             # Filter for any keyword passed by the user, not an exact match only
             query_set_list = query_set_list.filter(description__icontains=keywords)
+        # print(query_set_list)
 
     if 'city' in request.GET:
         city = request.GET['city']
         # Filter exact match only, case insensitive
-        query_set_list = query_set_list.filter(city__iexact=city)
+        if city:
+            query_set_list = query_set_list.filter(city__iexact=city)
+        
 
     if 'state' in request.GET:
         state = request.GET['state']
         # Filter exact match only, case insensitive
-        query_set_list = query_set_list.filter(city__iexact=state)
+        if state:
+            query_set_list = query_set_list.filter(state__iexact=state)
 
     context = {
+        'state_choices': state_choices,
         'eventos': query_set_list,
-        'state_choices': state_choices
+        'values': request.GET
     }
     return render(request, 'eventos/busca.html', context)
 
