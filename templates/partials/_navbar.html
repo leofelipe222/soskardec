@@ -26,7 +26,7 @@
           >
             <a class="nav-link" href="{% url 'espiritismo' %}">Espiritismo</a>
           </li>
-                    <li 
+          <li 
             {% if 'atividades' in request.path %}
               class="nav-item active mr-3"
             {% else %}
@@ -35,7 +35,7 @@
           >
             <a class="nav-link" href="{% url 'atividades' %}">Atividades</a>
           </li>
-                    <li 
+          <li 
             {% if 'eventos' in request.path %}
               class="nav-item active mr-3"
             {% else %}
@@ -44,7 +44,7 @@
           >
             <a class="nav-link" href="{% url 'eventos' %}">Eventos</a>
           </li>
-                    <li 
+          <li 
             {% if 'downloads' in request.path %}
               class="nav-item active mr-3"
             {% else %}

@@ -20,11 +20,16 @@ div.breadcrumbs {
 }
 
 div.breadcrumbs a {
-    color: #333333;
+    color: #fff;
 }
+
+/* .content-main a {
+    color: #10284e;
+} */
 
 .module h2, .module caption, .inline-group h2 {
     background: #10284e;
+    opacity: 0.9;
 }
 
 .button, input[type=submit], input[type=button], .submit-row input, a.button {

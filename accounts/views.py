@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages, auth
 from django.contrib.auth.models import User
+from contacts.models import Contact
 
 # Create your views here.
 def registrar(request):
@@ -67,4 +68,11 @@ def logout(request):
     return redirect('index')
 
 def painel_usuario(request):
-    return render(request, 'accounts/painel_usuario.html')
+    # Gets the contacts that match this user's id
+    user_contacts = Contact.objects.order_by("-contact_date").filter(user_id=request.user.id)
+
+    context = {
+        'contact': user_contacts
+    }
+
+    return render(request, 'accounts/painel_usuario.html', context)

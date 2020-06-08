@@ -5,18 +5,16 @@ from eventos.choices import state_choices
 
 # Create your views here.
 def index(request):
-    return render(request, 'pages/index.html')
-
-def busca(request):
     # Render index template, shows 3 eventos only
-    eventos = Evento.objects.order_by('-event_date').filter(is_published=True)
-
+    eventos = Evento.objects.order_by('-event_date').filter(is_published=True)[:3]
     context = {
-        'state_choices': state_choices,
         'eventos': eventos,
     }
+    return render(request, 'pages/index.html', context)
 
-    return render(request, 'eventos/busca.html', context)
+def busca(request):
+    # Render busca template
+    return render(request, 'eventos/busca.html')
 
 def sobre(request):
     # Render sobre template

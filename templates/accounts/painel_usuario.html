@@ -6,8 +6,8 @@
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
-          <h1 class="display-4">Área do Usuário</h1>
-          <p class="lead">Ben Vindo a área do usuário do SOS</p>
+          <h1 class="display-4">Bem Vindo ao SOS Kardec Online</h1>
+          <p class="lead">Ninguém cruza nosso caminho por acaso e nós não entramos na vida de ninguém sem nenhuma razão - "Chico Xavier"</p>
         </div>
       </div>
     </div>
@@ -19,10 +19,10 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="index.html">
+            <a href="{% url 'index' %}">
               <i class="fas fa-home"></i> Home</a>
           </li>
-          <li class="breadcrumb-item active"> Dashboard</li>
+          <li class="breadcrumb-item active"> Perfil do Usuário</li>
         </ol>
       </nav>
     </div>
@@ -35,7 +35,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2>Welcome John</h2>
+          <h2>Olá, {{ user.first_name }} {{ user.last_name }} </h2>
           <p>Here are the property listings that you have inquired about</p>
           <table class="table">
             <thead>
