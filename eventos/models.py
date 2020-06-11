@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import datetime
 from voluntarios.models import Voluntario
+from PIL import Image
 
 # Create your models here.
 class Evento(models.Model):
@@ -29,3 +30,14 @@ class Evento(models.Model):
     def __str__(self):
         return self.title # displays title as the main field in the admin area
 
+
+    # Resize image automatically
+    def save(self):
+        # Runs the save method of the parent class
+        super().save()
+
+        img = Image.open(self.photo_main.path)
+        if img.height > 640 or img.width > 427:
+            size = (640, 427)
+            img.thumbnail(size)
+            img.save(self.photo_main.path)

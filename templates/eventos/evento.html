@@ -39,81 +39,74 @@
           <!-- Home Main Image -->
           <img src="{{ evento.photo_main.url }}" alt="" class="img-main img-fluid mb-3">
           <!-- Thumbnails -->
-          <div class="row mb-5 thumbs">
+          <div class="row mb-5 thumbs row-eq-height">
             {% if evento.photo_1 %}
             <div class="col-md-2">
               <a href="{{ evento.photo_1.url }}" data-lightbox="home-images">
-                <img src="{{ evento.photo_1.url }}" alt="" class="img-fluid">
-              </a>
-            </div>
-            {% endif %}
-            {% if evento.photo_1 %}
-            <div class="col-md-2">
-              <a href="{{ evento.photo_2.url }}" data-lightbox="home-images">
-                <img src="{{ evento.photo_2.url }}" alt="" class="img-fluid">
+                <img src="{{ evento.photo_1.url }}" alt="" class="img-fluid img-thumbnail">
               </a>
             </div>
             {% endif %}
             {% if evento.photo_2 %}
             <div class="col-md-2">
               <a href="{{ evento.photo_2.url }}" data-lightbox="home-images">
-                <img src="{{ evento.photo_2.url }}" alt="" class="img-fluid">
+                <img src="{{ evento.photo_2.url }}" alt="" class="img-fluid img-thumbnail">
               </a>
             </div>
             {% endif %}
             {% if evento.photo_3 %}
             <div class="col-md-2">
               <a href="{{ evento.photo_3.url }}" data-lightbox="home-images">
-                <img src="{{ evento.photo_3.url }}" alt="" class="img-fluid">
+                <img src="{{ evento.photo_3.url }}" alt="" class="img-fluid img-thumbnail">
               </a>
             </div>
             {% endif %}
             {% if evento.photo_4 %}
             <div class="col-md-2">
               <a href="{{ evento.photo_4.url }}" data-lightbox="home-images">
-                <img src="{{ evento.photo_4.url }}" alt="" class="img-fluid">
+                <img src="{{ evento.photo_4.url }}" alt="" class="img-fluid img-thumbnail">
               </a>
             </div>
             {% endif %}
             {% if evento.photo_5 %}
             <div class="col-md-2">
               <a href="{{ evento.photo_5.url }}" data-lightbox="home-images">
-                <img src="{{ evento.photo_5.url }}" alt="" class="img-fluid">
+                <img src="{{ evento.photo_5.url }}" alt="" class="img-fluid img-thumbnail">
               </a>
             </div>
             {% endif %}
             {% if evento.photo_6 %}
             <div class="col-md-2">
               <a href="{{ evento.photo_6.url }}" data-lightbox="home-images">
-                <img src="{{ evento.photo_6.url }}" alt="" class="img-fluid">
+                <img src="{{ evento.photo_6.url }}" alt="" class="img-fluid img-thumbnail">
               </a>
             </div>
             {% endif %}
             {% if evento.photo_7 %}
             <div class="col-md-2">
               <a href="{{ evento.photo_7.url }}" data-lightbox="home-images">
-                <img src="{{ evento.photo_7.url }}" alt="" class="img-fluid">
+                <img src="{{ evento.photo_7.url }}" alt="" class="img-fluid img-thumbnail">
               </a>
             </div>
             {% endif %}
             {% if evento.photo_8 %}
             <div class="col-md-2">
               <a href="{{ evento.photo_8.url }}" data-lightbox="home-images">
-                <img src="{{ evento.photo_8.url }}" alt="" class="img-fluid">
+                <img src="{{ evento.photo_8.url }}" alt="" class="img-fluid img-thumbnail">
               </a>
             </div>
             {% endif %}
             {% if evento.photo_9 %}
             <div class="col-md-2">
               <a href="{{ evento.photo_9.url }}" data-lightbox="home-images">
-                <img src="{{ evento.photo_9.url }}" alt="" class="img-fluid">
+                <img src="{{ evento.photo_9.url }}" alt="" class="img-fluid img-thumbnail">
               </a>
             </div>
             {% endif %}
             {% if evento.photo_10 %}
             <div class="col-md-2">
               <a href="{{ evento.photo_10.url }}" data-lightbox="home-images">
-                <img src="{{ evento.photo_10.url }}" alt="" class="img-fluid">
+                <img src="{{ evento.photo_10.url }}" alt="" class="img-fluid img-thumbnail">
               </a>
             </div>
             {% endif %}
@@ -121,9 +114,6 @@
           </div>
           <!-- Fields -->
           <div class="row mb-5 fields">
-            <!-- <div class="col-md-6">
-
-            </div> -->
             <div class="col-md-6">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item text-dark">
@@ -135,10 +125,6 @@
                    <span class="float-right">{{ evento.event_date }}</span>
                 </li>
                 <li class="list-group-item text-dark">
-                  <i class="fas fa-bed"></i> Data do Evento:
-                  <span class="float-right">{{ evento.event_date }}</span>
-                </li>
-                <li class="list-group-item text-dark">
                   <i class="fas fa-bath"></i> Tipo de Evento:
                   <span class="float-right">{{ evento.event_type }}</span>
                 </li>
@@ -148,31 +134,7 @@
                 </li>
               </ul>
             </div>
-            <!-- <div class="col-md-6">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item text-dark">
-                  <i class="fas fa-th-large"></i> Square Feet:
-                  <span class="float-right">3200</span>
-                </li>
-                <li class="list-group-item text-dark">
-                  <i class="fas fa-square"></i> Lot Size:
-                  <span class="float-right">2.5 Acres
-                  </span>
-                </li>
-                <li class="list-group-item text-dark">
-                  <i class="fas fa-calendar"></i> Listing Date:
-                  <span class="float-right">8/30/2018</span>
-                </li>
-                <li class="list-group-item text-dark">
-                  <i class="fas fa-bed"></i> Realtor:
-                  <span class="float-right">Kyle Brown
-                  </span>
-                </li> -->
-
-
-              </ul>
-            </div>
-          </div>
+           </div>
 
           <!-- Description -->
           <div class="row mb-5">

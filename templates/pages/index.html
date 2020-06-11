@@ -3,6 +3,10 @@
 {% load humanize %}
 {% block title %} | Bem Vindo(a) {% endblock %}
 {% block content %}
+
+<!-- Favicon Icon -->
+<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}">
+
 <!-- Showcase -->
 <section id="showcase-inner" class="py-4 text-primary">
   <div class="row text-center">
@@ -21,37 +25,59 @@
 <br><br>
 {% include 'partials/_alerts.html' %}
 
-<section id="about" class="py-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <h2>We Search For The Perfect Home</h2>
-        <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
-        <img src="assets/img/about.jpg" alt="">
-        <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis esse officia repudiandae ad saepe ex, amet
-          neque quod accusamus rem quia magnam magni dolorum facilis ullam minima perferendis? Exercitationem at quaerat
-          commodi id libero eveniet harum perferendis laborum molestias quia.</p>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img class="card-img-top" src="{% static 'img/kardec_img_2.jpg' %}" alt="Allan Kardec">
-          <div class="card-body">
-            <h5 class="card-title">Doutrina Espírita Kardecista</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nesciunt amet, illo itaque similique repellat.
-              content.
-            </p>
-            <h6 class="text-secondary">Saiba Mais...</h6>
-          </div>
+  <!-- Team -->
+  <section id="guias" class="py-5">
+    <div class="container">
+      <!-- <h1 class="text-center">Nossos Guias</h1><br> -->
+      <div class="row text-center">
+        <div class="col-md-4">
+          <img src="{% static 'img/jesus_img_1.jpeg'  %}" alt="" class="rounded-circle mb-3">
+          <h4>Jesus Cristo</h4>
+        </div>
+        <div class="col-md-4">
+          <img src="{% static 'img/kardec_img_1.jpg'  %}" alt="" class="rounded-circle mb-3">
+          <h4>Allan Kardec</h4>
+        </div>
+        <div class="col-md-4">
+          <img src="{% static 'img/chico_img_2.jpeg'  %}" alt="" class="rounded-circle mb-3">
+          <h4>Chico Xavier</h4>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Eventos -->
+
+  <section id="message-home" class="bg-light text-dark text-center">
+    <div class="container">
+      <h2 class="display-4">Mensagem Espírita</h2>
+      <p class="lead text-justify"> Irmão, faze:
+        de cada ensinamento que recebes, uma instrução do Plano Superior;
+        de cada tarefa, por mínima que seja, uma realização em que deixes os melhores sinais de tua presença;
+        de cada conversão, um entendimento construtivo;
+        de cada conversação, um mensageiro de tua cooperação, no levantamento da felicidade geral;
+        de cada relação nova, uma sementeira de
+        bênçãos;
+        de cada necessitado, um irmão que te espera o auxílio, em nome da Divina Paternidade;
+        de cada desapontamento, um teste de compreensão;
+        de cada experiência, um ensejo de aprender;
+        de cada hora, uma oportunidade de servir...
+        Companheiro da Terra, és o viajor em trânsito na hospedaria do mundo!... Guarda o coração e a consciência, na prática do bem, de tal modo, que possas receber, com o despertar de cada manhã, um novo renascimento na casa física e, no descanso de cada noite, um ensaio de regresso tranquilo ao teu lar verdadeiro, na Vida Espiritual.</p>
+        <p class="lead text-right">Autor: Albino Teixeira<br> Psicografado por Chico Xavier</p>
+        
+      </div>
+  </section>
+
+<!-- Programação -->
 <section id="listings" class="py-4">
   <div class="container">
-    <h3 class="text-center mb-3">Eventos Recentes</h3>
+    <h3 class="text-center mb-3 bg-light border border-light rounded">Programação de
+      <script>
+        const dayName = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
+        const monthNames = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+        const d = new Date();
+        document.write(monthNames[d.getMonth()]);
+      </script>
+  </h3>
       <div class="row">
       <!-- If there are any eventos in the DB -->
       {% if eventos %}
@@ -96,29 +122,106 @@
   </div>
 </section>
 
-<section id="services" class="py-5 bg-secondary text-white">
+<!-- Eventos -->
+<section id="listings" class="py-4">
+  <div class="container">
+    <h3 class="text-center mb-3 bg-light border border-light rounded">Eventos Recentes</h3>
+      <div class="row">
+      <!-- If there are any eventos in the DB -->
+      {% if eventos %}
+        {% for evento in eventos %}
+          <!-- Evento 1 -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card listing-preview">
+              <img class="card-img-top" src="{{ evento.photo_main.url }}" alt="">
+              <div class="card-img-overlay">
+              </div>
+              <div class="card-body">
+                <div class="listing-heading text-center">
+                  <h4 class="text-primary">{{ evento.title }}</h4>
+                  <p>
+                    <i class="fas fa-map-marker text-dark"></i> {{ evento.city }} {{ evento.state }}, {{ evento.zipcode }}</p>
+                </div>
+                <hr>
+                <div class="row py-2 text-dark">
+                  <div class="col-12">
+                    <i class="fas fa-th-large"></i> Tipo: {{ evento.event_type }}</div>
+                </div>
+                <div class="row py-2 text-dark">
+                  <div class="col-12">
+                    <i class="fas fa-user"></i> Responsável: {{ evento.volunteer }}</div>
+                </div>
+                <div class="row text-dark pb-2">
+                  <div class="col-6">
+                    <i class="fas fa-clock"></i> {{ evento.event_date | timesince }}</div>
+                </div>
+                <hr>
+                <a href="{% url 'evento' evento.id %}" class="btn btn-primary btn-block">Mais Fotos</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      {% else %}
+      <!-- If there are no eventos in the DB -->
+        <div class="col-md-12">
+          <p><h3>Nenhum evento encontrado no banco de dados.</h3></p>
+        </div>
+      {% endif %}
+  </div>
+</section>
+
+<section id="listings" class="py-3">
+  <div class="container">
+    <h3 class="text-center mb-3 bg-light border border-light rounded">Como Ajudar</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <a href="http://smile.amazon.com/ch/81-3758631" target="_blank">
+          <img src="{% static 'img/amazon_smile_img_1.png' %}" alt="" class="img-fluid">
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="#" target="_blank">
+          <img src="{% static 'img/donation_img_1.png' %}" alt="" class="img-fluid mt-4">
+        </a>
+      </div>
+      <div class="col-md-4">
+          <img src="{% static 'img/cantina_img_1.jpeg' %}" alt="" class="img-fluid">
+        </a>
+        <p class="text-center md-3">Cantina aos Domingos</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="show-case" class="py-5 text-primary">
   <div class="container">
     <div class="row text-center">
       <div class="col-md-4">
+        <a href="{% url 'sobre' %}">
         <i class="fas fa-comment fa-4x mr-4"></i>
+        </a>
         <hr>
-        <h3>Consulting Services</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-          hic dignissimos ratione ea quae.</p>
+        <a href="{% url 'sobre' %}">
+          <h3>Entre em Contato</h3>
+        </a>
       </div>
       <div class="col-md-4">
-        <i class="fas fa-home fa-4x mr-4"></i>
+        <a href="https://www.facebook.com/soskardec/" target="_blank" >
+        <i class="fab fa-facebook fa-4x mr-4"></i>
+      </a>
         <hr>
-        <h3>Propery Management</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-          hic dignissimos ratione ea quae.</p>
+        <a href="https://www.facebook.com/soskardec/" target="_blank" >
+        <h3>Nosso Perfil no FaceBook</h3>
+      </a>
       </div>
       <div class="col-md-4">
-        <i class="fas fa-suitcase fa-4x mr-4"></i>
+        <a href="https://www.instagram.com/soskardec/" target="_blank" >
+        <i class="fab fa-instagram fa-4x mr-4"></i>
+      </a>
         <hr>
-        <h3>Renting & Selling</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-          hic dignissimos ratione ea quae.</p>
+        <a href="https://www.instagram.com/soskardec/" target="_blank" >
+        <h3>Siga-nos no Instragam</h3>
+      </a>
       </div>
     </div>
   </div>
