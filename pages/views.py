@@ -1,16 +1,30 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from eventos.models import Evento
+from programacao.models import Programa
 from eventos.choices import state_choices
 
 # Create your views here.
 def index(request):
     # Render index template, shows 3 eventos only
     eventos = Evento.objects.order_by('-event_date').filter(is_published=True)[:3]
+
+    programas = Programa.objects.order_by('-program_date').filter(is_published=True)
+    
     context = {
-        'eventos': eventos,
+        'programas': programas,
+        'eventos': eventos
     }
     return render(request, 'pages/index.html', context)
+
+
+# def programacao(request):
+#     # This is only needed if we had a separated page for programacao
+#     programas = Programa.objects.order_by('-program_date').filter(is_published=True)
+#     context = {
+#         'programas': programas
+#     }
+#     return render(request, 'pages/index.html', context)
 
 def busca(request):
     # Render busca template
