@@ -19,7 +19,7 @@ def index(request):
 
 
 # def programacao(request):
-#     # This is only needed if we had a separated page for programacao
+#     # This is only needed if we had a separated page for
 #     programas = Programa.objects.order_by('-program_date').filter(is_published=True)
 #     context = {
 #         'programas': programas

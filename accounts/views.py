@@ -68,11 +68,12 @@ def logout(request):
     return redirect('index')
 
 def painel_usuario(request):
-    # Gets the contacts that match this user's id
+    # Gets the contact user that matches this user's id
     user_contacts = Contact.objects.order_by("-contact_date").filter(user_id=request.user.id)
+    # user_contacts = Contact.objects.all()
 
     context = {
-        'contact': user_contacts
+        'contacts': user_contacts
     }
 
     return render(request, 'accounts/painel_usuario.html', context)

@@ -32,7 +32,7 @@ def contact(request):
         'Mensagem recebida do SOS Kardec website',
         'Mensagem: \n' + message + '\n',
         'soskardec@gmail.com',
-        ['leofelipe222@hotmail.com', 'soskardec@gmail.com', 'contact@soskarde.com'],
+        ['leofelipe222@hotmail.com', 'soskardec@gmail.com', 'contact@soskardec.com'],
         fail_silently=False,
     )
 

@@ -27,15 +27,6 @@
             <a class="nav-link" href="{% url 'espiritismo' %}">Espiritismo</a>
           </li>
           <li 
-            {% if 'atividades' in request.path %}
-              class="nav-item active mr-3"
-            {% else %}
-              class="nav-item mr-3"
-            {% endif %}
-          >
-            <a class="nav-link" href="{% url 'atividades' %}">Atividades</a>
-          </li>
-          <li 
             {% if 'eventos' in request.path %}
               class="nav-item active mr-3"
             {% else %}
@@ -44,7 +35,7 @@
           >
             <a class="nav-link" href="{% url 'eventos' %}">Eventos</a>
           </li>
-          <li 
+          <!-- <li 
             {% if 'downloads' in request.path %}
               class="nav-item active mr-3"
             {% else %}
@@ -52,7 +43,16 @@
             {% endif %}
           >
             <a class="nav-link" href="{% url 'downloads' %}">Downloads</a>
-          </li>
+          </li> -->
+          <li 
+          {% if 'atividades' in request.path %}
+            class="nav-item active mr-3"
+          {% else %}
+            class="nav-item mr-3"
+          {% endif %}
+        >
+          <a class="nav-link" href="{% url 'atividades' %}">Atividades</a>
+        </li>
           <li 
             {% if 'sobre' in request.path %}
               class="nav-item active mr-3"
@@ -61,6 +61,25 @@
             {% endif %}
           >
             <a class="nav-link" href="{% url 'sobre' %}">Quem Somos</a>
+          </li>
+          <li class="nav-link dropdown"
+            {% if 'atividades' in request.path %}
+              class="nav-item active mr-3"
+            {% else %}
+              class="nav-item mr-3"
+            {% endif %}
+          >
+            <!-- <a class="nav-link" href="{% url 'atividades' %}">Atividades</a> -->
+            <a class="nav-link dropdown-toggle" href="{% url 'atividades' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Trabalho Social</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Cesta Básica</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Sophia sWay</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Marys Place</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Be The Match</a>
+            </div>
           </li>
         </ul>
 
@@ -74,7 +93,7 @@
               {% endif %}
             >
             <a class="nav-link" href="{% url 'painel_usuario' %}">
-              <i class="fas fa-user-plus"></i> Bem Vindo, {{ user.username }}</a>
+              <i class="fas fa-user-plus"></i> Olá, {{ user.username }}</a>
           </li>
           <li class="nav-item mr-3">
             <a href="javascript:{document.getElementById('logout').submit()}" class="nav-link"><i class="fas fa-sign-out-alt"> Sair</i></a>

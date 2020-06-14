@@ -11,6 +11,19 @@
 .social a {
   margin-right: 0.4rem; }
 
+#navbarDropdown {
+  display: inline;
+}
+
+.dropdown-menu {
+  background-color: #10284e;
+}
+
+.dropdown-item {
+  background-color: #10284e;
+  color: #fff;
+}
+
 #showcase {
   background: url(../img/bluesky_img_1.jpg) no-repeat top center fixed/cover;
   position: relative;
