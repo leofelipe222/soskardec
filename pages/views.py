@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from eventos.models import Evento
 from programacao.models import Programa
 from eventos.choices import state_choices
+from django.utils.translation import gettext
 
 # Create your views here.
 def index(request):

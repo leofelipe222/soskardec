@@ -1,28 +1,46 @@
 {% load static %}
+{% load i18n %}
 <!-- Top Bar -->
-      <section id="top-bar" class="p-3">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <i class="fas fa-phone"></i> (206)-905-7787
-            </div>
-            <div class="col-md-4">
-              <i class="fas fa-envelope-open"></i> contact@soskardec.com
-            </div>
-            <div class="col-md-4">
-              <div class="social text-right">
-                <a href="https://twitter.com/soskardec/" target="_blank" >
-                  <i class="fab fa-twitter fa-1x m-1"></i>
-                </a>
-                <a href="https://www.facebook.com/soskardec/" target="_blank" >
-                  <!-- <i class="fab fa-facebook"></i> -->
-                  <i class="fab fa-facebook fa-1x m-1"></i>
-                </a>
-                <a href="https://www.instagram.com/soskardec/" target="_blank" >
-                  <i class="fab fa-instagram fa-1x m-1"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+<section id="top-bar" class="p-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <i class="fas fa-phone"></i> (206)-905-7787
+      </div>
+      <div class="col-md-4">
+        <i class="fas fa-envelope-open"></i> contact@soskardec.com
+      </div>
+      <div class="col-md-2">
+        <div class="social text-left">
+          <a href="https://twitter.com/soskardec/" target="_blank" >
+            <i class="fab fa-twitter fa-1x m-1"></i>
+          </a>
+          <a href="https://www.facebook.com/soskardec/" target="_blank" >
+            <!-- <i class="fab fa-facebook"></i> -->
+            <i class="fab fa-facebook fa-1x m-1"></i>
+          </a>
+          <a href="https://www.instagram.com/soskardec/" target="_blank" >
+            <i class="fab fa-instagram fa-1x m-1"></i>
+          </a>
         </div>
-      </section>
+      </div>
+      <div class="col-md-2">
+        <div class="social text-right">
+          <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+            <input name="next" type="hidden" value="{{ redirect_to }}">
+              {% get_language_info_list for LANGUAGES as languages %}
+              {% for language in languages %}
+              <button title="{{ language.name_local | title }}" name="language" type="submit" class="btn btn-primary btn-sm btn-group btn-group-toggle" 
+                  {% if language.code == LANGUAGE_CODE %}
+                    style="background-color: #a39d9df6 onclick=active"
+                  {% else %} 
+                    style="background-color: #d3edda onclick=active" 
+                  {% endif %}
+                    value="{{ language.code }}">{{ language.code | upper}}</button>
+              {% endfor %}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

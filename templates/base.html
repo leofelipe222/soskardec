@@ -1,9 +1,10 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head lang="{{ LANGUAGE_CODE }}">
     <!-- Favicon Icon -->
-<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Font Awesome -->

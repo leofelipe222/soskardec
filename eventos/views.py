@@ -9,7 +9,7 @@ def index(request):
     eventos = Evento.objects.order_by('-event_date').filter(is_published=True)
 
     # Adding pagination to the view
-    paginator = Paginator(eventos, 6) # 5 items per page
+    paginator = Paginator(eventos, 6) # 6 items per page
     page = request.GET.get('page')
     paged_events = paginator.get_page(page)
     

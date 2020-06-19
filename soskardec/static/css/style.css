@@ -6,6 +6,7 @@
 
 .navbar {
   opacity: 0.9;
+  font-size: 0.9rem;
   text-transform: uppercase; }
 
 .social a {
@@ -22,6 +23,7 @@
 .dropdown-item {
   background-color: #10284e;
   color: #fff;
+  font-size: 0.9rem;
 }
 
 #showcase {
@@ -74,7 +76,8 @@
     min-height: 270px; }
 
 #message-home {
-  background: url(../img/mainbanner_family.jpg);
+  /* background: url(../img/mainbanner_family.jpg); */
+  background: #fff;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;

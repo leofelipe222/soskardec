@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 {% load humanize %}
 {% block content %}
 <section id="showcase-inner" class="py-4 text-primary">
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
-          <h1 class="display-4">Bem Vindo ao SOS Kardec Online</h1>
-          <p class="lead">Ninguém cruza nosso caminho por acaso e nós não entramos na vida de ninguém sem nenhuma razão - "Chico Xavier"</p>
+          <h1 class="display-4"> {% trans "Bem Vindo ao" %}  SOS Kardec Online</h1>
+          <p class="lead"> {% blocktrans %}Ninguém cruza nosso caminho por acaso e nós não entramos na vida de ninguém sem nenhuma razão - "Chico Xavier"{% endblocktrans %} </p>
         </div>
       </div>
     </div>
@@ -22,7 +23,8 @@
             <a href="{% url 'index' %}">
               <i class="fas fa-home"></i> Home</a>
           </li>
-          <li class="breadcrumb-item active"> Perfil do Usuário</li>
+          <li class="breadcrumb-item active"> {% trans "Perfil do Usuário" %}
+           </li>
         </ol>
       </nav>
     </div>
@@ -35,14 +37,14 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2>Olá, {{ user.first_name }} {{ user.last_name }} </h2>
+          <h2> {% trans "Olá" %}, {{ user.first_name }} {{ user.last_name }} </h2>
           {% if contacts %}
-            <p>Aqui está a sua lista de mensagens:</p>
+            <p> {% trans "Messanges encontradas" %}: </p>
               <table class="table">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Mensagem</th>
+                    <th scope="col"> {% trans "Messagem" %} </th>
                     <th></th>
                   </tr>
                 </thead>
@@ -52,14 +54,14 @@
                       <td>{{ contact.id }}</td>
                       <td>{{ contact.message }}</td>
                       <td>
-                        <a class="btn btn-light" href="{% url 'contact' %}">Abrir Mensagem</a>
+                        <a class="btn btn-light" href="{% url 'contact' %}"> {% trans "Abrir Mensagem" %} </a>
                       </td>
                     </tr>
                   {% endfor %}
               </tbody>
             </table>
         {% else %}
-          <p class="lead">Nenhuma mensagem foi encontrada.</p>
+          <p class="lead"> {% trans "Nenhuma mensagem foi encontrada" %} .</p>
         {% endif %}
         </div>
       </div>

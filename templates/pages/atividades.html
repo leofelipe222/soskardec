@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 {% load humanize %}
 {% block title %} | Atividades {% endblock %}
 {% block content %}
@@ -7,10 +8,8 @@
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
-          <h1 class="display-4">Atividades da Casa</h1>
-          <p class="lead">“Notemos igualmente que é nos centros espíritas verdadeiramente sérios que se
-            fazem os mais sinceros adeptos, porque os assistentes são tocados pela boa
-            impressão que recebem. "Allan Kardec"</p>
+          <h1 class="display-4"> {% trans "Atividades da Casa" %} </h1>
+          <p class="lead">{% blocktrans %}“Notemos igualmente que é nos centros espíritas verdadeiramente sérios que se fazem os mais sinceros adeptos, porque os assistentes são tocados pela boa impressão que recebem. Allan Kardec"{% endblocktrans %}</p>
         </div>
       </div>
     </div>
@@ -25,7 +24,7 @@
             <a href="{% url 'index' %}">
               <i class="fas fa-home"></i> Home</a>
           </li>
-          <li class="breadcrumb-item active"> Atividades</li>
+          <li class="breadcrumb-item active"> {% trans "Atividades" %} </li>
         </ol>
       </nav>
     </div>
@@ -36,32 +35,38 @@
       <div class="row">
         <div class="col-md-8">
           <div class="flex-container">
-            <h2>Atendimento Fraterno</h2>
-            <p class="mt-4">Oferecemos apoio àqueles que buscam na Doutrina Espírita o abrigo para as suas aflições. É uma relação de ajuda que consiste num encontro fraternal entre aquele que tem carências a      serem supridas e o tarefeiro atendente, capacitado para ouvi-lo e orientá-lo quanto aos recursos que a Doutrina Espírita coloca ao seu alcance.
-            <br><br>Geralmente a pessoa que vai até o Centro Espírita busca palavras de conforto e um direcionamento. Com base na Doutrina Espírita, as conversas fazem você mesmo refletir sobre as questões que te afligem.<br><br>
+            <h2> {% trans "Atendimento Fraterno" %} </h2>
+            <p class="mt-4">{% blocktrans %}Oferecemos apoio àqueles que buscam na Doutrina Espírita o abrigo para as suas aflições. É uma relação de ajuda que consiste num encontro fraternal entre aquele que tem carências a serem supridas e o tarefeiro atendente, capacitado para ouvi-lo e orientá-lo quanto aos recursos que a Doutrina Espírita coloca ao seu alcance{% endblocktrans %}.
+            <br><br>{% blocktrans %} Geralmente a pessoa que vai até o Centro Espírita busca palavras de conforto e um direcionamento. Com base na Doutrina Espírita, as conversas fazem você mesmo refletir sobre as questões que te afligem{% endblocktrans %}.
+            <br><br>
             </p>
-            <h2>Palestras Públicas</h2>
-            <p class="mt-4">Não há um perfil ideal. Em princípio, qualquer pessoa pode assumir a tarefa de expositor. No entando, o que o distingue para tal função é a sua identificação com os propósitos espíritas, sua vontade de estudar e de compreender a doutrina e facilidade em transmitir os seus conhecimentos com didática, sinceridade, entusiasmo e, acima de tudo, muita humildade. Certamente é interessante constatar que a nobre tarefa de levar ao público a mensagem cristã, juntamente com os ensinamentos espíritas, exige do palestrante preparo, aptidão, abnegação e esforço para ser portador de bons exemplos daquilo que se propõe dissertar.<br><br>
-            </p>
-  
-            <h2>Estudo Doutrinário</h2>
-            <p class="mt-4">O Estudo Sistematizado da Doutrina Espírita (ESDE) surgiu como ferramenta didática de estudo do Espiritismo, oferecendo oportunidade de ampliação do conhecimento da base fundamental da Doutrina nos aspectos científico, filosófico e religioso.<br><br>
+            <h2> {% trans "Palestras Públicas" %} </h2>
+            <p class="mt-4">{% blocktrans %}Não há um perfil ideal. Em princípio, qualquer pessoa pode assumir a tarefa de expositor. No entando, o que o distingue para tal função é a sua identificação com os propósitos espíritas, sua vontade de estudar e de compreender a doutrina e facilidade em transmitir os seus conhecimentos com didática, sinceridade, entusiasmo e, acima de tudo, muita humildade. Certamente é interessante constatar que a nobre tarefa de levar ao público a mensagem cristã, juntamente com os ensinamentos espíritas, exige do palestrante preparo, aptidão, abnegação e esforço para ser portador de bons exemplos daquilo que se propõe dissertar{% endblocktrans %}
+            <br><br>
             </p>
   
-            <h2>Evangelização Infantil e Jovens</h2>
-            <p class="mt-4">A denominação de Evangelização Espírita Infanto-Juvenil, se dá à transmissão do conhecimento espírita e da moral evangélica pregada por Jesus. Como a preocupação não é somente com a transmissão de conhecimentos mas, sobretudo, com a formação moral, e como a formação moral se inspira no Evangelho, parece-nos muito apropriada à denominação de "evangelização espírita" dada a essa tarefa, por expressar, na sua abrangência, exatamente o que se realiza em nossos agrupamentos de crianças e jovens.<br><br>
+            <h2> {% trans "Estudo Doutrinário" %} </h2>
+            <p class="mt-4">{% blocktrans %}O Estudo Sistematizado da Doutrina Espírita (ESDE) surgiu como ferramenta didática de estudo do Espiritismo, oferecendo oportunidade de ampliação do conhecimento da base fundamental da Doutrina nos aspectos científico, filosófico e religioso{% endblocktrans %}.
+              <br><br>
             </p>
   
-            <h2>Passes</h2>
-            <p class="mt-4">Passe é uma transmissão conjunta, ou mista, de fluidos magnéticos – provenientes do encarnado –  e de fluidos espirituais – oriundos dos benfeitores espirituais, não devendo ser considerada uma simples transmissão de energia animal (magnetização).<br><br>
+            <h2> {% trans "Evangelização Infantil e Jovens" %} </h2>
+            <p class="mt-4">{% blocktrans %}A denominação de Evangelização Espírita Infanto-Juvenil, se dá à transmissão do conhecimento espírita e da moral evangélica pregada por Jesus. Como a preocupação não é somente com a transmissão de conhecimentos mas, sobretudo, com a formação moral, e como a formação moral se inspira no Evangelho, parece-nos muito apropriada à denominação de "evangelização espírita" dada a essa tarefa, por expressar, na sua abrangência, exatamente o que se realiza em nossos agrupamentos de crianças e jovens{% endblocktrans %}.
+              <br><br>
             </p>
   
-            <h2>Clube do Livro Espírita</h2>
-            <p class="mt-4">Um clube do livro, também conhecido como clube de leitura, é um clube social onde pessoas normalmente se encontram para discutir sobre um livro (ou capítulos individuais) que acabaram de ler, expressando suas opiniões, críticas, etc. O objetivo é promover o conhecimento através de uma discussão saudável e edificante do livro em questão.<br><br>
+            <h2> {% trans "Passes" %} </h2>
+            <p class="mt-4">{% blocktrans %}Passe é uma transmissão conjunta, ou mista, de fluidos magnéticos – provenientes do encarnado –  e de fluidos espirituais – oriundos dos benfeitores espirituais, não devendo ser considerada uma simples transmissão de energia animal (magnetização){% endblocktrans %}.
+            </p>
+            <br><br>
+            <h2> {% trans "Clube do Livro Espírita" %} </h2>
+            <p class="mt-4">{% blocktrans %}Um clube do livro, também conhecido como clube de leitura, é um clube social onde pessoas normalmente se encontram para discutir sobre um livro (ou capítulos individuais) que acabaram de ler, expressando suas opiniões, críticas, etc. O objetivo é promover o conhecimento através de uma discussão saudável e edificante do livro em questão{% endblocktrans %}.
+              <br><br>
             </p>
 
-            <h2>Culto no Lar</h2>
-            <p class="mt-4">Orientações de como implantar o Culto no Lar, que é um encontro semanal, sendo previamente marcado o dia e a hora, (devendo ser repetido sempre no mesmo dia e hora da semana) com o objetivo de reunir a família em torno dos ensinamentos evangélicos, à luz do Espiritismo, e sob a assistência dos Benfeitores Espirituais.<br><br>
+            <h2> {% trans "Culto no Lar" %} </h2>
+            <p class="mt-4"> {% blocktrans %}Orientações de como implantar o Culto no Lar, que é um encontro semanal, sendo previamente marcado o dia e a hora, (devendo ser repetido sempre no mesmo dia e hora da semana) com o objetivo de reunir a família em torno dos ensinamentos evangélicos, à luz do Espiritismo, e sob a assistência dos Benfeitores Espirituais{% endblocktrans %}.
+              <br><br>
             </p>
   
           </div>
@@ -70,9 +75,10 @@
           <div class="card">
             <img class="card-img-top" src="{% static 'img/atendimento_fraterno_img_1.jpg' %}" alt="Fraternidate">
             <div class="card-body">
-              <h5 class="card-title">Estamos aqui para ajudar!</h5>
+              <h5 class="card-title"> {% trans "Estamos aqui para ajudar!" %} </h5>
               <!-- <h6 class="text-secondary">Kyle Brown</h6> -->
-              <p class="card-text">O atendimento fraterno no Centro Espírita é uma oportunidade de falarmos sem julgamentos ou medos.</p>
+              <p class="card-text">{% blocktrans %}O atendimento fraterno no Centro Espírita é uma oportunidade de falarmos sem julgamentos ou medos{% endblocktrans %}.
+              </p>
             </div>
           </div>
         </div>

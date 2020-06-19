@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 {% load humanize %}
-{% block title %} | Bem Vindo(a) {% endblock %}
+{% block title %}
+  {% trans "| Bem Vindo" %}
+{% endblock %}
 {% block content %}
 
 <!-- Favicon Icon -->
@@ -14,7 +17,8 @@
       <div class="col-md-12">
           <img src="{% static 'img/sos_logo.png' %}" class="main-logo">
           <h1 class="display-4">Spiritist Organization of Seattle</h1>
-          <p class="lead">Nascer, morrer, renascer ainda e progredir sempre, tal é a lei.</p>
+          <!-- <p class="lead">Nascer, morrer, renascer ainda e progredir sempre, tal é a lei.</p> -->
+          <p class="lead">{% trans "Nascer, morrer, renascer ainda e progredir sempre, tal é a lei." %}</p>
         </div>
     </div>
     </div>
@@ -49,34 +53,18 @@
 
   <section id="message-home" class="bg-light text-dark text-center">
     <div class="container">
-      <h2 class="display-4">Mensagem Espírita</h2>
-      <p class="lead text-justify"> Irmão, faze:
-        de cada ensinamento que recebes, uma instrução do Plano Superior;
-        de cada tarefa, por mínima que seja, uma realização em que deixes os melhores sinais de tua presença;
-        de cada conversão, um entendimento construtivo;
-        de cada conversação, um mensageiro de tua cooperação, no levantamento da felicidade geral;
-        de cada relação nova, uma sementeira de
-        bênçãos;
-        de cada necessitado, um irmão que te espera o auxílio, em nome da Divina Paternidade;
-        de cada desapontamento, um teste de compreensão;
-        de cada experiência, um ensejo de aprender;
-        de cada hora, uma oportunidade de servir...
-        Companheiro da Terra, és o viajor em trânsito na hospedaria do mundo!... Guarda o coração e a consciência, na prática do bem, de tal modo, que possas receber, com o despertar de cada manhã, um novo renascimento na casa física e, no descanso de cada noite, um ensaio de regresso tranquilo ao teu lar verdadeiro, na Vida Espiritual.</p>
-        <p class="lead text-right">Autor: Albino Teixeira<br> Psicografado por Chico Xavier</p>
-        
+      <!-- <h2 class="display-4">Mensagem Espírita</h2> -->
+      <h2 class="display-4">{% trans "Mensagem Espírita" %} </h2>
+      <p class="lead text-justify"> {% blocktrans %}"Irmão, faze: de cada ensinamento que recebes, uma instrução do Plano Superior; de cada tarefa, por mínima que seja, uma realização em que deixes os melhores sinais de tua presença; de cada conversão, um entendimento construtivo; de cada conversação, um mensageiro de tua cooperação, no levantamento da felicidade geral; de cada relação nova, uma sementeira de bênçãos; de cada necessitado, um irmão que te espera o auxílio, em nome da Divina Paternidade; de cada desapontamento, um teste de compreensão; de cada experiência, um ensejo de aprender; de cada hora, uma oportunidade de servir...
+        Companheiro da Terra, és o viajor em trânsito na hospedaria do mundo!... Guarda o coração e a consciência, na prática do bem, de tal modo, que possas receber, com o despertar de cada manhã, um novo renascimento na casa física e, no descanso de cada noite, um ensaio de regresso tranquilo ao teu lar verdadeiro, na Vida Espiritual."{% endblocktrans %}</p>
+        <p class="lead text-right">{% trans "Autor" %}: Albino Teixeira<br> {% trans "Psicografado por" %} Chico Xavier</p>
       </div>
   </section>
 
 <!-- Programação -->
 <section id="listings" class="py-5">
   <div class="container">
-    <h3 class="text-center mb-3 bg-light border border-light rounded">Programação de 
-      <script>
-        const dayName = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
-        const monthNames = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
-        const d = new Date();
-        document.write(monthNames[d.getMonth()]);
-      </script>
+    <h3 class="text-center mb-3 bg-light border border-light rounded">{% trans "Programação do Mês" %}
     </h3>
       <div class="row">
       <!-- If there are any eventos in the DB -->
@@ -91,20 +79,20 @@
               <div class="card-body">
                 <hr>
                 <div class="row py-2 text-dark">
-                  <div class="col-6">
-                    <i class="fas fa-book-reader "></i> Tópico: {{ program.title }}</div>
+                  <div class="col-12">
+                    <i class="fas fa-book-reader "></i> {% trans "Tópico" %}: {{ program.title }}</div>
                 </div>
                 <div class="row py-2 text-dark">
-                  <div class="col-6">
-                    <i class="fas fa-th-large"></i> Tipo: {{ program.program_type }}</div>
+                  <div class="col-12">
+                    <i class="fas fa-th-large"></i> {% trans "Tipo" %}: {{ program.program_type }}</div>
                 </div>
                 <div class="row py-2 text-dark">
-                  <div class="col-6">
-                    <i class="fas fa-user"></i> Responsável: {{ program.volunteer }}</div>
+                  <div class="col-12">
+                    <i class="fas fa-user"></i> {% trans "Responsável" %}: {{ program.volunteer }}</div>
                 </div>
                 <div class="row text-dark pb-2">
-                  <div class="col-6">
-                    <i class="fas fa-clock"></i> {{ program.program_date }}</div>
+                  <div class="col-12">
+                    <i class="fas fa-clock"></i> {{ program.program_date }} </div>
                 </div>
               </div>
             </div>
@@ -113,7 +101,8 @@
       {% else %}
       <!-- If there are no eventos in the DB -->
         <div class="col-md-12">
-          <p><h3>Nenhuma programacao encontrada no banco de dados.</h3></p>
+          <!-- <p><h3>Nenhuma programacao encontrada no banco de dados.</h3></p> -->
+          <p><h3>{% trans "Nenhuma programacao encontrada no banco de dados" %}.</h3></p>
         </div>
       {% endif %}
   </div>
@@ -122,7 +111,7 @@
 <!-- Eventos -->
 <section id="listings" class="py-4">
   <div class="container">
-    <h3 class="text-center mb-3 bg-light border border-light rounded">Eventos Recentes</h3>
+    <h3 class="text-center mb-3 bg-light border border-light rounded">{% trans "Eventos Recentes" %}</h3>
       <div class="row">
       <!-- If there are any eventos in the DB -->
       {% if eventos %}
@@ -142,18 +131,18 @@
                 <hr>
                 <div class="row py-2 text-dark">
                   <div class="col-12">
-                    <i class="fas fa-th-large"></i> Tipo: {{ evento.event_type }}</div>
+                    <i class="fas fa-th-large"></i> {% trans "Tipo" %}: {{ evento.event_type }}</div>
                 </div>
                 <div class="row py-2 text-dark">
                   <div class="col-12">
-                    <i class="fas fa-user"></i> Responsável: {{ evento.volunteer }}</div>
+                    <i class="fas fa-user"></i> {% trans "Responsável" %}: {{ evento.volunteer }}</div>
                 </div>
                 <div class="row text-dark pb-2">
-                  <div class="col-6">
-                    <i class="fas fa-clock"></i> {{ evento.event_date | timesince }}</div>
+                  <div class="col-10">
+                    <i class="fas fa-clock"></i> {{ evento.event_date | timesince }} {% trans "atrás" %}</div>
                 </div>
                 <hr>
-                <a href="{% url 'evento' evento.id %}" class="btn btn-primary btn-block">Mais Fotos</a>
+                <a href="{% url 'evento' evento.id %}" class="btn btn-primary btn-block">{% trans "Mais Fotos" %}</a>
               </div>
             </div>
           </div>
@@ -161,7 +150,8 @@
       {% else %}
       <!-- If there are no eventos in the DB -->
         <div class="col-md-12">
-          <p><h3>Nenhum evento encontrado no banco de dados.</h3></p>
+          <!-- <p><h3>Nenhum evento encontrado no banco de dados.</h3></p> -->
+          <p><h3>{% trans "Nenhum evento encontrado no banco de dados" %}.</h3></p>
         </div>
       {% endif %}
   </div>
@@ -169,7 +159,7 @@
 
 <section id="listings" class="py-3">
   <div class="container">
-    <h3 class="text-center mb-3 bg-light border border-light rounded">Como Ajudar</h3>
+    <h3 class="text-center mb-3 bg-light border border-light rounded">{% trans "Como Ajudar" %}</h3>
     <div class="row">
       <div class="col-md-4">
         <a href="http://smile.amazon.com/ch/81-3758631" target="_blank">
@@ -184,7 +174,7 @@
       <div class="col-md-4">
           <img src="{% static 'img/cantina_img_1.jpeg' %}" alt="" class="img-fluid">
         </a>
-        <p class="text-center md-3">Cantina aos Domingos</p>
+        <p class="text-center md-3">{% trans "Cantina aos Domingos" %}</p>
       </div>
     </div>
   </div>
@@ -199,7 +189,8 @@
         </a>
         <hr>
         <a href="{% url 'sobre' %}">
-          <h3>Entre em Contato</h3>
+          <!-- <h3>Entre em Contato</h3> -->
+          <h3>{% trans "Entre em Contato" %}</h3>
         </a>
       </div>
       <div class="col-md-4">
@@ -208,7 +199,8 @@
       </a>
         <hr>
         <a href="https://www.facebook.com/soskardec/" target="_blank" >
-        <h3>Nosso Perfil no FaceBook</h3>
+        <!-- <h3>Nosso Perfil no FaceBook</h3> -->
+        <h3>{% trans "Nosso Perfil no FaceBook" %}</h3>
       </a>
       </div>
       <div class="col-md-4">
@@ -217,7 +209,8 @@
       </a>
         <hr>
         <a href="https://www.instagram.com/soskardec/" target="_blank" >
-        <h3>Siga-nos no Instragam</h3>
+        <!-- <h3>Siga-nos no Instragam</h3> -->
+        <h3>{% trans "Siga-nos no Instragam" %}</h3>
       </a>
       </div>
     </div>

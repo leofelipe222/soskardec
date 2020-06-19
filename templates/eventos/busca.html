@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 {% load humanize %}
-{% block title %} | Busca de Eventos {% endblock %}
+{% block title %} {% trans "| Busca de Eventos" %}  {% endblock %}
 {% block content %}
 
 <section id="showcase-inner" class="showcase-search text-primary py-4">
     <div class="container">
         <div class="row text-center">
           <div class="col-md-12">
-            <h1 class="display-4">Busca de Eventos</h1>
+            <h1 class="display-4">{% trans "Busca de Eventos" %} </h1>
           </div>
         </div>
       </div>
@@ -20,19 +21,19 @@
             <div class="form-row">
               <div class="col-md-8 mb-3 offset-md-2">
                 <label class="sr-only">Keywords</label>
-                <input type="text" name="keywords" class="form-control" placeholder="Palavra-chave (doações, franternos, etc)" value="{{values.keywords}}">
+                <input type="text" name="keywords" class="form-control" placeholder="Keywords to search" value="{{values.keywords}}">
               </div>
             </div>
             <!-- Form Row 2 -->
             <div class="form-row">
               <div class="col-md-4 mb-3 offset-md-2"> <!-- offset-md-2 align the form in center horizontally -->
-                <label class="sr-only">City</label>
+                <label class="sr-only"> {% trans "City" %} </label>
                 <input type="text" name="city" class="form-control" placeholder="Cidade" value="{{values.city}}">
             </div>
             <div class="col-md-4 mb-3">
-              <label class="sr-only">State</label>
+              <label class="sr-only"> {% trans "Estado" %} </label>
                 <select name="state" class="form-control">
-                    <option selected="true" disabled="disabled">Estado</option>
+                    <option selected="true" disabled="disabled"> {% trans "Estado" %} </option>
                     {% for key,value in state_choices.items %}
                       <!-- This prevens the user selection in dropdown menu -->
                         <option value="{{key}}"
@@ -44,7 +45,7 @@
                 </select>
             </div>
             <div class="col-md-8 mb-3 offset-md-2">
-                <button class="btn btn-primary btn-block mt-3" type="submit">Buscar Eventos</button>
+                <button class="btn btn-primary btn-block mt-3" type="submit"> {% trans "Buscar Eventos" %} </button>
             </div>
           </form>
         </div>
@@ -62,9 +63,9 @@
               <i class="fas fa-home"></i> Home</a>
           </li>
           <li class="breadcrumb-item">
-            <a href="{% url 'busca' %}">Busca de Eventos</a>
+            <a href="{% url 'busca' %}"> {% trans "Busca de Eventos" %} </a>
           </li>
-          <li class="breadcrumb-item active">Resultados da Busca</li>
+          <li class="breadcrumb-item active"> {% trans "Resultados da Busca" %} </li>
         </ol>
       </nav>
     </div>
@@ -95,18 +96,18 @@
                   <hr>
                   <div class="row py-2 text-dark">
                     <div class="col-12">
-                      <i class="fas fa-th-large"></i> Tipo: {{ evento.event_type }}</div>
+                      <i class="fas fa-th-large"></i> {% trans "Tipo" %} : {{ evento.event_type }}</div>
                   </div>
                   <div class="row py-2 text-dark">
                     <div class="col-12">
-                      <i class="fas fa-user"></i> Responsável: {{ evento.volunteer }}</div>
+                      <i class="fas fa-user"></i> {% trans "Responsável" %} : {{ evento.volunteer }}</div>
                   </div>
                   <div class="row text-dark pb-2">
                     <div class="col-6">
                       <i class="fas fa-clock"></i> {{ evento.event_date | timesince }}</div>
                   </div>
                   <hr>
-                  <a href="{% url 'evento' evento.id %}" class="btn btn-primary btn-block">Mais Fotos</a>
+                  <a href="{% url 'evento' evento.id %}" class="btn btn-primary btn-block"> {% trans "Mais Fotos" %} </a>
                 </div>
               </div>
             </div>
@@ -114,7 +115,7 @@
         {% else %}
         <!-- If there are no eventos in the DB -->
           <div class="col-md-12">
-            <p><h3>Nenhum evento encontrado no banco de dados.</h3></p>
+            <p><h3> {% trans "Nenhum evento encontrado no banco de dados" %}</h3></p>
           </div>
         {% endif %}
 

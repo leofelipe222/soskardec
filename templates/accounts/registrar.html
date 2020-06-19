@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 {% load humanize %}
 {% block content %}
 <section id="register" class="bg-light py-5">
@@ -9,7 +10,7 @@
           <div class="card">
             <div class="card-header bg-primary text-white">
               <h4>
-                <i class="fas fa-user-plus"></i> Registro</h4>
+                <i class="fas fa-user-plus"></i> {% trans "Registro" %} </h4>
             </div>
             <div class="card-body">
                 <!-- Alerts -->
@@ -17,27 +18,27 @@
                 <form action="{% url 'registrar' %}" method="POST">
                     {% csrf_token %}
                   <div class="form-group">
-                  <label for="first_name">Primeiro Nome</label>
+                  <label for="first_name"> {% trans "Primeiro Nome" %} </label>
                   <input type="text" name="first_name" class="form-control" required>
                 </div>
                 <div class="form-group">
-                  <label for="last_name">Último Nome</label>
+                  <label for="last_name"> {% trans "Último Nome" %} </label>
                   <input type="text" name="last_name" class="form-control" required>
                 </div>
                 <div class="form-group">
-                  <label for="username">Usuário</label>
+                  <label for="username"> {% trans "Usuário" %} </label>
                   <input type="text" name="username" class="form-control" required>
                 </div>
                 <div class="form-group">
-                  <label for="email">Email</label>
+                  <label for="email"> {% trans "Email" %} </label>
                   <input type="email" name="email" class="form-control" required>
                 </div>
                 <div class="form-group">
-                  <label for="password2">Senha</label>
+                  <label for="password2"> {% trans "Senha" %} </label>
                   <input type="password" name="password" class="form-control" required>
                 </div>
                 <div class="form-group">
-                  <label for="password">Confirmar Senha</label>
+                  <label for="password"> {% trans "Confirmar Senha" %} a</label>
                   <input type="password" name="password2" class="form-control" required>
                 </div>
                 <input type="submit" value="Registrar" class="btn btn-secondary btn-block">

@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 {% load humanize %}
-{% block title %} | Nossos Eventos {% endblock %}
+{% block title %} {% trans "| Nossos Eventos" %}  {% endblock %}
 {% block content %}
 <section id="showcase-inner" class="py-4 text-primary">
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
-          <h1 class="display-4">Histórico de Eventos</h1>
-          <p class="lead">A lista de eventos abaixo, organizados pelo Spiritist Organization of Seatte, mostra um pouco do nosso trabalho. Temos diversos tipos de eventos voltados para a nossa comunidade e arrecadação de fundos para as nossas atividades assistenciais.</p>
-        </div>
+          <h1 class="display-4"> {% trans "Histórico de Eventos" %}</h1>
+          <p class="lead">{% blocktrans %}A lista de eventos abaixo, organizados pelo Spiritist Organization of Seatte, mostra um pouco do nosso trabalho. Temos diversos tipos de eventos voltados para a nossa comunidade e arrecadação de fundos para as nossas atividades assistenciais.{% endblocktrans %}</p>
+          </div>
       </div>
     </div>
   </section>
@@ -23,10 +24,10 @@
             <a href="{% url 'index' %}">
               <i class="fas fa-home"></i> Home</a>
           </li>
-          <li class="breadcrumb-item active">Nossos Eventos</li>
+          <li class="breadcrumb-item active"> {% trans "Nossos Eventos" %} </li>
         </ol>
         <hr>
-        <a href="{% url 'busca' %}" class="btn btn-primary btn-block">Procurar Eventos</a>
+        <a href="{% url 'busca' %}" class="btn btn-primary btn-block"> {% trans "Procurar Eventos" %} </a>
       </nav>
     </div>
   </section>
@@ -56,18 +57,18 @@
                   <hr>
                   <div class="row py-2 text-dark">
                     <div class="col-12">
-                      <i class="fas fa-th-large"></i> Tipo: {{ evento.event_type }}</div>
+                      <i class="fas fa-th-large"></i> {% trans "Tipo" %}: {{ evento.event_type }}</div>
                   </div>
                   <div class="row py-2 text-dark">
                     <div class="col-12">
-                      <i class="fas fa-user"></i> Responsável: {{ evento.volunteer }}</div>
+                      <i class="fas fa-user"></i> {% trans "Responsável" %}: {{ evento.volunteer }}</div>
                   </div>
                   <div class="row text-dark pb-2">
-                    <div class="col-6">
+                    <div class="col-10">
                       <i class="fas fa-clock"></i> {{ evento.event_date | timesince }}</div>
                   </div>
                   <hr>
-                  <a href="{% url 'evento' evento.id %}" class="btn btn-primary btn-block">Mais Fotos</a>
+                  <a href="{% url 'evento' evento.id %}" class="btn btn-primary btn-block"> {% trans "Mais Fotos" %} </a>
                 </div>
               </div>
             </div>
@@ -75,7 +76,7 @@
         {% else %}
         <!-- If there are no eventos in the DB -->
           <div class="col-md-12">
-            <p><h3>Nenhum evento encontrado no banco de dados.</h3></p>
+            <p><h3> {% trans "Nenhum evento encontrado no banco de dados" %}</h3></p>
           </div>
         {% endif %}
 
