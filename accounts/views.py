@@ -53,10 +53,10 @@ def login(request):
         user = auth.authenticate(username=username, password=password)
         if user is not None:
             auth.login(request, user)
-            messages.success(request, ' - Você está logado(a)!')
+            messages.success(request, ' - Login Successful')
             return redirect('painel_usuario')
         else:
-            messages.error(request, 'Usuário ou Senha incorretos')
+            messages.error(request, 'Invalid User or Password')
             return redirect('login')
     else:
         return render(request, 'accounts/login.html')
@@ -64,16 +64,16 @@ def login(request):
 def logout(request):
     if request.method == "POST":
         auth.logout(request)
-        messages.success(request, " - Logout efetuado")
+        messages.success(request, " - Logout Successful")
     return redirect('index')
 
 def painel_usuario(request):
     # Gets the contact user that matches this user's id
     user_contacts = Contact.objects.order_by("-contact_date").filter(user_id=request.user.id)
-    # user_contacts = Contact.objects.all()
 
     context = {
         'contacts': user_contacts
     }
 
     return render(request, 'accounts/painel_usuario.html', context)
+

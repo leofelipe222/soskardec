@@ -26,6 +26,23 @@
   font-size: 0.9rem;
 }
 
+.row-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column-img-grid {
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column-img-grid img {
+  margin-top: 4px;
+  vertical-align: middle;
+}
+
+
 #showcase {
   background: url(../img/bluesky_img_1.jpg) no-repeat top center fixed/cover;
   position: relative;

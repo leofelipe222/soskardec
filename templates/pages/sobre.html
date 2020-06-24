@@ -8,8 +8,9 @@
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
+          <img src="{% static 'img/sos_logo.png' %}" class="main-logo">
           <h1 class="display-4">Spiritist Organization of Seattle</h1>
-          <p class="lead">{% blocktrans %}“Notemos igualmente que é nos centros espíritas verdadeiramente sérios que se fazem os mais sinceros adeptos, porque os assistentes são tocados pela boa impressão que recebem. Allan Kardec"{% endblocktrans %}</p>
+          <p class="lead">"{% trans "Fora da caridate, não há salvação" %}." Allan Kardec</p>
         </div>
       </div>
     </div>
@@ -49,7 +50,7 @@
           </div>
           <p class="mt-4">{% blocktrans %}Caso tenha alguma pergunta ou alguma dúvida, entre em contato conosco{% endblocktrans %}.</p>
           <!-- Message button -->
-          <button class="btn-primary btn-block btn-lg" data-toggle="modal" data-target="#inquiryModal">Contato</button>
+          <button class="btn-primary btn-block btn-lg" data-toggle="modal" data-target="#inquiryModal"> {% trans "Entre em Contato" %} </button>
 
           <!-- Large Map -->
         </div>

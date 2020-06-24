@@ -25,11 +25,9 @@ SECRET_KEY = '0k27d#=v3iw&o8(=x3iz$!9$wp%b4y@3hh88=x78k+4%70xm_&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['10.0.0.218',]
 
 # Application definition
-
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'eventos.apps.EventosConfig',
@@ -45,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
-    'rosetta'
+    'rosetta',
 ]
 
 MIDDLEWARE = [
@@ -169,4 +167,5 @@ EMAIL_PORT = 465
 EMAIL_HOST = os.environ.get('EMAIL_HOST')
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 ACCOUNT_EMAIL_VERIFICATION = 'none'

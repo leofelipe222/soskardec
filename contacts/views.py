@@ -28,11 +28,19 @@ def contact(request):
     contact.save()
 
     # Sending email
+
+    mail_list = [
+        'leofelipe222@hotmail.com',
+        'soskardec@gmail.com',
+        'contact@soskardec.com',
+        'flaviacarolyne@hotmail.com',
+    ]
+
     send_mail(
-        'Mensagem recebida do SOS Kardec website',
+        'Nova mensagem recebida do SOS Kardec website',
         'Mensagem: \n' + message + '\n',
         'soskardec@gmail.com',
-        ['leofelipe222@hotmail.com', 'soskardec@gmail.com', 'contact@soskardec.com'],
+        mail_list,
         fail_silently=False,
     )
 

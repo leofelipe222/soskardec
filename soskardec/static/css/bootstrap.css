@@ -3101,11 +3101,16 @@ input[type="button"].btn-block {
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: #10284e;
+  opacity: 0.9rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
   .card-header:first-child {
+    background-color: #10284e;
+    opacity: 0.9rem;
     border-radius: calc( 0.25rem - 1px) calc( 0.25rem - 1px) 0 0; }
   .card-header + .list-group .list-group-item:first-child {
+    background-color: #10284e;
+    opacity: 0.9rem;
     border-top: 0; }
 
 .card-footer {
@@ -4281,6 +4286,7 @@ button.close {
   vertical-align: text-top !important; }
 
 .bg-primary {
+  opacity: 0.9rem;
   background-color: #10284e !important; }
 
 a.bg-primary:hover, a.bg-primary:focus,

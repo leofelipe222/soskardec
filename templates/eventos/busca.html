@@ -9,6 +9,7 @@
     <div class="container">
         <div class="row text-center">
           <div class="col-md-12">
+            <img src="{% static 'img/sos_logo.png' %}" class="main-logo">
             <h1 class="display-4">{% trans "Busca de Eventos" %} </h1>
           </div>
         </div>
@@ -21,14 +22,14 @@
             <div class="form-row">
               <div class="col-md-8 mb-3 offset-md-2">
                 <label class="sr-only">Keywords</label>
-                <input type="text" name="keywords" class="form-control" placeholder="Keywords to search" value="{{values.keywords}}">
+                <input type="text" name="keywords" class="form-control" placeholder="{% trans 'Palavra-chave da busca' %}" value="{{values.keywords}}">
               </div>
             </div>
             <!-- Form Row 2 -->
             <div class="form-row">
               <div class="col-md-4 mb-3 offset-md-2"> <!-- offset-md-2 align the form in center horizontally -->
-                <label class="sr-only"> {% trans "City" %} </label>
-                <input type="text" name="city" class="form-control" placeholder="Cidade" value="{{values.city}}">
+                <label class="sr-only"> {% trans "Cidade" %} </label>
+                <input type="text" name="city" class="form-control" placeholder="{% trans 'Cidade' %}" value="{{values.city}}">
             </div>
             <div class="col-md-4 mb-3">
               <label class="sr-only"> {% trans "Estado" %} </label>

@@ -28,7 +28,8 @@
                   <input type="password" name="password" class="form-control" required>
                 </div>
 
-                <input type="submit" value="Login" class="btn btn-primary btn-block">
+                <input type="submit" value="Login" class="btn btn-primary btn-block"><br>
+                <a href="{% url 'password_reset' %}" class="card-text">{% trans "Esqueceu a senha?" %}</a>
               </form>
             </div>
           </div>

@@ -54,7 +54,7 @@
                       <td>{{ contact.id }}</td>
                       <td>{{ contact.message }}</td>
                       <td>
-                        <a class="btn btn-light" href="{% url 'contact' %}"> {% trans "Abrir Mensagem" %} </a>
+                        <a class="btn btn-light" href="#"> {% trans "Abrir Mensagem" %} </a>
                       </td>
                     </tr>
                   {% endfor %}
@@ -63,7 +63,10 @@
         {% else %}
           <p class="lead"> {% trans "Nenhuma mensagem foi encontrada" %} .</p>
         {% endif %}
-        </div>
+        </div>        
+      </div>
+      <div class="row">
+        {% trans "Esta página ainda está em desenvolvimento..." %}
       </div>
     </div>
   </section>

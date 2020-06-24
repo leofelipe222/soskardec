@@ -4,12 +4,15 @@
 {% load humanize %}
 {% block title %} | {{evento.title}} {% endblock %}
 {% block content %}
-<section id="showcase-inner" class="py-4 text-primary">
-    <div class="container">
-      <div class="row text-center">
+<!-- Section -->
+  <section id="showcase-inner" class="py-4 text-primary">
+    <div class="row text-center">
+      <div class="container">
         <div class="col-md-12">
-          <h1 class="display-4">{{ evento.title }}</h1>
-        </div>
+            <img src="{% static 'img/sos_logo.png' %}" class="main-logo">
+            <h1 class="display-4">Spiritist Organization of Seattle</h1>
+          </div>
+      </div>
       </div>
     </div>
   </section>
@@ -34,121 +37,96 @@
   <!-- Listing -->
   <section id="listing" class="py-4">
     <div class="container">
-      <a href="{% url 'eventos' %}" class="btn btn-light mb-4"> {% trans "Voltar para Eventos" %} </a>
-      <div class="row">
-        <div class="col-md-9">
-          <!-- Home Main Image -->
-          <img src="{{ evento.photo_main.url }}" alt="" class="img-main img-fluid mb-3">
-          <!-- Thumbnails -->
-          <div class="row mb-5 thumbs row-eq-height">
-            {% if evento.photo_1 %}
-            <div class="col-md-2">
-              <a href="{{ evento.photo_1.url }}" data-lightbox="home-images">
-                <img src="{{ evento.photo_1.url }}" alt="" class="img-fluid img-thumbnail">
-              </a>
-            </div>
-            {% endif %}
-            {% if evento.photo_2 %}
-            <div class="col-md-2">
-              <a href="{{ evento.photo_2.url }}" data-lightbox="home-images">
-                <img src="{{ evento.photo_2.url }}" alt="" class="img-fluid img-thumbnail">
-              </a>
-            </div>
-            {% endif %}
-            {% if evento.photo_3 %}
-            <div class="col-md-2">
-              <a href="{{ evento.photo_3.url }}" data-lightbox="home-images">
-                <img src="{{ evento.photo_3.url }}" alt="" class="img-fluid img-thumbnail">
-              </a>
-            </div>
-            {% endif %}
-            {% if evento.photo_4 %}
-            <div class="col-md-2">
-              <a href="{{ evento.photo_4.url }}" data-lightbox="home-images">
-                <img src="{{ evento.photo_4.url }}" alt="" class="img-fluid img-thumbnail">
-              </a>
-            </div>
-            {% endif %}
-            {% if evento.photo_5 %}
-            <div class="col-md-2">
-              <a href="{{ evento.photo_5.url }}" data-lightbox="home-images">
-                <img src="{{ evento.photo_5.url }}" alt="" class="img-fluid img-thumbnail">
-              </a>
-            </div>
-            {% endif %}
-            {% if evento.photo_6 %}
-            <div class="col-md-2">
-              <a href="{{ evento.photo_6.url }}" data-lightbox="home-images">
-                <img src="{{ evento.photo_6.url }}" alt="" class="img-fluid img-thumbnail">
-              </a>
-            </div>
-            {% endif %}
-            {% if evento.photo_7 %}
-            <div class="col-md-2">
-              <a href="{{ evento.photo_7.url }}" data-lightbox="home-images">
-                <img src="{{ evento.photo_7.url }}" alt="" class="img-fluid img-thumbnail">
-              </a>
-            </div>
-            {% endif %}
-            {% if evento.photo_8 %}
-            <div class="col-md-2">
-              <a href="{{ evento.photo_8.url }}" data-lightbox="home-images">
-                <img src="{{ evento.photo_8.url }}" alt="" class="img-fluid img-thumbnail">
-              </a>
-            </div>
-            {% endif %}
-            {% if evento.photo_9 %}
-            <div class="col-md-2">
-              <a href="{{ evento.photo_9.url }}" data-lightbox="home-images">
-                <img src="{{ evento.photo_9.url }}" alt="" class="img-fluid img-thumbnail">
-              </a>
-            </div>
-            {% endif %}
-            {% if evento.photo_10 %}
-            <div class="col-md-2">
-              <a href="{{ evento.photo_10.url }}" data-lightbox="home-images">
-                <img src="{{ evento.photo_10.url }}" alt="" class="img-fluid img-thumbnail">
-              </a>
-            </div>
-            {% endif %}
-
+      <div class="text-center">
+        <h3 class="">{{ evento.title }}</h3><br>
+      </div>
+      <div class="row-grid">
+        <div class="column-img-grid">
+          {% if evento.photo_1 %}
+            <a href="{{ evento.photo_1.url }}" data-lightbox="home-images">
+              <img src="{{ evento.photo_1.url }}" alt="" class="img-rounded" width="200" height="132">
+            </a>
+          {% endif %}
+          {% if evento.photo_2 %}
+            <a href="{{ evento.photo_2.url }}" data-lightbox="home-images">
+              <img src="{{ evento.photo_2.url }}" alt="" class="img-rounded" width="200" height="132">
+            </a>
+          {% endif %}
+          {% if evento.photo_3 %}
+            <a href="{{ evento.photo_3.url }}" data-lightbox="home-images">
+              <img src="{{ evento.photo_3.url }}" alt="" class="img-rounded" width="200" height="132">
+            </a>
+          {% endif %}
+          {% if evento.photo_4 %}
+            <a href="{{ evento.photo_4.url }}" data-lightbox="home-images">
+              <img src="{{ evento.photo_4.url }}" alt="" class="img-rounded" width="200" height="132">
+            </a>
+          {% endif %}
+          {% if evento.photo_5 %}
+            <a href="{{ evento.photo_5.url }}" data-lightbox="home-images">
+              <img src="{{ evento.photo_5.url }}" alt="" class="img-rounded" width="200" height="132">
+            </a>
+          {% endif %}
+          {% if evento.photo_6 %}
+            <a href="{{ evento.photo_6.url }}" data-lightbox="home-images">
+              <img src="{{ evento.photo_6.url }}" alt="" class="img-rounded" width="200" height="132">
+            </a>
+          {% endif %}
+          {% if evento.photo_7 %}
+            <a href="{{ evento.photo_7.url }}" data-lightbox="home-images">
+              <img src="{{ evento.photo_7.url }}" alt="" class="img-rounded" width="200" height="132">
+            </a>
+          {% endif %}
+          {% if evento.photo_8 %}
+            <a href="{{ evento.photo_8.url }}" data-lightbox="home-images">
+              <img src="{{ evento.photo_8.url }}" alt="" class="img-rounded" width="200" height="132">
+            </a>
+          {% endif %}
+          {% if evento.photo_9 %}
+            <a href="{{ evento.photo_9.url }}" data-lightbox="home-images">
+              <img src="{{ evento.photo_9.url }}" alt="" class="img-rounded" width="200" height="132">
+            </a>
+          {% endif %}
+          {% if evento.photo_10 %}
+            <a href="{{ evento.photo_10.url }}" data-lightbox="home-images">
+              <img src="{{ evento.photo_10.url }}" alt="" class="img-rounded" width="200" height="132">
+            </a>
+          {% endif %}
+        </div>
+      </div>
+      <br>
+        <!-- Description -->
+        <div class="row mb-5">
+          <div class="col-md-6">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-dark">
+                  <i class="fas fa-map-marker"></i> {% trans "Localização" %}:
+                  <span class="float-right">{{ evento.city }}, {{ evento.state }} - {{ evento.zipcode }}</span>
+              </li>
+              <li class="list-group-item text-dark">
+                  <i class="fas fa-bed"></i> {% trans "Data do Evento" %}: 
+                  <span class="float-right">{{ evento.event_date | timesince }}</span>
+              </li>
+              <li class="list-group-item text-dark">
+                <i class="fas fa-bath"></i> {% trans "Tipo de Evento" %}:
+                <span class="float-right">{{ evento.event_type }}</span>
+              </li>
+              <li class="list-group-item text-dark">
+                <i class="fas fa-car"></i> {% trans "Voluntário Responsável" %}:
+                <span class="float-right">{{ evento.volunteer }}</span>
+              </li>
+            </ul>
           </div>
-          <!-- Fields -->
-          <div class="row mb-5 fields">
-            <div class="col-md-6">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item text-dark">
-                    <i class="fas fa-map-marker"></i> {% trans "Localização" %}:
-                    <span class="float-right">{{ evento.city }}, {{ evento.state }} - {{ evento.zipcode }}</span>
-                </li>
-                <li class="list-group-item text-dark">
-                   <i class="fas fa-bed"></i> {% trans "Data do Evento" %}: 
-                   <span class="float-right">{{ evento.event_date }}</span>
-                </li>
-                <li class="list-group-item text-dark">
-                  <i class="fas fa-bath"></i> {% trans "Tipo de Evento" %}:
-                  <span class="float-right">{{ evento.event_type }}</span>
-                </li>
-                <li class="list-group-item text-dark">
-                  <i class="fas fa-car"></i> {% trans "Voluntário Responsável" %}:
-                  <span class="float-right">{{ evento.volunteer }}</span>
-                </li>
-              </ul>
-            </div>
-           </div>
-
-          <!-- Description -->
-          <div class="row mb-5">
-            <div class="col-md-12">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-dark">
-                      <i class="fas fa-money-bill-alt"></i> {% trans "Descrição" %}:<br><br>
-                      <span class="float-right">{{ evento.description }}</span>
-                    </li>
-                  </ul>
-            </div>
+          <div class="col-md-6">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-dark">
+                <i class="fas fa-money-bill-alt"></i> {% trans "Descrição" %}:<br><br>
+                <span class="float-right">{{ evento.description }}</span>
+              </li>
+            </ul>
           </div>
         </div>
+      <a href="{% url 'eventos' %}" class="btn btn-primary"> {% trans "Voltar para Eventos" %} </a>
       </div>
     </div>
   </section>

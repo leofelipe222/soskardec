@@ -32,7 +32,7 @@ class Evento(models.Model):
 
 
     # Resize image automatically
-    def save(self):
+    def save(self, *args, **kwargs):
         # Runs the save method of the parent class
         super().save()
 

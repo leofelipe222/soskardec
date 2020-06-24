@@ -29,7 +29,11 @@ msgstr "English"
 
 #: templates/accounts/login.html:22 templates/accounts/registrar.html:29
 msgid "Usuário"
-msgstr "User"
+msgstr "Username"
+
+#: templates/accounts/login.html:22 templates/accounts/registrar.html:32
+msgid "Esqueceu a senha?"
+msgstr "Forgot password?"
 
 #: templates/accounts/login.html:27 templates/accounts/registrar.html:37
 msgid "Senha"
@@ -37,7 +41,7 @@ msgstr "Password"
 
 #: templates/accounts/painel_usuario.html:10
 msgid "Bem Vindo ao"
-msgstr "| Welcome"
+msgstr "Welcome to "
 
 #: templates/accounts/painel_usuario.html:11
 msgid ""
@@ -71,6 +75,11 @@ msgstr "See Message"
 msgid "Nenhuma mensagem foi encontrada"
 msgstr "No messages were found"
 
+#: templates/accounts/painel_usuario.html:69
+msgid "Esta página ainda está em desenvolvimento"
+msgstr "This page is still under development"
+
+
 #: templates/accounts/registrar.html:13
 msgid "Registro"
 msgstr "Register"
@@ -99,13 +108,17 @@ msgstr "| Search Events"
 msgid "Busca de Eventos"
 msgstr "Search Events"
 
+#: templates/eventos/busca.html:24
+msgid "Palavra-chave da busca"
+msgstr "Keywords to search"
+
 #: templates/eventos/busca.html:30
-msgid "City"
-msgstr "Cidade"
+msgid "Cidade"
+msgstr "City"
 
 #: templates/eventos/busca.html:34 templates/eventos/busca.html:36
 msgid "Estado"
-msgstr ""
+msgstr "State"
 
 #: templates/eventos/busca.html:48
 msgid "Buscar Eventos"
@@ -122,8 +135,12 @@ msgstr "Type"
 
 #: templates/eventos/busca.html:103 templates/eventos/eventos.html:64
 #: templates/pages/index.html:91 templates/pages/index.html:138
-msgid "Responsável"
-msgstr "In Charge"
+msgid "Palestrante"
+msgstr "Presenter"
+
+#: templates/pages/index.html:95 templates/pages/index.html:138
+msgid "Idioma"
+msgstr "Language"
 
 #: templates/eventos/busca.html:110 templates/eventos/eventos.html:71
 #: templates/pages/index.html:145
@@ -168,8 +185,8 @@ msgid "| Nossos Eventos"
 msgstr "| Our Events"
 
 #: templates/eventos/eventos.html:11
-msgid "Histórico de Eventos"
-msgstr "Event History"
+msgid "Nossos Eventos"
+msgstr "Our Events"
 
 #: templates/eventos/eventos.html:12
 msgid ""
@@ -182,10 +199,6 @@ msgstr ""
 "shows some of our work. We have several types of events aimed at our "
 "community and fundraising for our assistance activities"
 
-#: templates/eventos/eventos.html:27
-msgid "Nossos Eventos"
-msgstr "Our Events"
-
 #: templates/eventos/eventos.html:30
 msgid "Procurar Eventos"
 msgstr "Search Events"
@@ -193,16 +206,6 @@ msgstr "Search Events"
 #: templates/pages/atividades.html:11
 msgid "Atividades da Casa"
 msgstr "Activities"
-
-#: templates/pages/atividades.html:12
-msgid ""
-"Notemos igualmente que é nos centros espíritas verdadeiramente "
-"sérios que se fazem os mais sinceros adeptos, porque os assistentes são "
-"tocados pela boa impressão que recebem. Allan Kardec"
-msgstr ""
-"Let us also note that it is in the truly serious spiritist centers that the "
-"most sincere followers are made, because the assistants are touched by the "
-"good impression they receive. Allan Kardec "
 
 #: templates/pages/atividades.html:31 templates/partials/_navbar.html:55
 msgid "Atividades"
@@ -376,8 +379,8 @@ msgid ""
 "\"O Espiritismo é uma ciência que trata da natureza, origem e destino dos "
 "Espíritos, e de suas relações com o mundo corporal.\" Allan Kardec"
 msgstr ""
-"Spiritism is a science that deals with the nature, origin and destiny of the "
-"Spirits, and their relations with the corporal world. Allan Kardec"
+"\"Spiritism is a science that deals with the nature, origin and destiny of the "
+"Spirits, and their relations with the corporal world.\" Allan Kardec"
 
 #: templates/pages/espiritismo.html:27 templates/partials/_navbar.html:28
 msgid "Espiritismo"
@@ -523,8 +526,7 @@ msgstr "| Welcome"
 
 #: templates/pages/index.html:21
 msgid "Nascer, morrer, renascer ainda e progredir sempre, tal é a lei."
-msgstr ""
-"To be born, to die, to be reborn yet and always progress, such is the law."
+msgstr "To be born, to die, to be reborn yet and always progress, such is the law."
 
 #: templates/pages/index.html:57
 msgid "Mensagem Espírita"
@@ -547,7 +549,7 @@ msgid ""
 "casa física e, no descanso de cada noite, um ensaio de regresso tranquilo ao "
 "teu lar verdadeiro, na Vida Espiritual.\""
 msgstr ""
-"Brother, do: from every teaching you receive, an instruction from the "
+"\"Brother, do: from every teaching you receive, an instruction from the "
 "Superior Plan; from every task, however small, an achievement in which you "
 "leave the best signs of your presence; from each conversion, a constructive "
 "understanding; from each conversation, a messenger of your cooperation, in "
@@ -559,7 +561,7 @@ msgstr ""
 "world! ... Keep your heart and conscience, in doing good, in such a way so "
 "that you can receive, with the awakening of each morning, a new rebirth in "
 "the physical house and, in the rest of each night, a rehearsal of a peaceful "
-"return to your true home, in Spiritual Life."
+"return to your true home, in Spiritual Life.\""
 
 #: templates/pages/index.html:60
 msgid "Autor"
@@ -610,18 +612,22 @@ msgid "Siga-nos no Instragam"
 msgstr "Follow-us on Instagram"
 
 #: templates/pages/sobre.html:12
+msgid "Fora da caridate, não há salvação"
+msgstr "Without charity, there is no salvation"
+
+#: templates/pages/atividades.html:12
 msgid ""
-"“Notemos igualmente que é nos centros espíritas verdadeiramente sérios que "
+"\"Notemos igualmente que é nos centros espíritas verdadeiramente sérios que "
 "se fazem os mais sinceros adeptos, porque os assistentes são tocados pela "
-"boa impressão que recebem. Allan Kardec\""
+"boa impressão que recebem.\" Allan Kardec"
 msgstr ""
-"Let us also note that it is in the truly serious spiritist centers that the "
+"\"Let us also note that it is in the truly serious spiritist centers that the "
 "most sincere followers are made, because the assistants are touched by the "
-"good impression they receive. Allan Kardec "
+"good impression they receive.\" Allan Kardec"
 
 #: templates/pages/sobre.html:27 templates/partials/_navbar.html:64
 msgid "Quem Somos"
-msgstr "Who We Are"
+msgstr "About Us"
 
 #: templates/pages/sobre.html:38
 msgid ""
@@ -636,6 +642,7 @@ msgstr ""
 #: templates/pages/sobre.html:39
 msgid "Nossa História"
 msgstr "Our Story"
+
 
 #: templates/pages/sobre.html:40
 msgid ""
@@ -677,7 +684,7 @@ msgstr "Food Pantry"
 
 #: templates/partials/_navbar.html:100
 msgid "Sair"
-msgstr "Exit"
+msgstr "Logout"
 
 #: templates/partials/_navbar.html:115
 msgid "Registrar"

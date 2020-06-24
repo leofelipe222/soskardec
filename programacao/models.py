@@ -2,12 +2,12 @@ from django.db import models
 from voluntarios.models import Voluntario
 from PIL import Image
 
-# Create your models here.
 class Programa(models.Model):
     # If the volunteer is deleted the event still remains in the DB
     volunteer = models.ForeignKey(Voluntario, on_delete=models.DO_NOTHING)
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
+    language = models.CharField(max_length=200, default="Portuguese")
     program_type = models.CharField(max_length=200)
     program_date = models.DateTimeField(blank=True)
     is_published = models.BooleanField(default=True)
