@@ -303,6 +303,19 @@ msgstr ""
 "evangelization given to this task, to express, in its scope, exactly what is "
 "accomplished in our groups of children and young people."
 
+#: templates/pages/atividades.html:57
+msgid "Crianças e Jovens"
+msgstr "Children and Youth"
+
+#: templates/pages/atividades.html:57
+msgid ""
+"Nosso trabalho visa a formação de futuros homens "
+"e mulheres de bem, utilizando os ensinamentos espiritas"
+
+msgstr ""
+"Our work aims at the formation of future good men "
+"and women, using the spiritual teachings"
+
 #: templates/pages/atividades.html:62
 msgid "Passes"
 msgstr "Spiritist Pass"
@@ -498,7 +511,7 @@ msgid ""
 "Evangelho: \"Dai de graça o que de graça recebestes\".\n"
 "            A prática espírita é realizada com simplicidade, sem nenhum "
 "culto exterior, dentro do princípio cristão de que Deus deve ser adorado em "
-"espírito e verdade "
+"espírito e verdade"
 msgstr ""
 "All spiritist practice is free, as the moral principle of the Gospel guides: "
 "(Give freely what you received free). Spiritist practice is performed with "
@@ -547,6 +560,12 @@ msgstr "Brazilian Spiritist Federation"
 msgid "Federação Espírita Americana"
 msgstr "US Spiritist Ferederation"
 
+msgid ""
+"O Culto no Lar é uma importante prática espírita que visa "
+"harmonizar o lar através do estudo do evangelho"
+msgstr ""
+"Home Worship is an important spiritist practice that aims "
+"to harmonize the home by studying the gospel"
 
 
 #: templates/pages/index.html:6
