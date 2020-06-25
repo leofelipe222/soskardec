@@ -505,11 +505,22 @@ msgstr ""
 "simplicity, without any external worship, within the Christian principle "
 "that God should be worshiped in spirit and truth"
 
-#: templates/pages/espiritismo.html:55
+#: templates/pages/espiritismo.html:56
+msgid "Quem é Allan Kardec?"
+msgstr "Who is Allan Kardec"
+
+#: templates/pages/espiritismo.html:66
+msgid ""
+"Foi um influente educador, autor e tradutor francês, notabilizou-se como o codificador do espiritismo"
+msgstr ""
+"He was an influential French educator, author and translator, he "
+"became famous as the codifier of spiritualism "
+
+#: templates/pages/espiritismo.html:63
 msgid "Quem é Chico Xavier?"
 msgstr "Who is Chico Xavier"
 
-#: templates/pages/espiritismo.html:56
+#: templates/pages/espiritismo.html:66
 msgid ""
 "Foi um médium, filantropo e um dos mais importantes expoentes do Espiritismo"
 msgstr ""
@@ -519,6 +530,24 @@ msgstr ""
 #: templates/pages/espiritismo.html:57
 msgid " Saiba Mais"
 msgstr "Find out more"
+
+#: templates/pages/espiritismo.html:75
+msgid "Livros em Português"
+msgstr "Books in Portuguese"
+
+#: templates/pages/espiritismo.html:76
+msgid "Livros em Inglês"
+msgstr "Books in English"
+
+#: templates/pages/espiritismo.html:77
+msgid "Federação Espírita Brasileira"
+msgstr "Brazilian Spiritist Federation"
+
+#: templates/pages/espiritismo.html:78
+msgid "Federação Espírita Americana"
+msgstr "US Spiritist Ferederation"
+
+
 
 #: templates/pages/index.html:6
 msgid "| Bem Vindo"

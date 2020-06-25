@@ -51,6 +51,15 @@
         </div>
         <div class="col-md-4">
           <div class="card">
+            <img class="card-img-top" src="{% static 'img/kardec_img_3.jpeg' %}" alt="">
+            <div class="card-body">
+              <h5 class="card-title"> {% trans "Quem é Allan Kardec?" %} </h5>
+              <p class="card-text">{% blocktrans %}Foi um influente educador, autor e tradutor francês, notabilizou-se como o codificador do espiritismo{% endblocktrans %}.</p>
+              <h6 class="text-secondary"><a href="https://pt.wikipedia.org/wiki/Allan_Kardec" target="_blank"> {% trans " Saiba Mais" %}...</a></h6>
+            </div>
+          </div>
+          <br><br>
+          <div class="card">
             <img class="card-img-top" src="{% static 'img/chicoxavier1.jpg' %}" alt="">
             <div class="card-body">
               <h5 class="card-title"> {% trans "Quem é Chico Xavier?" %} </h5>
@@ -58,6 +67,19 @@
               <h6 class="text-secondary"><a href="https://pt.wikipedia.org/wiki/Chico_Xavier" target="_blank"> {% trans " Saiba Mais" %}...</a></h6>
             </div>
           </div>
+          <br><br>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"> Links </h5>
+              <ul>
+                <li><a class="card-text" href="http://bvespirita.com/Livros-Menu.html" target="_blank">{% trans "Livros em Português" %}</a></li>
+                <li><a class="card-text" href="https://www.spiritist.us/e-books" target="_blank">{% trans "Livros em Inglês" %}</a></li>
+                <li><a class="card-text" href="https://www.febnet.org.br/portal/" target="_blank">{% trans "Federação Espírita Brasileira" %}</a></li>
+                <li><a class="card-text" href="https://www.spiritist.us/" target="_blank">{% trans "Federação Espírita Americana" %}</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>

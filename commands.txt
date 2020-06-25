@@ -1,0 +1,48 @@
+git status
+git add .
+git commit -m "Improved design and added content to home page"
+git push -u origin master
+pwd
+ls
+python manage.py startapp programacao
+
+python manage.py shell
+python manage.py migrate
+python manage.py runserver
+git add .
+git commit -m "Finished Programacao App"
+git push -u origin master
+python manage.py shell
+python manage.py makemigrations
+python manage.py migrate
+python manage.py collectstatic
+python manage.py makemigrations contacts
+python manage.py migrate
+python manage.py migrate --fake queue zero
+python manage.py migrate --fake contacts zero
+find . path "*/migrations/*.py"
+find . -path "*/migrations/*.py"
+find . -path "*/migrations/*.py"
+pip install gettext
+pip install python-gettext
+sudo brew install gettext
+brew install gettext
+sudo python manage.py makemessages -l en
+sudo python manage.py makemessages -d djangojs -l en
+python manage.py makemessages -l pt-br
+sudo python manage.py makemessages -l pt-br
+sudo python manage.py makemessages -d djangojs -l br
+pip search django-rosseta
+sudo pip install django-rosseta
+pip install django-rosseta
+sudo pip install django-rosetta
+sudo python manage.py makemessages -l en-us
+sudo python manage.py makemessages -d djangojs -l en-us
+
+sudo python manage.py compilemessages --locale en  
+python manage.py showmigrations
+python manage.py makemigrations
+sudo python manage.py compilemessages --locale en
+pip freeze
+pip freeze > requirements.txt
+history >> commands.txt
