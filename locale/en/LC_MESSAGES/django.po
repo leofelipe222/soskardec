@@ -128,6 +128,10 @@ msgstr "Search Events"
 msgid "Resultados da Busca"
 msgstr "Search Results"
 
+#: templates/pages/index.html:87
+msgid "Jesus Cristo"
+msgstr "Jesus Christ"
+
 #: templates/eventos/busca.html:99 templates/eventos/eventos.html:60
 #: templates/pages/index.html:87 templates/pages/index.html:134
 msgid "Tipo"
@@ -159,6 +163,10 @@ msgstr "Events"
 #: templates/eventos/evento.html:37
 msgid "Voltar para Eventos"
 msgstr "Back to Events"
+
+#: templates/eventos/evento.html:65
+msgid "Responsável"
+msgstr "In Charge"
 
 #: templates/eventos/evento.html:121
 msgid "Localização"
