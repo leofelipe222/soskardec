@@ -528,7 +528,7 @@ msgstr ""
 
 #: templates/pages/espiritismo.html:56
 msgid "Quem é Allan Kardec?"
-msgstr "Who is Allan Kardec"
+msgstr "Who is Allan Kardec?"
 
 #: templates/pages/espiritismo.html:66
 msgid ""
@@ -539,7 +539,7 @@ msgstr ""
 
 #: templates/pages/espiritismo.html:63
 msgid "Quem é Chico Xavier?"
-msgstr "Who is Chico Xavier"
+msgstr "Who is Chico Xavier?"
 
 #: templates/pages/espiritismo.html:66
 msgid ""

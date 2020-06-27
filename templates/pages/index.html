@@ -71,34 +71,32 @@
       {% if programas %}
         {% for program in programas %}
           <!-- Evento 1 -->
-          <div class="col-md-6 col-lg-6 mb-2">
+          <div class="col-md-6 col-lg-6 mb-4">
             <div class="card listing-preview">
               <img class="" src="{{ program.photo_main.url }}" alt="{{ program.description }}">
-              <div class="card-img-overlay">
-              </div>
-              <div class="card-body">
-                <hr>
-                <div class="row py-2 text-dark">
-                  <div class="col-12">
-                    <i class="fas fa-book-reader "></i> {% trans "Tópico" %}: {{ program.title }}</div>
+                <div class="card-body">
+                  <hr>
+                  <div class="row py-2 text-dark">
+                    <div class="col-12">
+                      <i class="fas fa-book-reader "></i> {% trans "Tópico" %}: {{ program.title }}</div>
+                  </div>
+                  <div class="row py-2 text-dark">
+                    <div class="col-12">
+                      <i class="fas fa-th-large"></i> {% trans "Tipo" %}: {{ program.program_type }}</div>
+                  </div>
+                  <div class="row py-2 text-dark">
+                    <div class="col-12">
+                      <i class="fas fa-user"></i> {% trans "Palestrante" %}: {{ program.volunteer }}</div>
+                  </div>
+                  <div class="row py-2 text-dark">
+                    <div class="col-12">
+                      <i class="fas fa-language"></i> {% trans "Idioma" %}: {{ program.language }}</div>
+                  </div>
+                  <div class="row text-dark pb-2">
+                    <div class="col-12">
+                      <i class="fas fa-clock"></i> {{ program.program_date }} </div>
+                  </div>
                 </div>
-                <div class="row py-2 text-dark">
-                  <div class="col-12">
-                    <i class="fas fa-th-large"></i> {% trans "Tipo" %}: {{ program.program_type }}</div>
-                </div>
-                <div class="row py-2 text-dark">
-                  <div class="col-12">
-                    <i class="fas fa-user"></i> {% trans "Palestrante" %}: {{ program.volunteer }}</div>
-                </div>
-                <div class="row py-2 text-dark">
-                  <div class="col-12">
-                    <i class="fas fa-language"></i> {% trans "Idioma" %}: {{ program.language }}</div>
-                </div>
-                <div class="row text-dark pb-2">
-                  <div class="col-12">
-                    <i class="fas fa-clock"></i> {{ program.program_date }} </div>
-                </div>
-              </div>
             </div>
           </div>
         {% endfor %}
