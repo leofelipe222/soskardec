@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, HttpResponse
 from django.contrib import messages, auth
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 from contacts.models import Contact
 
 # Create your views here.
@@ -44,6 +45,7 @@ def registrar(request):
     else:
         return render(request, 'accounts/registrar.html')
 
+
 def login(request):
     # Login user
     if request.method == 'POST':
@@ -68,6 +70,7 @@ def logout(request):
         messages.success(request, " - Logout Successful")
     return redirect('index')
 
+@login_required(login_url='login')
 def painel_usuario(request):
     # Gets the contact user that matches this user's id
     user_contacts = Contact.objects.order_by("-contact_date").filter(user_id=request.user.id)

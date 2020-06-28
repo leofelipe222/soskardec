@@ -39,11 +39,10 @@
         <div class="col-md-12">
           {% if user.is_authenticated %}
             <h2> {% trans "Olá" %}, {{ user.first_name }} {{ user.last_name }} </h2>
-          {% else %}
-            <!-- HTML Redirect after 5 seconds -->
-            <h2>It looks like you've logged in from another device, terminating current session...</h2>
-            <meta http-equiv="refresh" content="3; URL={% url 'login' %}"/>
-          {% endif %}
+            {% endif %}
+            <!-- HTML Redirect after 3 seconds -->
+            <!-- <h2>Permission Denied! Redirecting...</h2> -->
+            <!-- <meta http-equiv="refresh" content="3; URL={% url 'login' %}"/> -->
           {% if contacts %}
             <p> {% trans "Messanges encontradas" %}: </p>
               <table class="table">
