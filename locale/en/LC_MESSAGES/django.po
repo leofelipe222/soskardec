@@ -576,6 +576,26 @@ msgstr ""
 "to harmonize the home by studying the gospel"
 
 
+msgid "Evangelização Crianças e Jovens"
+msgstr "Evangelizing Children and Youth"
+
+
+msgid "Que os pequenos venham a mim e não os impeçam, pois a esses pertence o reino dos céus."
+msgstr "Let the little children come to me and do not hinder them, for to such belongs the kingdom of heaven."
+
+msgid "Tema"
+msgstr "Subject"
+
+msgid "Evangelização"
+msgstr "Evangelization"
+
+msgid "Evangelizador"
+msgstr "Envangelizer"
+
+msgid "Turma"
+msgstr "Group"
+
+
 #: templates/pages/index.html:6
 msgid "| Bem Vindo"
 msgstr "| Welcome"

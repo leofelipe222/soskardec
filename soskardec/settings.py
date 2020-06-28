@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'contacts.apps.ContactsConfig',
     'downloads.apps.DownloadsConfig',
     'programacao.apps.ProgramacaoConfig',
+    'evangelizacao.apps.EvangelizacaoConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'accounts.middlewares.OneSessionPerUSer',
 ]
 
 ROOT_URLCONF = 'soskardec.urls'

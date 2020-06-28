@@ -51,7 +51,7 @@
               <br><br>
             </p>
   
-            <h2> {% trans "Evangelização Infantil e Jovens" %} </h2>
+            <h2><a href="{% url 'evangelizacao'%}"> {% trans "Evangelização Infantil e Jovens" %}</a> </h2>
             <p class="mt-4">{% blocktrans %}A denominação de Evangelização Espírita Infanto-Juvenil, se dá à transmissão do conhecimento espírita e da moral evangélica pregada por Jesus. Como a preocupação não é somente com a transmissão de conhecimentos mas, sobretudo, com a formação moral, e como a formação moral se inspira no Evangelho, parece-nos muito apropriada à denominação de "evangelização espírita" dada a essa tarefa, por expressar, na sua abrangência, exatamente o que se realiza em nossos agrupamentos de crianças e jovens{% endblocktrans %}.
               <br><br>
             </p>
@@ -74,21 +74,23 @@
         </div>
         <div class="col-md-4">
           <div class="card">
+            <a href="{% url 'sobre'%}">
             <img class="card-img-top" src="{% static 'img/atendimento_fraterno_img_1.jpg' %}" alt="Fraternidate">
             <div class="card-body">
-              <h5 class="card-title"> {% trans "Estamos aqui para ajudar!" %} </h5>
+              <h5 class="card-title"> {% trans "Estamos aqui para ajudar!" %} </h5></a>
               <p class="card-text">{% blocktrans %}O atendimento fraterno no Centro Espírita é uma oportunidade de falarmos sem julgamentos ou medos{% endblocktrans %}.
               </p>
             </div>
           </div>
           <br><br>
           <div class="card">
-            <img class="card-img-top" src="{% static 'img/evang_img_1.jpeg' %}" alt="Fraternidate">
-            <div class="card-body">
-              <h5 class="card-title"> {% trans "Crianças e Jovens" %}! </h5>
-              <p class="card-text">{% blocktrans %}Nosso trabalho visa a formação de futuros homens e mulheres de bem, utilizando os ensinamentos espiritas{% endblocktrans %}.
-              </p>
-            </div>
+            <a href="{% url 'evangelizacao'%}">
+              <img class="card-img-top" src="{% static 'img/evang_img_1.jpeg' %}" alt="Fraternidate">
+              <div class="card-body">
+                <h5 class="card-title"> {% trans "Crianças e Jovens" %}! </h5></a>
+                <p class="card-text">{% blocktrans %}Nosso trabalho visa a formação de futuros homens e mulheres de bem, utilizando os ensinamentos espiritas{% endblocktrans %}.
+                </p>
+              </div>
           </div>
           <br><br>
           <div class="card">

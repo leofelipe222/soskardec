@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from eventos.models import Evento
 from programacao.models import Programa
+from evangelizacao.models import Evangelizacao
 from eventos.choices import state_choices
 from django.utils.translation import gettext
 
@@ -19,13 +20,13 @@ def index(request):
     return render(request, 'pages/index.html', context)
 
 
-# def programacao(request):
-#     # This is only needed if we had a separated page for
-#     programas = Programa.objects.order_by('-program_date').filter(is_published=True)
-#     context = {
-#         'programas': programas
-#     }
-#     return render(request, 'pages/index.html', context)
+def evangelizacao(request):
+    # This is only needed if we had a separated page for
+    evangelizacao = Evangelizacao.objects.order_by('-class_date').filter(is_published=True)
+    context = {
+        'evangelizacao': evangelizacao
+    }
+    return render(request, 'evangelizacao/evangelizacao.html', context)
 
 def busca(request):
     # Render busca template

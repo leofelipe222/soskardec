@@ -16,7 +16,7 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')), # This is a new app
     path('contacts/', include('contacts.urls')), # This is a new app
     path('programacao/', include('programacao.urls')), # This is a new app
-    # path('downloads/', include('downloads.urls')), # This is a new app
+    # path('evangelizacao/', include('evangelizacao.urls')), # This is a new app
     path('rosetta/', include('rosetta.urls')), # translation library
     path('i18n/', include('django.conf.urls.i18n')),
     path('i18n/', JavaScriptCatalog.as_view(), js_info_dict),
