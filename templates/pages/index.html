@@ -64,8 +64,7 @@
 <!-- Programação -->
 <section id="listings" class="py-5">
   <div class="container">
-    <h3 class="text-center mb-3 bg-light shadow p-3 mb-5 rounded">{% trans "Programação do Mês" %}
-    </h3>
+    <h3 class="text-center bg-primary text-white p-2 mb-5 rounded">{% trans "Programação do Mês" %}</h3>
       <div class="row">
       <!-- If there are any eventos in the DB -->
       {% if programas %}
@@ -110,10 +109,67 @@
   </div>
 </section>
 
+<!-- Evangelização -->
+<section id="listings" class="py-2">
+  <div class="container">
+    <h3 class="text-center bg-primary text-white p-2 mb-2 rounded">{% trans "Evangelização" %}</h3>
+    <div class="row py-4">
+      <!-- If there are any eventos in the DB -->
+      {% if evangelizacao %}
+        {% for evang in evangelizacao %}
+          <!-- Aulas Envagelização -->
+          <div class="col-md-12 col-lg-12 mb-4">
+            <div class="card listing-preview">
+                <div class="card-body">
+                  <div class="row py-2 text-dark">
+                    <div class="col-12">
+                      <i class="fas fa-book-reader "></i> {% trans "Tema" %}: {{ evang.description }}</div>
+                  </div>
+                  <hr>
+                  <div class="row py-2 text-dark">
+                    <div class="col-12">
+                      <i class="fas fa-book-reader "></i> {% trans "Tópico" %}: {{ evang.title }}</div>
+                  </div>
+                  <div class="row py-2 text-dark">
+                    <div class="col-12">
+                      <i class="fas fa-school"></i> {% trans "Turma" %}: {{ evang.class_type }}</div>
+                  </div>
+                  <div class="row py-2 text-dark">
+                    <div class="col-12">
+                      <i class="fas fa-chalkboard-teacher"></i> {% trans "Palestrante" %}: {{ evang.volunteer }}</div>
+                  </div>
+                  <div class="row py-2 text-dark">
+                    <div class="col-12">
+                      <i class="fas fa-language"></i> {% trans "Idioma" %}: {{ evang.language }}</div>
+                  </div>
+                  <div class="row text-dark pb-2">
+                    <div class="col-12">
+                      <i class="fas fa-clock"></i> {{ evang.class_date }} </div>
+                  </div>
+                  <div class="row text-dark pb-2">
+                    <div class="col-12">
+                      <i class="fas fa-download"></i><a href="{{ evang.doc_file.url }}"> Class Download -  PDF</a></div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        {% endfor %}
+      {% else %}
+        <!-- If there are no eventos in the DB -->
+        <div class="col-md-12">
+          <!-- <p><h3>Nenhuma programacao encontrada no banco de dados.</h3></p> -->
+          <p><h3>{% trans "Nenhuma programacao encontrada no banco de dados" %}.</h3></p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+
 <!-- Eventos -->
 <section id="listings" class="py-4">
   <div class="container">
-    <h3 class="text-center mb-3 bg-light shadow p-3 mb-5 rounded">{% trans "Eventos Recentes" %}</h3>
+    <h3 class="text-center bg-primary text-white p-2 mb-5 rounded">{% trans "Eventos Recentes" %}</h3>
       <div class="row">
       <!-- If there are any eventos in the DB -->
       {% if eventos %}
@@ -121,7 +177,7 @@
           <!-- Evento 1 -->
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="card listing-preview">
-              <img class="card-img-top" src="{{ evento.photo_main.url }}" alt="">
+              <img class="card-img-top" width="300" height="232" src="{{ evento.photo_main.url }}" alt="">
               <div class="card-img-overlay">
               </div>
               <div class="card-body">
@@ -161,7 +217,7 @@
 
 <section id="listings" class="py-3">
   <div class="container">
-    <h3 class="text-center mb-3 bg-light shadow p-3 mb-5 rounded">{% trans "Como Ajudar" %}</h3>
+    <h3 class="text-center bg-primary text-white p-2 mb-3 rounded">{% trans "Como Ajudar" %}</h3>
     <div class="row">
       <div class="col-md-4">
         <a href="http://smile.amazon.com/ch/81-3758631" target="_blank">

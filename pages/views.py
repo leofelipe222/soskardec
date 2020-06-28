@@ -10,15 +10,15 @@ from django.utils.translation import gettext
 def index(request):
     # Render index template, shows 3 eventos only
     eventos = Evento.objects.order_by('-event_date').filter(is_published=True)[:3]
-
-    programas = Programa.objects.order_by('-program_date').filter(is_published=True)
+    programas = Programa.objects.order_by('-program_date').filter(is_published=True)[:4]
+    evangelizacao = Evangelizacao.objects.order_by('-class_date').filter(is_published=True)[:2]
     
     context = {
         'programas': programas,
-        'eventos': eventos
+        'eventos': eventos,
+        'evangelizacao': evangelizacao,
     }
     return render(request, 'pages/index.html', context)
-
 
 def evangelizacao(request):
     # This is only needed if we had a separated page for
