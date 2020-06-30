@@ -27,6 +27,30 @@ msgstr "Portuguese"
 msgid "English"
 msgstr "English"
 
+msgid "INFORMATIVO SOBRE COVID-19 À COMUNIDADE"
+msgstr "NOTE TO THE COMMUNITY ABOUT COVID-19"
+
+msgid "Presados Membros do Spiritist Organization of Seattle"
+msgstr "Dear Members of Spiritist Organization of Seattle"
+
+msgid ""
+"Seguindo as recomendações do governo e das autoridades de saúde, "
+"a Spiritist Organization of Seattle decidiu encerrar nossas reuniões públicas de Domingo, "
+"na esperança de retardar a propagação do coronavírus. À medida que passamos juntos por esses "
+"tempos tumultuados juntos, continuemos nosso compromisso com o crescimento espiritual de uma "
+"nova maneira. Nossas reuniões de serviço ocorrerão online, até novo aviso. Você é calorosamente "
+"convidado a participar de nossos cultos de Domingo"
+
+msgstr ""
+"Following government and health authorities’ recommendations, "
+"the Spiritist Organization of Seattle has moved to shut down our "
+"Sunday public meetings, hoping to slow the spread of the coronavirus. "
+"As we journey through these tumultuous times together, let us continue our "
+"commitment to Spiritual growth in a new way. Our service meetings will take place "
+"online, until futher notice. You’re warmly invited to attend our Sunday services"
+
+
+
 #: templates/accounts/login.html:22 templates/accounts/registrar.html:29
 msgid "Usuário"
 msgstr "Username"
