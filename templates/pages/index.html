@@ -112,18 +112,26 @@
 <!-- Evangelização -->
 <section id="listings" class="py-2">
   <div class="container">
-    <h3 class="text-center bg-primary text-white p-2 mb-2 rounded">{% trans "Evangelização" %}</h3>
+    <a href="{% url 'evangelizacao' %}"><h3 class="text-center bg-primary text-white p-2 mb-2 rounded">{% trans "Evangelização" %}</h3></a>
     <div class="row py-4">
       <!-- If there are any eventos in the DB -->
       {% if evangelizacao %}
         {% for evang in evangelizacao %}
           <!-- Aulas Envagelização -->
-          <div class="col-md-12 col-lg-12 mb-4">
+          <div class="col-md-6 col-lg-6 mb-4">
             <div class="card listing-preview">
                 <div class="card-body">
                   <div class="row py-2 text-dark">
                     <div class="col-12">
-                      <i class="fas fa-book-reader "></i> {% trans "Tema" %}: {{ evang.description }}</div>
+                      <div class="row">
+                        <div class="col-2 pr-0">
+                          <i class="fas fa-child fa-4x"></i>
+                        </div>
+                        <div id="evang-child-symbol" class="col-10 pl-0">
+                          {{ evang.description }}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <hr>
                   <div class="row py-2 text-dark">
@@ -169,7 +177,7 @@
 <!-- Eventos -->
 <section id="listings" class="py-4">
   <div class="container">
-    <h3 class="text-center bg-primary text-white p-2 mb-5 rounded">{% trans "Eventos Recentes" %}</h3>
+    <a href="{% url 'eventos' %}"><h3 class="text-center bg-primary text-white p-2 mb-5 rounded">{% trans "Eventos Recentes" %}</h3></a>
       <div class="row">
       <!-- If there are any eventos in the DB -->
       {% if eventos %}
