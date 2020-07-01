@@ -50,17 +50,8 @@
           {% else %}
             class="nav-item mr-3"
           {% endif %}
-        >
-          <a class="nav-link" href="{% url 'atividades' %}">{% trans "Atividades" %} </a>
-        </li>
-          <li 
-            {% if 'sobre' in request.path %}
-              class="nav-item active mr-3"
-            {% else %}
-              class="nav-item mr-3"
-            {% endif %}
           >
-            <a class="nav-link" href="{% url 'sobre' %}">{% trans "Quem Somos" %}</a>
+            <a class="nav-link" href="{% url 'atividades' %}">{% trans "Atividades" %} </a>
           </li>
           <li 
             {% if 'assistencial' in request.path %}
@@ -70,6 +61,15 @@
             {% endif %}
           >
             <a class="nav-link" href="{% url 'assistencial' %}">{% trans "Trabalho Social" %}</a>
+          </li>
+          <li 
+            {% if 'sobre' in request.path %}
+              class="nav-item active mr-3"
+            {% else %}
+              class="nav-item mr-3"
+            {% endif %}
+          >
+            <a class="nav-link" href="{% url 'sobre' %}">{% trans "Quem Somos" %}</a>
           </li>
         </ul>
 

@@ -478,10 +478,6 @@ msgstr ""
 "knowledge of the fundamental basis of the Doctrine in the scientific, "
 "philosophical and religious aspects"
 
-#: templates/pages/atividades.html:57
-msgid "Evangelização Infantil e Jovens"
-msgstr "Evangelization for Children and Youth"
-
 #: templates/pages/atividades.html:58
 msgid ""
 "A denominação de Evangelização Espírita Infanto-Juvenil, se dá à transmissão "
@@ -794,8 +790,11 @@ msgstr ""
 msgid "Tema"
 msgstr "Subject"
 
+msgid "Evangelização Infantil e Jovens"
+msgstr "Children and Youth Evangelism"
+
 msgid "Evangelização"
-msgstr "Evangelization"
+msgstr "Evangelism"
 
 msgid "Evangelizador"
 msgstr "Envangelizer"
