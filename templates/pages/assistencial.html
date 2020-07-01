@@ -40,14 +40,16 @@
             <p class="mt-4">{% blocktrans %}Através de doações recebidas pelo SOS Kardec, temos conseguido fornecer alimentos aos moradores mais necessitados do Country Club States (Bothel). A idéia é tentar reduzir os custos com alimentação para que eles possam comprar seus remédios e arcar com outras despesas do dia a dia{% endblocktrans %}.
             <br><br>
             {% blocktrans %}Recebemos as doações todos os Domingos no Centro Espírita, orgazimos e fazemos a entrega aos moradores. Pedimos que os alimentos doadoes não sejam perecíveis e que estejam em embalagens originais e seladas{% endblocktrans %}.
+            <p>{% blocktrans %}Também podemos buscar as doações na regiões do King County and Snohomish County caso o doador não frequente o nosso centro espírita{% endblocktrans %}.</p>
             </p>
+
             <h2 class="mt-4"><a href="https://www.marysplaceseattle.org" target="_blank">Mary's Place</a></h2>
             <p class="mt-4">{% blocktrans %}Trabalhamos também com abrigos, levando doações de alimentos e produtos de higiene pessoal, roupas, sapatos para as famílias abrigadas{% endblocktrans %}. 
             <br><br>
             {% blocktrans %}Mary's Place oferece várias oportunidades para voluntariado. Você também pode doar seu tempo em uma destas áreas: Lidere uma aula, ensine um aluno, ajude com pedidos de moradia ou emprego, ensine um ofício, ajude no escritório, doe serviços profissionais, etc. Você pode trazer esperança e amor para mulheres, crianças e famílias{% endblocktrans %}.
             </p>
             <p><a href="https://www.marysplaceseattle.org/get-involved" target="_blank">{% trans "Saiba Mais" %}...</a></p>
-  
+            
             <h2 class="mt-4"><a href="https://sophiaway.org/" target="_blank">The Sophia Way</a></h2>
             <p class="mt-4">{% blocktrans %}Com o abrigo Sophia Way é permitida a doação de refeições feitas em casa ou de restaurantes. São servidos almoço e janta para uma variada quantia de pessoas todos os dias{% endblocktrans %}.</p>
             <p><a href="https://sophiaway.org/donate-meals/" target="_blank">{% trans "Saiba Mais" %}...</a></p>
@@ -63,11 +65,16 @@
               <li>{% trans "Sabão Líquido de corpo (viagem ou tamanho completo)" %}</li>
               <li>{% trans "Copos de água de plástico" %}</li>
               <li>{% trans "Lanches embalados individualmente (batatas fritas, bolachas, biscoitos, etc.)" %}</li>
-              </ul>
-            </p>
+            </ul>
+          </p>
+          
+          <p><a href="https://sophiaway.org/shelter-needs/" target="_blank">{% trans "Saiba Mais" %}...</a></p>
+        </div>
 
-            <p><a href="https://sophiaway.org/shelter-needs/" target="_blank">{% trans "Saiba Mais" %}...</a></p>
-          </div>
+        <h2 class="mt-4"><a href="https://bethematch.org/" target="_blank">Be the Match</a></h2>
+        <p class="mt-4">{% blocktrans %}Para as milhares de pessoas diagnosticadas todos os anos com câncer de sangue com risco de vida, como leucemia e linfoma, existe uma cura. Nos últimos 30 anos, o Be The Match ®, operado pelo National Marrow Donor Program ® (NMDP), gerencia o maior e mais diversificado registro de medula óssea do mundo. Trabalham todos os dias para salvar vidas através de transplantes{% endblocktrans %}.
+        </p>
+        <p><a href="https://bethematch.org/about-us/" target="_blank">{% trans "Saiba Mais" %}...</a></p>
         </div>
         <div class="col-md-4">
           <div class="card">
@@ -81,8 +88,18 @@
           </div>
           <br><br>
           <div class="card">
-            <a href="{% url 'evangelizacao' %}">
+            <a href="https://www.marysplaceseattle.org/" target="_blank">
               <img class="card-img-top" src="{% static 'img/shelter_girl_img_1.jpg' %}" alt="Fraternidate">
+              <div class="card-body">
+                <h5 class="card-title"> {% trans "Missão do Mary's Place" %}! </h5></a>
+                <p class="card-text">{% blocktrans %}O Mary's Place oferece abrigo e serviços seguros e inclusivos que apoiam mulheres, crianças e famílias em sua jornada para sair dos sem-teto{% endblocktrans %}.
+                </p>
+              </div>
+          </div>
+          <br><br>
+          <div class="card">
+            <a href="https://sophiaway.org/" target="_blank">
+              <img class="card-img-top" src="{% static 'img/homeless_woman_img_1.jpg' %}">
               <div class="card-body">
                 <h5 class="card-title"> {% trans "Missão do Sophia Way" %}! </h5></a>
                 <p class="card-text">{% blocktrans %}Acabar com a falta de moradia para as mulheres, oferecendo abrigo, serviços sociais e moradia permanente com apoio{% endblocktrans %}.

@@ -46,7 +46,7 @@ msgstr "Food Pantry"
 msgid ""
 "Através de doações recebidas pelo SOS Kardec, "
 "temos conseguido fornecer alimentos aos moradores "
-"mais necessitados do Country Club States (Bothel). A "
+"mais necessitados do Country Club States (Bothell). A "
 "idéia é tentar reduzir os custos com alimentação para "
 "que eles possam comprar seus remédios e arcar com outras "
 "despesas do dia a dia"
@@ -55,7 +55,7 @@ msgstr ""
 "Through donations received by SOS Kardec, "
 "we have been able to provide food to the "
 "neediest residents of the Country Club States "
-"(Bothel). The idea is to try to reduce food costs "
+"(Bothell). The idea is to try to reduce food costs "
 "so that they can afford their medicine and bear "
 "other daily expenses"
 
@@ -68,6 +68,16 @@ msgstr ""
 "We collect donations every Sunday at the Spiritist Center, we sort and deliver them "
 "to the residents. We ask that donated foods are not perishable and that they are in "
 "original and sealed packaging"
+
+msgid ""
+"Também podemos buscar as doações na regiões do King County "
+"and Snohomish County caso o doador não frequente o nosso "
+"centro espírita"
+
+msgstr ""
+"We can also arrange for donation pickup in the King County "
+"and Snohomish County regions if the donor does not attend "
+"our spiritist center."
 
 msgid ""
 "Trabalhamos também com abrigos, levando doações de alimentos e produtos de higiene "
@@ -159,6 +169,33 @@ msgstr ""
 
 msgid "Missão do Sophia Way"
 msgstr "The Sophia Way's Mission"
+
+
+msgid "Missão do Mary's Place"
+msgstr "Mary's Place Mission"
+
+msgid ""
+"O Mary's Place oferece abrigo e serviços seguros e inclusivos "
+"que apoiam mulheres, crianças e famílias em sua jornada para "
+"sair dos sem-teto"
+
+msgstr ""
+"Mary’s Place provides safe, inclusive shelter and services "
+"that support women, children and families on their journey "
+"out of homelessness"
+
+msgid ""
+"Para as milhares de pessoas diagnosticadas todos os anos com câncer de sangue "
+"com risco de vida, como leucemia e linfoma, existe uma cura. Nos últimos 30 anos, "
+"o Be The Match ®, operado pelo National Marrow Donor Program ® (NMDP), gerencia o maior "
+"e mais diversificado registro de medula óssea do mundo. Trabalham todos os dias para "
+"salvar vidas através de transplantes"
+
+msgstr ""
+"For the thousands of people diagnosed every year with life-threatening blood cancers like " "leukemia and lymphoma, a cure exists. Over the past 30 years Be The Match ® , operated by the "
+"National Marrow Donor Program ®  (NMDP), has managed the largest and most diverse marrow "
+"registry in the world. They work every day to save lives through transplant"
+
 
 msgid ""
 "Seguindo as recomendações do governo e das autoridades de saúde, "
