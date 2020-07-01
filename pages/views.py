@@ -36,6 +36,10 @@ def sobre(request):
     # Render sobre template
     return render(request, 'pages/sobre.html')
 
+def assistencial(request):
+    # Render assistencial template
+    return render(request, 'pages/assistencial.html')
+
 def espiritismo(request):
     return render(request, 'pages/espiritismo.html')
 

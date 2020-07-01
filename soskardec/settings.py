@@ -121,7 +121,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'pt-br'
+LANGUAGE_CODE = 'pt'
 
 TIME_ZONE = 'UTC'
 
@@ -134,8 +134,8 @@ USE_TZ = True
 from django.utils.translation import ugettext_lazy as gettext
 
 LANGUAGES = (
-    ('pt-br', gettext('Português')),
-    ('en-us', gettext('English')),
+    ('pt', gettext('Português')),
+    ('en', gettext('English')),
 )
 
 LOCALE_PATHS = [

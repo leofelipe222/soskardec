@@ -33,6 +33,133 @@ msgstr "NOTE TO THE COMMUNITY ABOUT COVID-19"
 msgid "Presados Membros do Spiritist Organization of Seattle"
 msgstr "Dear Members of Spiritist Organization of Seattle"
 
+
+msgid "Uma associação filantrópica, voluntária e sem fins lucrativos"
+msgstr "A philanthropic, voluntary and non-profit association"
+
+msgid "Trabalhos Assistenciais"
+msgstr "Assistance Work"
+
+msgid "Cesta Básica"
+msgstr "Food Pantry"
+
+msgid ""
+"Através de doações recebidas pelo SOS Kardec, "
+"temos conseguido fornecer alimentos aos moradores "
+"mais necessitados do Country Club States (Bothel). A "
+"idéia é tentar reduzir os custos com alimentação para "
+"que eles possam comprar seus remédios e arcar com outras "
+"despesas do dia a dia"
+
+msgstr ""
+"Through donations received by SOS Kardec, "
+"we have been able to provide food to the "
+"neediest residents of the Country Club States "
+"(Bothel). The idea is to try to reduce food costs "
+"so that they can afford their medicine and bear "
+"other daily expenses"
+
+msgid ""
+"Recebemos as doações todos os Domingos no Centro Espírita, orgazimos e fazemos a "
+"entrega aos moradores. Pedimos que os alimentos doadoes não sejam perecíveis e que "
+"estejam em embalagens originais e seladas"
+
+msgstr ""
+"We collect donations every Sunday at the Spiritist Center, we sort and deliver them "
+"to the residents. We ask that donated foods are not perishable and that they are in "
+"original and sealed packaging"
+
+msgid ""
+"Trabalhamos também com abrigos, levando doações de alimentos e produtos de higiene "
+"pessoal, roupas, sapatos para as famílias abrigadas"
+
+msgstr ""
+"We also work with shelters, taking donations of food and personal hygiene "
+"products, clothes, shoes for sheltered families"
+
+
+msgid ""
+"Mary's Place oferece várias oportunidades para voluntariado. Você também pode doar "
+"seu tempo em uma destas áreas: Lidere uma aula, ensine um aluno, ajude com pedidos "
+"de moradia ou emprego, ensine um ofício, ajude no escritório, doe serviços "
+"profissionais, etc. Você pode trazer esperança e amor para mulheres, crianças e famílias"
+
+msgstr ""
+"Mary's Place offers several opportunities for volunteering. You can also donate "
+"your time in one of these areas: Lead a class, teach a student, help with housing "
+"or employment requests, teach a trade, help in the office, donate professional "
+"services, etc. You can bring hope and love to women, children and families"
+
+msgid ""
+"Com o abrigo Sophia Way é permitida a doação de refeições feitas em casa ou de "
+"restaurantes. São servidos almoço e janta para uma variada quantia de pessoas "
+"todos os dias"
+
+msgstr ""
+"With Sophia Way shelter, donations of fresh food prepared at home or in restaurants are allowed. "
+"Lunch and dinner are offered to a varied amount of people every day"
+
+msgid ""
+"O abrigo também aceita doação de mantimentos e produtos de higiene "
+"pessoal e limpeza, veja a lista abaixo"
+
+msgstr ""
+"The shelter also accepts donation of supplies and personal hygiene "
+"and cleaning products, see list below"
+
+msgid "Máscaras"
+msgstr "Masks"
+
+msgid "Luvas (todos os tamanhos)"
+msgstr "Gloves (all sizes)"
+
+msgid "Desifetantes para as mãos"
+msgstr "Hand sanitizers"
+
+msgid "Lenços de Limpeza (Lysol / Clorox)"
+msgstr "Wipes (Lysol / Clorox)"
+
+msgid "Toalhas de papel"
+msgstr "Paper towels"
+
+msgid "Produtos de cabelo étnico"
+msgstr "Ethnic hair products"
+
+msgid "Shampoo e Condicionador (tamanho viagem)"
+msgstr "Shampoo and Conditioner (travel size)"
+
+msgid "Sabão Líquido de corpo (viagem ou tamanho completo)"
+msgstr "Body Wash (travel or full size)"
+
+msgid "Copos de água de plástico"
+msgstr "Plastic water cups"
+
+msgid "Lanches embalados individualmente (batatas fritas, bolachas, biscoitos, etc.)"
+msgstr "Individually packaged snacks (chips, crackers, cookies, etc.)"
+
+msgid "Maneiras de ajudar"
+msgstr "Ways you can help"
+
+msgid ""
+"A sua ajuda é bem vinda, seja ela em forma de doação, "
+"trabalho voluntário ou simplesmente uma conversa"
+
+msgstr ""
+"Your help is welcome, be it in the form of donation, "
+"volunteer work or simply a conversation"
+
+msgid ""
+"Acabar com a falta de moradia para as mulheres, "
+"oferecendo abrigo, serviços sociais e moradia "
+"permanente com apoio"
+
+msgstr ""
+"To end homelessness for women by providing shelter, "
+"social services, and permanent housing with support"
+
+msgid "Missão do Sophia Way"
+msgstr "The Sophia Way's Mission"
+
 msgid ""
 "Seguindo as recomendações do governo e das autoridades de saúde, "
 "a Spiritist Organization of Seattle decidiu encerrar nossas reuniões públicas de Domingo, "
@@ -49,7 +176,8 @@ msgstr ""
 "commitment to Spiritual growth in a new way. Our service meetings will take place "
 "online, until futher notice. You’re warmly invited to attend our Sunday services"
 
-
+msgid "Domingos - 10am"
+msgstr "Sundays - 10am"
 
 #: templates/accounts/login.html:22 templates/accounts/registrar.html:29
 msgid "Usuário"
@@ -573,8 +701,8 @@ msgstr ""
 "Spiritism"
 
 #: templates/pages/espiritismo.html:57
-msgid " Saiba Mais"
-msgstr "Find out more"
+msgid "Saiba Mais"
+msgstr "Learn More"
 
 #: templates/pages/espiritismo.html:75
 msgid "Livros em Português"
@@ -731,7 +859,7 @@ msgid "Siga-nos no Instragam"
 msgstr "Follow-us on Instagram"
 
 #: templates/pages/sobre.html:12
-msgid "Fora da caridate, não há salvação"
+msgid "Fora da caridade, não há salvação"
 msgstr "Without charity, there is no salvation"
 
 #: templates/pages/atividades.html:12

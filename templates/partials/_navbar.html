@@ -3,7 +3,6 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
     <div class="container">
-      
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -63,23 +62,14 @@
           >
             <a class="nav-link" href="{% url 'sobre' %}">{% trans "Quem Somos" %}</a>
           </li>
-          <li class="nav-link dropdown"
-            {% if 'atividades' in request.path %}
+          <li 
+            {% if 'assistencial' in request.path %}
               class="nav-item active mr-3"
             {% else %}
               class="nav-item mr-3"
             {% endif %}
           >
-            <a class="nav-link dropdown-toggle" href="{% url 'atividades' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">{% trans "Trabalho Social" %}</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">{% trans "Cestas Básicas" %}</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="https://sophiaway.org/" target="_blank">Sophia Way</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="https://www.marysplaceseattle.org/" target="_blank">Marys Place</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="https://bethematch.org/" target="_blank">Be The Match</a>
-            </div>
+            <a class="nav-link" href="{% url 'assistencial' %}">{% trans "Trabalho Social" %}</a>
           </li>
         </ul>
 

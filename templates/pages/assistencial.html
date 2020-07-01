@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load humanize %}
+{% block title %} | Atividades {% endblock %}
+{% block content %}
+  <section id="showcase-inner" class="py-4 text-primary">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <img src="{% static 'img/sos_logo.png' %}" class="main-logo">
+          <h1 class="display-4"> {% trans "Trabalhos Assistenciais" %} </h1>
+          <p class="lead">"{% trans "Fora da caridate, não há salvação" %}." Allan Kardec</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <section id="bc" class="mt-3">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'index' %}">
+              <i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="breadcrumb-item active"> {% trans "Atividades" %} </li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <section id="about" class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="flex-container">
+            <h2> {% trans "Cesta Básica" %} </h2>
+            <p class="mt-4">{% blocktrans %}Através de doações recebidas pelo SOS Kardec, temos conseguido fornecer alimentos aos moradores mais necessitados do Country Club States (Bothel). A idéia é tentar reduzir os custos com alimentação para que eles possam comprar seus remédios e arcar com outras despesas do dia a dia{% endblocktrans %}.
+            <br><br>
+            {% blocktrans %}Recebemos as doações todos os Domingos no Centro Espírita, orgazimos e fazemos a entrega aos moradores. Pedimos que os alimentos doadoes não sejam perecíveis e que estejam em embalagens originais e seladas{% endblocktrans %}.
+            </p>
+            <h2 class="mt-4"><a href="https://www.marysplaceseattle.org" target="_blank">Mary's Place</a></h2>
+            <p class="mt-4">{% blocktrans %}Trabalhamos também com abrigos, levando doações de alimentos e produtos de higiene pessoal, roupas, sapatos para as famílias abrigadas{% endblocktrans %}. 
+            <br><br>
+            {% blocktrans %}Mary's Place oferece várias oportunidades para voluntariado. Você também pode doar seu tempo em uma destas áreas: Lidere uma aula, ensine um aluno, ajude com pedidos de moradia ou emprego, ensine um ofício, ajude no escritório, doe serviços profissionais, etc. Você pode trazer esperança e amor para mulheres, crianças e famílias{% endblocktrans %}.
+            </p>
+            <p><a href="https://www.marysplaceseattle.org/get-involved" target="_blank">{% trans "Saiba Mais" %}...</a></p>
+  
+            <h2 class="mt-4"><a href="https://sophiaway.org/" target="_blank">The Sophia Way</a></h2>
+            <p class="mt-4">{% blocktrans %}Com o abrigo Sophia Way é permitida a doação de refeições feitas em casa ou de restaurantes. São servidos almoço e janta para uma variada quantia de pessoas todos os dias{% endblocktrans %}.</p>
+            <p><a href="https://sophiaway.org/donate-meals/" target="_blank">{% trans "Saiba Mais" %}...</a></p>
+            {% blocktrans %}O abrigo também aceita doação de mantimentos e produtos de higiene pessoal e limpeza, veja a lista abaixo{% endblocktrans %}:
+            <ul>
+              <li>{% trans "Máscaras" %}</li>
+              <li>{% trans "Luvas (todos os tamanhos)" %}</li>
+              <li>{% trans "Desifetantes para as mãos" %}</li>
+              <li>{% trans "Lenços de Limpeza (Lysol / Clorox)" %}</li>
+              <li>{% trans "Toalhas de papel" %}</li>
+              <li>{% trans "Produtos de cabelo étnico" %}</li>
+              <li>{% trans "Shampoo e Condicionador (tamanho viagem)" %}</li>
+              <li>{% trans "Sabão Líquido de corpo (viagem ou tamanho completo)" %}</li>
+              <li>{% trans "Copos de água de plástico" %}</li>
+              <li>{% trans "Lanches embalados individualmente (batatas fritas, bolachas, biscoitos, etc.)" %}</li>
+              </ul>
+            </p>
+
+            <p><a href="https://sophiaway.org/shelter-needs/" target="_blank">{% trans "Saiba Mais" %}...</a></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <a href="{% url 'sobre'%}">
+            <img class="card-img-top" src="{% static 'img/hands_heart_love_img_1.jpg' %}" alt="Fraternidate" height="300px">
+            <div class="card-body">
+              <h5 class="card-title"> {% trans "Maneiras de ajudar" %}! </h5></a>
+              <p class="card-text">{% blocktrans %}A sua ajuda é bem vinda, seja ela em forma de doação, trabalho voluntário ou simplesmente uma conversa{% endblocktrans %}.
+              </p>
+            </div>
+          </div>
+          <br><br>
+          <div class="card">
+            <a href="{% url 'evangelizacao' %}">
+              <img class="card-img-top" src="{% static 'img/shelter_girl_img_1.jpg' %}" alt="Fraternidate">
+              <div class="card-body">
+                <h5 class="card-title"> {% trans "Missão do Sophia Way" %}! </h5></a>
+                <p class="card-text">{% blocktrans %}Acabar com a falta de moradia para as mulheres, oferecendo abrigo, serviços sociais e moradia permanente com apoio{% endblocktrans %}.
+                </p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
