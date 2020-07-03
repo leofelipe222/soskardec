@@ -1,12 +1,11 @@
 {% extends 'admin/base.html' %}
 {% load static %}
 {% load i18n %}
-{% block branding %}
-<h1 id="head">
-    SOS KARDEC - Administrador
-</h1>
-{% endblock %}
-
 {% block extrastyle %}
     <link rel="stylesheet" href="{% static 'css/admin.css' %}">
 {% endblock %}
+
+{% block branding %}
+    <h3 class="admin-name" >SOS KARDEC ADMIN</h3>
+{% endblock %}
+

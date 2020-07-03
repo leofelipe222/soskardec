@@ -86,7 +86,7 @@
               <i class="fas fa-user-plus"></i> {% trans "Olá" %}, {{ user.username }}</a>
           </li>
           <li class="nav-item mr-3">
-            <a href="javascript:{document.getElementById('logout').submit()}" class="nav-link"><i class="fas fa-sign-out-alt"> {% trans "Sair" %}</i></a>
+            <a href="javascript:{document.getElementById('logout').submit()}" class="nav-link"><i class="fas fa-sign-out-alt"> </i>{% trans "Sair" %}</a>
             <form action="{% url 'logout' %}" method="POST" id="logout">
               {% csrf_token %}
               <input type="hidden">
