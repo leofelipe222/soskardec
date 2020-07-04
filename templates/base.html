@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- Lightbox -->
     <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+    <!-- Title -->
     <title>Spiritist Organization of Seattle - {% block title %} {% endblock %} </title>
 </head>
 <body>
@@ -25,12 +26,12 @@
     <!-- Nav Bar -->
     {% include 'partials/_navbar.html' %}
     <!-- Main Content -->
-    {% block content %} {% endblock %}
+    {% block content %} 
     <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'js/lightbox.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
-
+    {% endblock %}
     <!-- Top Bar -->
     {% include 'partials/_footer.html' %}
 </body>

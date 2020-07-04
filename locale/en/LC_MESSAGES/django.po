@@ -27,12 +27,14 @@ msgstr "Portuguese"
 msgid "English"
 msgstr "English"
 
-msgid "INFORMATIVO SOBRE COVID-19 À COMUNIDADE"
+msgid "INFORMATIVO COVID-19 À COMUNIDADE"
 msgstr "NOTE TO THE COMMUNITY ABOUT COVID-19"
 
 msgid "Presados Membros do Spiritist Organization of Seattle"
 msgstr "Dear Members of Spiritist Organization of Seattle"
 
+msgid "Biblioteca"
+msgstr "Library"
 
 msgid "Uma associação filantrópica, voluntária e sem fins lucrativos"
 msgstr "A philanthropic, voluntary and non-profit association"
@@ -917,7 +919,7 @@ msgid ""
 msgstr ""
 "The SOS KARDEC group's mission is to promote the study, dissemination and "
 "practice of Spiritism in its threefold aspect: scientific, philosophical and "
-"religious, based on the works codified by Allan Kardec."
+"religious, based on the works codified by Allan Kardec"
 
 #: templates/pages/sobre.html:39
 msgid "Nossa História"
