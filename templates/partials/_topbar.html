@@ -1,6 +1,9 @@
 {% load static %}
 {% load i18n %}
 
+<!-- Flags -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
+
 <!-- Button trigger modal -->
 <h3 class="text-center bg-danger p-2 rounded">
   <button id="covid-update" type="button" class="btn btn-secondary bg-danger border border-0" data-toggle="modal" data-target="#exampleModal">
@@ -59,13 +62,12 @@
             <input name="next" type="hidden" value="{{ redirect_to }}">
               {% get_language_info_list for LANGUAGES as languages %}
               {% for language in languages %}
-              <button title="{{ language.name_local | title }}" name="language" type="submit" class="btn btn-primary btn-sm btn-group btn-group-toggle" 
-                  {% if language.code == LANGUAGE_CODE %}
-                    style="background-color: #a39d9df6 onclick=active"
-                  {% else %} 
-                    style="background-color: #d3edda onclick=active" 
+                <button title="{{ language.name_local | title }}" name="language" type="submit"  
+                  {% if language.code == 'pt' %}
+                    class="flag-icon flag-icon-br" value="{{ language.code }}"></button>
+                  {% else %}
+                    class="flag-icon flag-icon-us" value="{{ language.code }}"></button>
                   {% endif %}
-                    value="{{ language.code }}">{{ language.code | upper}}</button>
               {% endfor %}
           </form>
         </div>

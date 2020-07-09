@@ -36,11 +36,13 @@
       <div class="row">
         <div class="col-md-8">
           <div class="flex-container">
-            <h2> {% trans "Atendimento Fraterno" %} </h2>
+            <!-- Message button -->
+            <a href="" data-toggle="modal" data-target="#inquiryModal"><h2> {% trans "Atendimento Fraterno" %} </h2></a>
             <p class="mt-4">{% blocktrans %}Oferecemos apoio àqueles que buscam na Doutrina Espírita o abrigo para as suas aflições. É uma relação de ajuda que consiste num encontro fraternal entre aquele que tem carências a serem supridas e o tarefeiro atendente, capacitado para ouvi-lo e orientá-lo quanto aos recursos que a Doutrina Espírita coloca ao seu alcance{% endblocktrans %}.
             <br><br>{% blocktrans %} Geralmente a pessoa que vai até o Centro Espírita busca palavras de conforto e um direcionamento. Com base na Doutrina Espírita, as conversas fazem você mesmo refletir sobre as questões que te afligem{% endblocktrans %}.
-            <br><br>
-            </p>
+            <br>
+            <p><a href="" data-toggle="modal" data-target="#inquiryModal">{% trans "Entre em Contato" %}...</a></p>
+            </p><br>
             <h2> {% trans "Palestras Públicas" %} </h2>
             <p class="mt-4">{% blocktrans %}Não há um perfil ideal. Em princípio, qualquer pessoa pode assumir a tarefa de expositor. No entando, o que o distingue para tal função é a sua identificação com os propósitos espíritas, sua vontade de estudar e de compreender a doutrina e facilidade em transmitir os seus conhecimentos com didática, sinceridade, entusiasmo e, acima de tudo, muita humildade. Certamente é interessante constatar que a nobre tarefa de levar ao público a mensagem cristã, juntamente com os ensinamentos espíritas, exige do palestrante preparo, aptidão, abnegação e esforço para ser portador de bons exemplos daquilo que se propõe dissertar{% endblocktrans %}
             <br><br>
@@ -75,7 +77,8 @@
         <div class="col-md-4">
           <div class="card">
             <a href="{% url 'sobre'%}">
-            <img class="card-img-top" src="{% static 'img/atendimento_fraterno_img_1.jpg' %}" alt="Fraternidate">
+            <a href="" data-toggle="modal" data-target="#inquiryModal">
+            <img class="card-img-top" src="{% static 'img/atendimento_fraterno_img_1.jpg' %}" alt="Fraternidade">
             <div class="card-body">
               <h5 class="card-title"> {% trans "Estamos aqui para ajudar!" %} </h5></a>
               <p class="card-text">{% blocktrans %}O atendimento fraterno no Centro Espírita é uma oportunidade de falarmos sem julgamentos ou medos{% endblocktrans %}.
@@ -105,4 +108,46 @@
       </div>
     </div>
   </section>
+
+  <!-- Message Form -->
+    <div class="modal fade" id="inquiryModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="inquiryModalLabel"> {% trans "Messagem" %} </h5>
+            <button type="button" class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="{% url 'contact' %}" method="POST">
+              {% csrf_token %}
+              {% if user.is_authenticated %}
+                <input type="hidden" name="user_id" value="{{ user.id }}">
+              {% else %}
+                <input type="hidden" name="user_id" value="0">
+              {% endif %}
+              <div class="form-group">
+                <label for="name" class="col-form-label"> {% trans "Nome" %}:</label>
+                <input type="text" name="name" class="form-control" {% if user.is_authenticated %} value="{{ user.first_name }} {{ user.last_name }}" {% endif %} required>
+              </div>
+              <div class="form-group">
+                <label for="email" class="col-form-label"> {% trans "Email" %}:</label>
+                <input type="email" name="email" class="form-control"  {% if user.is_authenticated %} value="{{ user.email }}" {% endif %} required>
+              </div>
+              <div class="form-group">
+                <label for="phone" class="col-form-label"> {% trans "Telefone" %}:</label>
+                <input type="text" name="phone" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="message" class="col-form-label"> {% trans "Mensagem" %}:</label>
+                <textarea name="message" class="form-control"></textarea>
+              </div>
+              <hr>
+              <input type="submit" value="{% trans "Enviar" %}" class="btn btn-primary btn-block">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 {% endblock %}

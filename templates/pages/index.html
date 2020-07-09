@@ -71,7 +71,10 @@
           <div class="col-md-6 col-lg-6 mb-4">
             <div class="card listing-preview">
               <img class="" src="{{ program.photo_main.url }}" alt="{{ program.description }}">
-                <div class="card-body">
+                <div class="card-body py-2">
+                  <div class="col-12 text-center text-uppercase bg-dark text-white rounded">
+                    <p class="p-2">{% trans "Idioma" %}: {{ program.language }}</p>
+                  </div>
                   <hr>
                   <div class="row py-2 text-dark">
                     <div class="col-12">
@@ -224,13 +227,16 @@
 <section id="listings" class="py-3">
   <div class="container">
     <h3 class="text-center bg-primary text-white p-2 mb-3 rounded">{% trans "Como Ajudar" %}</h3>
-    <div class="row">
+    <div class="row" id="sos-help">
       <div class="col-md-4">
         <a href="http://smile.amazon.com/ch/81-3758631" target="_blank">
-          <img src="{% static 'img/amazon_smile_img_1.png' %}" alt="" class="img-fluid mt-3">
+          <img src="{% static 'img/amazon_smile_img_1.png' %}" class="img-fluid mt-3" width="500px">
         </a>
       </div>
       <div class="col-md-4 m-auto">
+        <a href="https://venmo.com/soskardec" target="_blank">
+          <img src="{% static 'img/venmo_img_1.png' %}" alt="" class="img-fluid">
+        </a>
         <a href="#" target="_blank">
           <img src="{% static 'img/donation_img_1.png' %}" alt="" class="img-fluid">
         </a>

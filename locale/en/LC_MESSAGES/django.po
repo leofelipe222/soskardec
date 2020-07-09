@@ -921,20 +921,51 @@ msgstr ""
 "practice of Spiritism in its threefold aspect: scientific, philosophical and "
 "religious, based on the works codified by Allan Kardec"
 
+msgid "Enviar"
+msgstr "Send"
+
 #: templates/pages/sobre.html:39
 msgid "Nossa História"
 msgstr "Our Story"
 
-
 #: templates/pages/sobre.html:40
 msgid ""
-"Criado em setembro de 2013, o Grupo de Estudos da Doutrina Espirita – "
-"Spiritist Organization of Seattle –  é uma associação filantrópica, "
-"voluntária e sem fins lucrativos. Voltado para atividades doutrinárias"
+"Em setembro de 2013, após um ano de preparação espiritual e seguindo a orientação dos nossos mentores, foi formado na cidade de Bothell no estado de Washington "
+"o (Grupo de Estudos da Doutrina Espírita de Seattle) que em seguida passaria a receber o nome oficial de Spiritist Organization of Seattle – SOS KARDEC – Amparado "
+"pela Espiritualidade maior e alicerçado nas diretrizes do United States Spiritist Federation, desde a sua formação o Spiritist Organization of Seattle acredita que "
+"devemos funcionar com simplicidade, objetividade e harmonia ao promover a disseminação da doutrina Espírita, enfatizando o seu lado menos místico e mais racional. "
+"Isso só será possível se os associados se conduzirem por uma política administrativa pautada em boa organização, cordialidade mútua e disciplina"
 msgstr ""
-"Created in September 2013, the Spiritist Doctrine Study Group - Spiritist "
-"Organization of Seattle - is a philanthropic, voluntary and non-profit "
-"association. Focused on doctrinal activities"
+"In September 2013, after a year of spiritual preparation and following the guidance of our mentors, he was trained in the city of Bothell in Washington state "
+"the (Seattle Spiritist Doctrine Study Group) who would then be given the official name of the Spiritist Organization of Seattle - SOS KARDEC - Supported "
+"for the greater Spirituality and based on the guidelines of the United States Spiritist Federation, since its formation the Spiritist Organization of Seattle believes that "
+"we must function with simplicity, objectivity and harmony when promoting the dissemination of the Spiritist doctrine, emphasizing its less mystical and more rational side. "
+"This will only be possible if members are guided by an administrative policy based on good organization, mutual friendliness and discipline"
+
+msgid ""
+"A princípio, o S.O.S. Kardec reunia-se aos domingos na residência de um dos seus fundadores fazendo o estudo da doutrina dos espíritos, realizando palestras, oferecendo "
+"serviço de acolhimento fraterno, evangelização infantojuvenil e servindo a comunidade local com obras de caridade. Hoje, já operando em local público também aos Domingos, "
+"oferece os mesmos serviços à comunidade de forma mais amplificada; porém, continua acentuando a razão e o livre-arbítrio para que seus membros realizem essas atividades "
+"com a mesma estruturação e disciplina, em formas organizacionais voluntárias e não remuneradas"
+msgstr ""
+"At first, S.O.S.Kardec met on Sundays at the residence of one of its founders, studying the doctrine of spirits, giving lectures, offering "
+"fraternal welcome service, children's evangelization and serving the local community with works of charity. Today, already operating in a public place also on Sundays, "
+"offers the same services to the community in a more amplified way; however, it continues to emphasize the reason and free will for its members to carry out these activities "
+"with the same structure and discipline, in voluntary and unpaid organizational forms"
+
+msgid ""
+"Ao longo dos anos, várias dificuldades foram vivenciadas, ambas externa e internamente; contudo, aprendemos sempre com essas experiências e seguimos adiante, resolutos e "
+"conscientes de que os resultados positivos são conseguidos pelo esforço do conjunto e não por individualidades ou agendas pessoais. Voltado para atividades doutrinárias, "
+"educativas e obras de caridade, o Spiritist Organization of Seattle – SOS KARDEC – tem como missão promover o estudo, a difusão e a prática do Espiritismo no seu tríplice "
+"aspecto: científico, filosófico e religioso, com base nas obras codificadas por Allan Kardec. A nossa visão é poder, em breve, expandir os nossos serviços e atividades, "
+"funcionando em sede própria onde membros e comunidade poderão compartilhar o Evangelho de Jesus à luz da Doutrina Espírita"
+msgstr ""
+"Over the years, several difficulties have been experienced, both externally and internally; however, we always learn from these experiences and we move forward, resolute and "
+"aware that positive results are achieved by the effort of the group and not by individualities or personal agendas. Focused on doctrinal activities, "
+"educational and charitable works, the Spiritist Organization of Seattle - SOS KARDEC - has the mission of promoting the study, diffusion and practice of Spiritism in its triple "
+"aspect: scientific, philosophical and religious, based on the works codified by Allan Kardec. Our vision is to be able, soon, to expand our services and activities, "
+"operating in its own headquarters where members and the community can share the Gospel of Jesus in the light of the Spiritist Doctrine"
+
 
 #: templates/pages/sobre.html:50
 msgid "Caso tenha alguma pergunta ou alguma dúvida, entre em contato conosco"
