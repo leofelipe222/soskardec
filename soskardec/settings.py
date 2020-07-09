@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '0k27d#=v3iw&o8(=x3iz$!9$wp%b4y@3hh88=x78k+4%70xm_&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['10.0.0.218',]
+ALLOWED_HOSTS = ['soskardec.herokuapp.com/','10.0.0.218',]
 
 # Application definition
 INSTALLED_APPS = [
@@ -85,13 +85,6 @@ WSGI_APPLICATION = 'soskardec.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'soskardecdb',
-    #     'USER': 'soskardec',
-    #     'PASSWORD': 'SOSkardec',
-    #     'HOST': 'localhost'
-    # }
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
