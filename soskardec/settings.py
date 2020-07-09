@@ -149,7 +149,8 @@ STATICFILES_DIRS = [
 ]
 
 # Media Folder Settings
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = ('/app/media')
 MEDIA_URL = '/media/'
 
 #Messages
