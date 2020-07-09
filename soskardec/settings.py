@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '0k27d#=v3iw&o8(=x3iz$!9$wp%b4y@3hh88=x78k+4%70xm_&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['soskardec.herokuapp.com','10.0.0.218',]
 
@@ -149,8 +149,7 @@ STATICFILES_DIRS = [
 ]
 
 # Media Folder Settings
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_ROOT = ('/app/media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 #Messages
