@@ -1,0 +1,49 @@
+#header {
+    background: #10284e;
+    color: #fff;
+    opacity: 0.9;
+    margin: auto;
+}
+
+#branding h1 {
+    color: #fff;
+    font-size: medium;
+}
+
+.admin-name {
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    font-size: medium;
+}
+
+#user-tools {
+    width: max-content;
+    font-size: medium;
+}
+
+a:link,
+a:visited {
+    color: #10284e;
+}
+
+div.breadcrumbs {
+    font-size: medium;
+    background: #10284e;
+    color: #fff;
+}
+
+div.breadcrumbs a {
+    color: #fff;
+}
+
+.module h2, .module caption, .inline-group h2 {
+    background: #10284e;
+    opacity: 0.9;
+}
+
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background: #10284e;
+    color: #fff;
+    opacity: 0.9;
+}
