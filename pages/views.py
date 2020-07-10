@@ -28,6 +28,12 @@ def evangelizacao(request):
     }
     return render(request, 'evangelizacao/evangelizacao.html', context)
 
+def error_view_404(request, exception):
+    return render(request, 'pages/404.html')
+
+def error_view_500(request, exception):
+    return render(request, 'pages/500.html')
+
 def busca(request):
     # Render busca template
     return render(request, 'eventos/busca.html')

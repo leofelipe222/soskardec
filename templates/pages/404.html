@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load humanize %}
+{% block title %} | Page Not Found {% endblock %}
+{% block content %}
+
+<!-- Showcase -->
+<section id="showcase-inner" class="py-4 text-primary">
+    <div class="row text-center">
+      <div class="container">
+        <div class="col-md-12">
+            <img src="{% static 'img/sos_logo.png' %}" class="main-logo">
+            <h1 class="display-4">Spiritist Organization of Seattle</h1>
+            <p class="lead">Sorry! We are unable to find this page.</p>
+          </div>
+      </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
