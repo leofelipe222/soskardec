@@ -25,7 +25,7 @@ SECRET_KEY = '0k27d#=v3iw&o8(=x3iz$!9$wp%b4y@3hh88=x78k+4%70xm_&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['soskardec.herokuapp.com','10.0.0.218',]
+ALLOWED_HOSTS = ['soskardec.herokuapp.com','10.0.0.23']
 
 # Application definition
 INSTALLED_APPS = [
@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'contacts.apps.ContactsConfig',
     # 'downloads.apps.DownloadsConfig',
+    'library.apps.LibraryConfig',
     'programacao.apps.ProgramacaoConfig',
     'evangelizacao.apps.EvangelizacaoConfig',
     'django.contrib.admin',
@@ -141,8 +142,8 @@ DEFAULT_CHARSET = 'utf-8'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'soskardec/static')

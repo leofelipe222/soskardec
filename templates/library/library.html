@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load humanize %}
+{% block title %} | {% trans "Biblioteca Espírita Online" %}  {% endblock %}
+{% block content %}
+<section id="showcase-inner" class="py-4 text-primary">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <img src="{% static 'img/sos_logo.png' %}" class="main-logo">
+          <h1 class="display-4"> {% trans "Biblioteca Espírita Online" %}</h1>
+          <p class="lead">"{% blocktrans %}Amai-vos, eis o primeiro ensinamento. Instruí-vos, eis o segundo.{% endblocktrans %}"</p>
+          {% trans "Allan Kardec" %}
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <section id="bc" class="mt-3">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'index' %}">
+              <i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="breadcrumb-item active"> {% trans "Biblioteca" %} </li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+<!-- Biblioteca Online -->
+<section id="Library" class="py-4">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="flex-container">
+            <h2> {% trans "Biblioteca Online" %} </h2>
+            <p class="mt-4">{% blocktrans %}Os frequentadores assíduos do SOS Kardec, podem retirar livros espíritas emprestados da nossa biblioteca. Veja os nosso catálogo de livros disponíveis. Procure um de nossos voluntários no Centro Espírita para mais detalhes{% endblocktrans %}.
+            <br><br>{% blocktrans %}Todas as verdades são encontradas no Cristianismo; os erros que nele criaram raiz são de origem humana. E eis que, além do túmulo, em que acreditáveis o nada, vozes vêm clamar-vos: Irmãos! nada perece. Jesus Cristo é o vencedor do mal, sede os vencedores da impiedade! – (Espírito de Verdade. Paris, 1860.){% endblocktrans %}
+            <br><br>
+            {% blocktrans %}Allan Kardec – O Evangelho Segundo o Espiritismo, Cap. VI, item 5.{% endblocktrans %}
+            </p>
+          </div>
+        </div>
+        <div class="card-body col-md-4">
+            <img class="rounded mx-auto d-flex" src="{% static 'img/library_img_1.png' %}" width="350px" height="282px">
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Catálogo de Livros do SOS -->
+<section id="listings" class="py-4">
+    <div class="container">
+      <div class="row">
+        <!-- If there are any eventos in the DB -->
+        {% if books %}
+        {% for book in books %}
+        <!-- Livros Biblioteca Online -->
+        <div class="col-md-3">
+            <div class="card">
+                <div class="row no-gutters">
+                    <img src="{{ book.photo_main.url }}" class="" alt="{{ book.title }}" height="340" width="254">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ book.title }}</h5>
+                        <div class="row py-2 text-dark">
+                    </div>
+                    <div class="row py-2 text-dark">
+                        <div class="col-12">
+                            <i class="fas fa-user-edit"></i> {% trans "Autor" %}: {{ book.author }}
+                        </div>
+                    </div>
+                    {% if book.medium %}
+                    <div class="row py-2 text-dark">
+                        <div class="col-12">
+                            <i class="fas fa-signature"></i> {% trans "Psicografado por" %}: {{ book.medium }}
+                        </div>
+                    </div>
+                    {% endif %}
+                    <div class="row text-dark pb-2">
+                        <div class="col-12">
+                            <i class="fas fa-building"></i> {% trans "Editora" %}: {{ book.publisher }} 
+                        </div>
+                    </div>
+                    <div class="row py-2 text-dark">
+                        <div class="col-12">
+                            <i class="fas fa-language"></i> {% trans "Idioma" %}: {{ book.language }}
+                        </div>
+                    </div>
+                    <div class="row py-2 text-dark">
+                        <div class="col-12">
+                            <i class="fas fa-code "></i> {% trans "Código" %}: {{ book.code }}
+                        </div>
+                    </div>
+                    <div class="row py-2 text-dark">
+                        <div class="col-12">
+                            <i class="fas fa-language"></i> {% trans "Cópias" %}: {{ book.copies }}
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- </div> -->
+          {% endfor %}
+        {% else %}
+            <!-- If there are no eventos in the DB -->
+            <div class="col-md-12">
+            <!-- <p><h3>Nenhuma programacao encontrada no banco de dados.</h3></p> -->
+            <p><h3>{% trans "Nenhum livro encontrado no banco de dados" %}.</h3></p>
+            </div>
+      {% endif %}
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          {% if evangelizacao.has_other_pages %}
+            <ul class="pagination">
+              {% if evangelizacao.has_previous %}
+              <li class="page-item">
+                <a href="?page={{evangelizacao.previous_page_number}}" class="page-link">&laquo;</a>
+              </li>
+              {% else %}
+                <li class="page-item disabled">
+                  <a class="page-link">&laquo;</a>
+                </li>
+              {% endif %}
+              {% for i in evangelizacao.paginator.page_range %}
+                {% if evangelizacao.number == i %}
+                  <li class="page-item active">
+                    <a class="page-link">{{i}}</a>
+                  </li>
+                {% else %}
+                  <li class="page-item">
+                    <a href="?page={{i}}" class="page-link">{{i}}</a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+              {% if evangelizacao.has_next %}
+              <li class="page-item">
+                <a href="?page={{evangelizacao.next_page_number}}" class="page-link">&raquo;</a>
+              </li>
+              {% else %}
+                <li class="page-item disabled">
+                  <a class="page-link">&raquo;</a>
+                </li>
+              {% endif %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
