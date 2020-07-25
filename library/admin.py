@@ -9,7 +9,7 @@ class LibraryAdmin(admin.ModelAdmin):
     list_display_links = ('id', 'code', 'title', 'author', 'medium', 'publisher')
 
     # Creates a filter for the items below
-    list_filter = ('code', 'title', 'author', 'medium', 'publisher', 'language')
+    list_filter = ('author', 'medium', 'publisher', 'language')
 
     # Makes it editable
     list_editable = ('is_published',)
