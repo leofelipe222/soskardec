@@ -34,9 +34,13 @@ def error_view_404(request, exception):
 def error_view_500(request, exception):
     return render(request, 'pages/500.html')
 
-def busca(request):
+def busca_eventos(request):
     # Render busca template
-    return render(request, 'eventos/busca.html')
+    return render(request, 'eventos/busca_eventos.html')
+
+def busca_livros(request):
+    # Render busca template
+    return render(request, 'library/busca_livros.html')
 
 def sobre(request):
     # Render sobre template

@@ -12,7 +12,8 @@ urlpatterns = [
     # path('contacts', views.contacts, name='contacts'),
     # path('downloads', views.downloads, name='downloads'),
     path('evangelizacao', views.evangelizacao, name='evangelizacao'),
-    path('busca', views.busca, name='busca'),
+    path('busca_eventos', views.busca_eventos, name='busca_eventos'),
+    path('busca_livros', views.busca_livros, name='busca_livros'),
     path('registrar', views.registrar, name='registrar'),
     path('login', views.login, name='login')
 ]

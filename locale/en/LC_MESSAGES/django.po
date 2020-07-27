@@ -1011,6 +1011,20 @@ msgid ""
 msgstr ""
 "Love each other, is the first teaching. Educate yourself, is the second."
 
+msgid "Busca de Livros"
+msgstr "Book Search"
+
+msgid "Buscar Livros"
+msgstr "Book Search"
+
+msgid "Procurar Livros"
+msgstr "Search Books"
+
+msgid "Médium"
+msgstr "Medium"
+
+
+
 msgid ""
 "Os frequentadores assíduos do SOS Kardec, podem retirar livros espíritas emprestados "
 "da nossa biblioteca. Veja os nosso catálogo de livros disponíveis. Procure um de nossos "

@@ -28,7 +28,7 @@ def evento(request, evento_id):
 
     return render(request, 'eventos/evento.html', context)
 
-def busca(request):
+def busca_eventos(request):
 
     # Adding query_set lists
     query_set_list = Evento.objects.order_by('-event_date').filter(is_published=True)
@@ -54,10 +54,17 @@ def busca(request):
         if state:
             query_set_list = query_set_list.filter(state__iexact=state)
 
+    # Adding pagination to the view
+    paginator = Paginator(query_set_list, 9) # 9 events per page
+    query = request.GET
+    page = request.GET.get('page')
+    paged_events = paginator.get_page(page)
+
     context = {
         'state_choices': state_choices,
-        'eventos': query_set_list,
+        'eventos': paged_events,
+        'query': query,
         'values': request.GET
     }
-    return render(request, 'eventos/busca.html', context)
+    return render(request, 'eventos/busca_eventos.html', context)
 
