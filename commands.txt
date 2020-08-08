@@ -1,3 +1,9 @@
+Create virtual environment
+python3 -m venv project_venv
+
+Activate:
+source project_venv/bin/activate
+
 git status
 git add .
 git commit -m "Improved design and added content to home page"
