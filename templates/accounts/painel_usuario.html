@@ -32,47 +32,48 @@
 
 <!-- Alerts -->
 {% include 'partials/_alerts.html' %}
-
-  <section id="dashboard" class="py-4">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          {% if user.is_authenticated %}
-            <h2> {% trans "Olá" %}, {{ user.first_name }} {{ user.last_name }} </h2>
-            {% endif %}
-            <!-- HTML Redirect after 3 seconds -->
-            <!-- <h2>Permission Denied! Redirecting...</h2> -->
-            <!-- <meta http-equiv="refresh" content="3; URL={% url 'login' %}"/> -->
-          {% if contacts %}
-            <p> {% trans "Messanges encontradas" %}: </p>
-              <table class="table">
-                <thead>
+<section id="dashboard" class="py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        {% if user.is_authenticated %}
+          <h2> {% trans "Olá" %}, {{ user.first_name }} {{ user.last_name }} </h2>
+          {% endif %}
+          <!-- HTML Redirect after 3 seconds -->
+          <!-- <h2>Permission Denied! Redirecting...</h2> -->
+          <!-- <meta http-equiv="refresh" content="3; URL={% url 'login' %}"/> -->
+        {% if contacts %}
+          <p> {% trans "Messanges encontradas" %}: </p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col"> {% trans "Messagem" %} </th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for contact in contacts %}
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col"> {% trans "Messagem" %} </th>
-                    <th></th>
+                    <td>{{ contact.id }}</td>
+                    <td>{{ contact.message }}</td>
+                    <td>
+                      <a class="btn btn-light" href="#"> {% trans "Abrir Mensagem" %} </a>
+                    </td>
                   </tr>
-                </thead>
-                <tbody>
-                  {% for contact in contacts %}
-                    <tr>
-                      <td>{{ contact.id }}</td>
-                      <td>{{ contact.message }}</td>
-                      <td>
-                        <a class="btn btn-light" href="#"> {% trans "Abrir Mensagem" %} </a>
-                      </td>
-                    </tr>
-                  {% endfor %}
-              </tbody>
-            </table>
-        {% else %}
-          <p class="lead"> {% trans "Nenhuma mensagem foi encontrada" %} .</p>
-        {% endif %}
-        </div>        
-      </div>
-      <div class="row">
-        {% trans "Esta página ainda está em desenvolvimento..." %}
+                {% endfor %}
+            </tbody>
+          </table>
+      {% else %}
+        <p class="lead"> {% trans "Nenhuma mensagem foi encontrada" %} .</p>
+      {% endif %}
       </div>
     </div>
-  </section>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="text-info">{% trans "Esta página ainda está em desenvolvimento..." %}</p>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock %}
