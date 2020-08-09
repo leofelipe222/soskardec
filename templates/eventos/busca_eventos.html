@@ -86,11 +86,6 @@
             <div class="col-md-6 col-lg-4 mb-4">
               <div class="card listing-preview">
                 <img class="card-img-top" width="300" height="232" src="{{ evento.photo_main.url }}" alt="">
-                <div class="card-img-overlay">
-                  <!-- <h2>
-                    <span class="badge badge-secondary text-white">{{ listing.price | intcomma }}</span>
-                  </h2> -->
-                </div>
                 <div class="card-body">
                   <div class="listing-heading text-center">
                     <h4 class="text-primary">{{ evento.title }}</h4>
@@ -100,15 +95,15 @@
                   <hr>
                   <div class="row py-2 text-dark">
                     <div class="col-12">
-                      <i class="fas fa-th-large"></i> {% trans "Tipo" %} : {{ evento.event_type }}</div>
+                      <i class="fas fa-th-large"></i> {% trans "Tipo" %}: {{ evento.event_type }}</div>
                   </div>
                   <div class="row py-2 text-dark">
                     <div class="col-12">
-                      <i class="fas fa-user"></i> {% trans "Responsável" %} : {{ evento.volunteer }}</div>
+                      <i class="fas fa-user"></i> {% trans "Responsável" %}: {{ evento.volunteer }}</div>
                   </div>
                   <div class="row text-dark pb-2">
-                    <div class="col-6">
-                      <i class="fas fa-clock"></i> {{ evento.event_date | timesince }}</div>
+                    <div class="col-10">
+                      <i class="fas fa-clock"></i> {{ evento.event_date | timesince }} {% trans "atrás" %}</div>
                   </div>
                   <hr>
                   <a href="{% url 'evento' evento.id %}" class="btn btn-primary btn-block"> {% trans "Mais Fotos" %} </a>
