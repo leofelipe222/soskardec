@@ -508,6 +508,9 @@ msgstr ""
 "Our work aims at the formation of future good men "
 "and women, using the spiritual teachings"
 
+msgid "Download Material da Aula"
+msgstr "Download Class Material"
+
 #: templates/pages/atividades.html:62
 msgid "Passes"
 msgstr "Spiritist Pass"
@@ -1022,8 +1025,6 @@ msgstr "Search Books"
 
 msgid "Médium"
 msgstr "Medium"
-
-
 
 msgid ""
 "Os frequentadores assíduos do SOS Kardec, podem retirar livros espíritas emprestados "
