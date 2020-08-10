@@ -120,8 +120,23 @@
     </div>
   </section>
 
+<!-- Total Boosk -->
+<section>
+  <div class="container">
+      <div class="card-body text-center">
+        <i class="fas fa-book"></i>
+        <i class="fas fa-book"></i>
+        <i class="fas fa-book"></i>
+        {% if books %} ... {{ total_books }} {% trans "livros encontrados" %} ... {% endif %}
+        <i class="fas fa-book"></i>
+        <i class="fas fa-book"></i>
+        <i class="fas fa-book"></i>
+      </div>
+  </div>
+</section>
+
 <!-- Catálogo de Livros do SOS -->
-<section id="listings" class="py-4">
+<section id="listings" class="py-1">
   <div class="container">
     <div class="row pb-3">
       <!-- If there are any books in the DB -->

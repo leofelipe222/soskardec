@@ -60,14 +60,17 @@ def busca_livros(request):
         if language:
             query_set_list = query_set_list.filter(language__iexact=language)
 
+    total_books = len(query_set_list)
     # Adding pagination to the view
     paginator = Paginator(query_set_list, 9) # 9 books per page
+    dir(paginator)
     query = request.GET
     page = request.GET.get('page')
     paged_books = paginator.get_page(page)
 
     context = {
         'books': paged_books,
+        'total_books': total_books,
         'unique_authors': unique_authors,
         'unique_mediums': unique_mediums,
         'unique_publishers': unique_publishers,

@@ -1023,6 +1023,9 @@ msgstr "Book Search"
 msgid "Procurar Livros"
 msgstr "Search Books"
 
+msgid "livros encontrados"
+msgstr "books found"
+
 msgid "Médium"
 msgstr "Medium"
 
