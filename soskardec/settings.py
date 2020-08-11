@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'evangelizacao.apps.EvangelizacaoConfig',
     'django.contrib.admin',
     'django.contrib.auth',
+    'groupadmin_users',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
