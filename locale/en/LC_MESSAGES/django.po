@@ -34,7 +34,7 @@ msgid "Presados Membros do Spiritist Organization of Seattle"
 msgstr "Dear Members of Spiritist Organization of Seattle"
 
 msgid "Obras Básicas"
-msgstr "Basic Works"
+msgstr "Spiritist Doctrine"
 
 msgid "Biblioteca"
 msgstr "Library"
