@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-19 06:53+0000\n"
 "PO-Revision-Date: 2020-06-17 03:38+0000\n"
-"Last-Translator: b'Sos Kardec <leofelipe222@gmail.com>'\n"
+"Last-Translator: b'S.O.S Kardec <leofelipe222@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -33,6 +33,9 @@ msgstr "NOTE TO THE COMMUNITY ABOUT COVID-19"
 msgid "Presados Membros do Spiritist Organization of Seattle"
 msgstr "Dear Members of Spiritist Organization of Seattle"
 
+msgid "Obras Básicas"
+msgstr "Basic Works"
+
 msgid "Biblioteca"
 msgstr "Library"
 
@@ -46,20 +49,20 @@ msgid "Cesta Básica"
 msgstr "Food Pantry"
 
 msgid ""
-"As atividades de Assistência Social desenvolvidas pelo SOS Kardec visam alcançar "
+"As atividades de Assistência Social desenvolvidas pelo S.O.S Kardec visam alcançar "
 "irmãos que precisam de auxílio material. Para realização deste trabalhado fazemos "
 "campanhas de arrecadação de donativos entre os frequentadores da nossa Casa e pessoas "
 "da comunidade. Os trabalhadores envolvidos levam os mantimentos até às famílias assistidas, "
 "sempre respeitando a privacidade de cada um dos envolvidos"
 
 msgstr ""
-"The Social Assistance activities developed by SOS Kardec aim to reach brothers who need "
+"The Social Assistance activities developed by S.O.S Kardec aim to reach brothers who need "
 "material assistance. To carry out this work, we carry out campaigns to collect donations "
 "between the visitors of our House and people from the community. The workers involved take "
 "the supplies to the assisted families, always respecting the privacy of each one involved"
 
 msgid ""
-"Recebemos as doações todos os Domingos no Centro Espírita, orgazimos e fazemos a "
+"Recebemos as doações todos os Domingos no Centro Espírita, organizamos e fazemos a "
 "entrega aos moradores. Pedimos que os alimentos doadoes não sejam perecíveis e que "
 "estejam em embalagens originais e seladas"
 
@@ -387,11 +390,11 @@ msgstr "Our Events"
 #: templates/eventos/eventos.html:12
 msgid ""
 "A lista de eventos abaixo, organizados pelo Spiritist Organization of "
-"Seatte, mostra um pouco do nosso trabalho. Temos diversos tipos de eventos "
+"Seattle, mostra um pouco do nosso trabalho. Temos diversos tipos de eventos "
 "voltados para a nossa comunidade e arrecadação de fundos para as nossas "
-"atividades assistenciais."
+"atividades assistenciais"
 msgstr ""
-"The list of events below, organized by the Spiritist Organization of Seatte, "
+"The list of events below, organized by the Spiritist Organization of Seattle, "
 "shows some of our work. We have several types of events aimed at our "
 "community and fundraising for our assistance activities"
 
@@ -442,7 +445,7 @@ msgstr "Public Lecture"
 #: templates/pages/atividades.html:48
 msgid ""
 "Não há um perfil ideal. Em princípio, qualquer pessoa pode assumir a tarefa "
-"de expositor. No entando, o que o distingue para tal função é a sua "
+"de expositor. No entanto, o que o distingue para tal função é a sua "
 "identificação com os propósitos espíritas, sua vontade de estudar e de "
 "compreender a doutrina e facilidade em transmitir os seus conhecimentos com "
 "didática, sinceridade, entusiasmo e, acima de tudo, muita humildade. "
@@ -463,7 +466,7 @@ msgstr ""
 
 #: templates/pages/atividades.html:52
 msgid "Estudo Doutrinário"
-msgstr "Doctrinal Study"
+msgstr "Spiritist Doctrine Study"
 
 #: templates/pages/atividades.html:53
 msgid ""
@@ -472,10 +475,16 @@ msgid ""
 "conhecimento da base fundamental da Doutrina nos aspectos científico, "
 "filosófico e religioso"
 msgstr ""
-"The Systematic Study of the Spiritist Doctrine (ESDE) emerged as a didactic "
+"The Systematic Study of the Spiritist Doctrine (WorkBook) emerged as a didactic "
 "tool for the study of Spiritism, offering an opportunity to expand the "
 "knowledge of the fundamental basis of the Doctrine in the scientific, "
 "philosophical and religious aspects"
+
+msgid "ESDE Português: Quintas-Feiras das 8pm - 9:30pm (Online)"
+msgstr "SDS Portuguese: Thursdays 8pm - 9:30pm (Online)"
+
+msgid "ESDE Inglês: Quartas-Feiras das 8:30pm - 9:30pm (Online)"
+msgstr "SDS English: Wednesdays 8:30pm - 9:30pm (Online)"
 
 #: templates/pages/atividades.html:58
 msgid ""
@@ -513,19 +522,31 @@ msgstr "Download Class Material"
 
 #: templates/pages/atividades.html:62
 msgid "Passes"
-msgstr "Spiritist Pass"
+msgstr "Healing (Passes)"
 
 #: templates/pages/atividades.html:63
 msgid ""
-"Passe é uma transmissão conjunta, ou mista, de fluidos magnéticos – "
-"provenientes do encarnado –  e de fluidos espirituais – oriundos dos "
-"benfeitores espirituais, não devendo ser considerada uma simples transmissão "
-"de energia animal (magnetização)"
+"O Passe foi incluído nas práticas doutrinárias do Espiritismo, como auxiliar nos "
+"recursos terapêuticos. Podemos defini-lo como"
+
 msgstr ""
-"Spiritist Pass is a joint, or mixed, transmission of magnetic fluids - from "
-"the incarnate - and spiritual fluids - from spiritual benefactors, and "
-"should not be considered as a simple transmission of animal energy "
-"(magnetization)"
+"The Pass was included in the doctrinal practices of Spiritism, as an aid in "
+"therapeutic resources. We can define it as"
+
+msgid "Transferência de fluidos de perespírito para perespírito"
+msgstr "Fluid transfer from perispirit to perispirit"
+
+msgid "Tranfusão fisiopsíquica, operação de boa vontade"
+msgstr "Physiopsychic transfusion, goodwill operation"
+
+msgid "Não é unicamente transfusão de energia anímica, é o equilíbrio ideal da mente"
+msgstr "It’s not just transfusion of soul energy, it’s the ideal balance of the mind"
+
+msgid "O Passe é doação fluídica de amor"
+msgstr "The Pass is a fluid gift of love"
+
+msgid "O nosso Clube do Livro é realizado a cada duas semanas, participe conosco"
+msgstr "Our Book Club is held every two weeks, join with us"
 
 #: templates/pages/atividades.html:66
 msgid "Clube do Livro Espírita"
@@ -722,18 +743,18 @@ msgid ""
 "Foi um influente educador, autor e tradutor francês, notabilizou-se como o codificador do espiritismo"
 msgstr ""
 "He was an influential French educator, author and translator, he "
-"became famous as the codifier of spiritualism "
+"became famous as the codifier of spiritism"
 
 #: templates/pages/espiritismo.html:63
-msgid "Quem é Chico Xavier?"
-msgstr "Who is Chico Xavier?"
+msgid "Questão 625 do Livro dos Espíritos"
+msgstr "Question 625 of the Spirits Book"
 
 #: templates/pages/espiritismo.html:66
 msgid ""
-"Foi um médium, filantropo e um dos mais importantes expoentes do Espiritismo"
+"Qual o tipo mais perfeito que Deus tem oferecido ao homem, para lhe servir de guia e modelo"
 msgstr ""
-"He was a medium, philanthropist and one of the most important exponents of "
-"Spiritism"
+"What is the most perfect type that God has offered to man, to serve as a guide and model"
+
 
 #: templates/pages/espiritismo.html:57
 msgid "Saiba Mais"
@@ -772,12 +793,12 @@ msgstr "Let the little children come to me and do not hinder them, for to such b
 msgid ""
 "Nossa Escola de Evangelização Infantil Juvenil atende às crianças e aos jovens "
 "que chegam ao centro com seus familiares. A proposta da equipe de Evangelizadores "
-"do SOS Kardec é contribuir com a formação de futuros cidadãos e cidadãs de bem, "
+"do S.O.S Kardec é contribuir com a formação de futuros cidadãos e cidadãs de bem, "
 "que contribuirão na construção de um sociedade mais justa, conforme os preceitos cristãos"
 msgstr ""
 "Our School of Evangelization for Children and Youth serves children and young "
 "people who arrive at the center with their families. The proposal of the team of Evangelizers "
-"of SOS Kardec is to contribute to the development of future citizens and good citizens, who will "
+"of S.O.S Kardec is to contribute to the development of future citizens and good citizens, who will "
 "contribute to the construction of a more just society, according to Christian precepts "
 
 msgid ""
@@ -793,7 +814,7 @@ msgid "Tema"
 msgstr "Subject"
 
 msgid "Evangelização Infantil e Jovens"
-msgstr "Children and Youth Evangelism"
+msgstr "Children and Youth"
 
 msgid "Evangelização"
 msgstr "Evangelism"
@@ -916,11 +937,11 @@ msgstr "About Us"
 
 #: templates/pages/sobre.html:38
 msgid ""
-"O grupo SOS KARDEC tem como missão promover o estudo, a difusão e a prática "
+"O grupo S.O.S Kardec tem como missão promover o estudo, a difusão e a prática "
 "do Espiritismo no seu tríplice aspecto: científico, filosófico e religioso, "
 "com base nas obras codificadas por Allan Kardec"
 msgstr ""
-"The SOS KARDEC group's mission is to promote the study, dissemination and "
+"The S.O.S Kardec group's mission is to promote the study, dissemination and "
 "practice of Spiritism in its threefold aspect: scientific, philosophical and "
 "religious, based on the works codified by Allan Kardec"
 
@@ -934,13 +955,13 @@ msgstr "Our Story"
 #: templates/pages/sobre.html:40
 msgid ""
 "Em setembro de 2013, após um ano de preparação espiritual e seguindo a orientação dos nossos mentores, foi formado na cidade de Bothell no estado de Washington "
-"o (Grupo de Estudos da Doutrina Espírita de Seattle) que em seguida passaria a receber o nome oficial de Spiritist Organization of Seattle – SOS KARDEC – Amparado "
+"o (Grupo de Estudos da Doutrina Espírita de Seattle) que em seguida passaria a receber o nome oficial de Spiritist Organization of Seattle – S.O.S Kardec – Amparado "
 "pela Espiritualidade maior e alicerçado nas diretrizes do United States Spiritist Federation, desde a sua formação o Spiritist Organization of Seattle acredita que "
 "devemos funcionar com simplicidade, objetividade e harmonia ao promover a disseminação da doutrina Espírita, enfatizando o seu lado menos místico e mais racional. "
 "Isso só será possível se os associados se conduzirem por uma política administrativa pautada em boa organização, cordialidade mútua e disciplina"
 msgstr ""
 "In September 2013, after a year of spiritual preparation and following the guidance of our mentors, was created in the city of Bothell in Washington state "
-"the (Seattle Spiritist Doctrine Study Group) who would then be given the official name of the Spiritist Organization of Seattle - SOS KARDEC - Supported "
+"the (Seattle Spiritist Doctrine Study Group) who would then be given the official name of the Spiritist Organization of Seattle - S.O.S Kardec - Supported "
 "by the greater Spirituality and based on the guidelines of the United States Spiritist Federation, since its formation the Spiritist Organization of Seattle believes that "
 "we must function with simplicity, objectivity and harmony when promoting the dissemination of the Spiritist doctrine, emphasizing its less mystical and more rational side. "
 "This will only be possible if members are guided by an administrative policy based on good organization, mutual friendliness and discipline"
@@ -959,13 +980,13 @@ msgstr ""
 msgid ""
 "Ao longo dos anos, várias dificuldades foram vivenciadas, ambas externa e internamente; contudo, aprendemos sempre com essas experiências e seguimos adiante, resolutos e "
 "conscientes de que os resultados positivos são conseguidos pelo esforço do conjunto e não por individualidades ou agendas pessoais. Voltado para atividades doutrinárias, "
-"educativas e obras de caridade, o Spiritist Organization of Seattle – SOS KARDEC – tem como missão promover o estudo, a difusão e a prática do Espiritismo no seu tríplice "
+"educativas e obras de caridade, o Spiritist Organization of Seattle – S.O.S Kardec – tem como missão promover o estudo, a difusão e a prática do Espiritismo no seu tríplice "
 "aspecto: científico, filosófico e religioso, com base nas obras codificadas por Allan Kardec. A nossa visão é poder, em breve, expandir os nossos serviços e atividades, "
 "funcionando em sede própria onde membros e comunidade poderão compartilhar o Evangelho de Jesus à luz da Doutrina Espírita"
 msgstr ""
 "Over the years, several difficulties have been experienced, both externally and internally; however, we always learn from these experiences and we move forward, resolute and "
 "aware that positive results are achieved by the effort of the group and not by individualities or personal agendas. Focused on doctrinal activities, "
-"educational and charitable works, the Spiritist Organization of Seattle - SOS KARDEC - has the mission of promoting the study, diffusion and practice of Spiritism in its triple "
+"educational and charitable works, the Spiritist Organization of Seattle - S.O.S Kardec - has the mission of promoting the study, diffusion and practice of Spiritism in its triple "
 "aspect: scientific, philosophical and religious, based on the works codified by Allan Kardec. Our vision is to be able, soon, to expand our services and activities, "
 "operating in its own headquarters where members and the community can share the Gospel of Jesus in the light of the Spiritist Doctrine"
 
@@ -1030,12 +1051,12 @@ msgid "Médium"
 msgstr "Medium"
 
 msgid ""
-"Os frequentadores assíduos do SOS Kardec, podem retirar livros espíritas emprestados "
+"Os frequentadores assíduos do S.O.S Kardec, podem retirar livros espíritas emprestados "
 "da nossa biblioteca. Veja os nosso catálogo de livros disponíveis. Procure um de nossos "
 "voluntários no Centro Espírita para mais detalhes"
 
 msgstr ""
-"Regular visitors to SOS Kardec can borrow spiritist books from our "
+"Regular visitors to S.O.S Kardec can borrow spiritist books from our "
 "library. See our catalog of available books. Look for one of our volunteers "
 "at the Spiritist Center for more details"
 
