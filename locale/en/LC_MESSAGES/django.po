@@ -34,7 +34,7 @@ msgid "Presados Membros do Spiritist Organization of Seattle"
 msgstr "Dear Members of Spiritist Organization of Seattle"
 
 msgid "Obras Básicas"
-msgstr "Spiritist Doctrine"
+msgstr "Spiritist Pentateuch"
 
 msgid "Biblioteca"
 msgstr "Library"
@@ -545,8 +545,15 @@ msgstr "It’s not just transfusion of soul energy, it’s the ideal balance of 
 msgid "O Passe é doação fluídica de amor"
 msgstr "The Pass is a fluid gift of love"
 
-msgid "O nosso Clube do Livro é realizado a cada duas semanas, participe conosco"
-msgstr "Our Book Club is held every two weeks, join with us"
+msgid "Água fluidificada"
+msgstr  "Fluidized Water"
+
+msgid "O nosso Clube do Livro é realizado no primeiro e último Domingo do mês, "
+"para saber mais use o nosso grupo do WhatsApp"
+
+msgstr ""
+"Our Book Club is held on first and last Sunday of the month, from 1:30pm to 3pm. "
+"To learn more join our WhatsApp group"
 
 #: templates/pages/atividades.html:66
 msgid "Clube do Livro Espírita"
@@ -775,6 +782,9 @@ msgstr "Brazilian Spiritist Federation"
 #: templates/pages/espiritismo.html:78
 msgid "Federação Espírita Americana"
 msgstr "US Spiritist Ferederation"
+
+msgid "Vídeo em Destaque"
+msgstr "Featured Video"
 
 msgid ""
 "O Culto no Lar é uma importante prática espírita que visa "
