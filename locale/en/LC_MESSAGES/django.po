@@ -81,6 +81,33 @@ msgstr ""
 "and Snohomish County regions if the donor does not attend "
 "our spiritist center"
 
+# assistecia/donations
+msgid "Assistência Social"
+msgstr "Social Assitance"
+
+# assistecia/donations
+msgid "Como fazer doações"
+msgstr "How to donate"
+
+msgid ""
+"Para aquisição de produtos perecíveis, como leite, ovos, pães, carnes, "
+"frutas e verduras, estamos pedindo a doação de gift cards que serão "
+"doados diretamente às famílias"
+
+msgstr ""
+"For the purchase of perishable products, such as milk, eggs, breads, meats, "
+"fruits and vegetables, we are asking for the donation of gift cards that will "
+"be donated directly to families"
+
+msgid "Demanda"
+msgstr "Demand"
+
+msgid "Produto"
+msgstr "Products"
+
+msgid "Detalhes"
+msgstr "Details"
+
 msgid ""
 "Trabalhamos também com abrigos, levando doações de alimentos e produtos de higiene "
 "pessoal, roupas, sapatos para as famílias abrigadas"

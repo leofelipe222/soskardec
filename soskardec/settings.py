@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'contacts.apps.ContactsConfig',
     # 'downloads.apps.DownloadsConfig',
     'library.apps.LibraryConfig',
+    'assistencia.apps.AssistenciaConfig',
     'programacao.apps.ProgramacaoConfig',
     'evangelizacao.apps.EvangelizacaoConfig',
     'django.contrib.admin',

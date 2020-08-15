@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load humanize %}
+{% block title %} | Atividades {% endblock %}
+{% block content %}
+  <section id="showcase-inner" class="py-4 text-primary">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <img src="{% static 'img/sos_logo.png' %}" class="main-logo">
+          <h1 class="display-4"> {% trans "Trabalhos Assistenciais" %} </h1>
+          <p class="lead">"{% trans "Fora da caridade, não há salvação" %}." <br> Allan Kardec</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <section id="bc" class="mt-3">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'index' %}">
+              <i class="fas fa-home"></i> Home</a>
+            <a href="{% url 'assistencial' %}">
+              <li class="breadcrumb-item active"> {% trans "Atividades" %} </a>
+          </li>
+          <li class="breadcrumb-item active"> {% trans "Cesta Básica" %} </li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <section id="about" class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="flex-container">
+            <!-- Message button -->
+            <a href="" data-toggle="modal" data-target="#inquiryModal"><h2> {% trans "Cesta Básica" %} </h2></a>
+            <p class="mt-4">{% blocktrans %}As atividades de Assistência Social desenvolvidas pelo S.O.S Kardec visam alcançar irmãos que precisam de auxílio material. Para realização deste trabalhado fazemos campanhas de arrecadação de donativos entre os frequentadores da nossa Casa e pessoas da comunidade. Os trabalhadores envolvidos levam os mantimentos até às famílias assistidas, sempre respeitando a privacidade de cada um dos envolvidos{% endblocktrans %}.
+            <br><br>
+            {% blocktrans %}Recebemos as doações todos os Domingos no Centro Espírita, organizamos e fazemos a entrega aos moradores. Pedimos que os alimentos doadoes não sejam perecíveis e que estejam em embalagens originais e seladas{% endblocktrans %}.
+            <p>{% blocktrans %}Também podemos buscar as doações na regiões do King County and Snohomish County caso o doador não frequente o nosso centro espírita{% endblocktrans %}.</p>
+            </p>
+            <p>{% blocktrans %}Para aquisição de produtos perecíveis, como leite, ovos, pães, carnes, frutas e verduras, estamos pedindo a doação de gift cards que serão doados diretamente às famílias{% endblocktrans %}.</p>
+            <p><a href="" data-toggle="modal" data-target="#inquiryModal">{% trans "Entre em Contato" %}...</a></p>
+          </div>
+        </div>
+        <br><br>
+        <div class="col-md-4">
+          <div class="card">
+            <a href="" data-toggle="modal" data-target="#inquiryModal">
+            <img class="card-img-top" src="{% static 'img/donation_img_1.jpg' %}" alt="Fraternidate" height="300px">
+            <div class="card-body">
+              <h5 class="card-title"> {% trans "Como fazer doações" %}! </h5></a>
+              <p class="card-text">{% blocktrans %}A sua ajuda é bem vinda, seja ela em forma de doação, trabalho voluntário ou simplesmente uma conversa{% endblocktrans %}.
+              </p>
+            </div>
+          </div>
+          <br><br>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id=donation class="py-2">
+    <div class="container">
+      <div class="row">
+        <div class="table-responsive">
+          {% if donations %}
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">{% trans "Demanda" %}</th>
+                  <th scope="col">{% trans "Produto" %}</th>
+                  <th scope="col">{% trans "Detalhes" %}</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                {% for donation in donations %}
+                <tr>
+                  <th scope="row">{{ donation.id }}</th>
+                  <td>{{ donation.demmand }}</td>
+                  <td>{{ donation.name }}</td>
+                  <td>{{ donation.description }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% else %}
+            <h5>No donation products found</h5>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Message Form -->
+<div class="modal fade" id="inquiryModal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="inquiryModalLabel"> {% trans "Messagem" %} </h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+        <form action="{% url 'contact' %}" method="POST">
+          {% csrf_token %}
+          {% if user.is_authenticated %}
+            <input type="hidden" name="user_id" value="{{ user.id }}">
+          {% else %}
+            <input type="hidden" name="user_id" value="0">
+          {% endif %}
+          <div class="form-group">
+            <label for="name" class="col-form-label"> {% trans "Nome" %}:</label>
+            <input type="text" name="name" class="form-control" {% if user.is_authenticated %} value="{{ user.first_name }} {{ user.last_name }}" {% endif %} required>
+          </div>
+          <div class="form-group">
+            <label for="email" class="col-form-label"> {% trans "Email" %}:</label>
+            <input type="email" name="email" class="form-control"  {% if user.is_authenticated %} value="{{ user.email }}" {% endif %} required>
+          </div>
+          <div class="form-group">
+            <label for="phone" class="col-form-label"> {% trans "Telefone" %}:</label>
+            <input type="text" name="phone" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="message" class="col-form-label"> {% trans "Mensagem" %}:</label>
+            <textarea name="message" class="form-control"></textarea>
+          </div>
+          <hr>
+          <input type="submit" value="{% trans "Enviar" %}" class="btn btn-primary btn-block">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

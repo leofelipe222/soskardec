@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from eventos.models import Evento
 from programacao.models import Programa
 from evangelizacao.models import Evangelizacao
+from assistencia.models import Assistencia
 from eventos.choices import state_choices
 from django.utils.translation import gettext
 
@@ -27,6 +28,16 @@ def evangelizacao(request):
         'evangelizacao': evangelizacao
     }
     return render(request, 'evangelizacao/evangelizacao.html', context)
+
+# Create your views here.
+def assistencia(request):
+    # Fecth all classes from DB, filter new ones first and is_published
+    donations = Assistencia.objects.order_by('demmand').filter(is_published=True)
+    context = {
+        'donations': donations
+    }
+
+    return render(request, 'pages/assistencia.html', context)
 
 def error_view_404(request, exception):
     return render(request, 'pages/404.html')

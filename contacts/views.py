@@ -30,10 +30,10 @@ def contact(request):
     # Sending email
 
     mail_list = [
-        'leofelipe222@hotmail.com',
+        'leo.souza@soskardec.org',
+        'laine.oliveira@soskardec.org',
+        'jaqueline.neves@soskardec.org',
         'soskardec@gmail.com',
-        'contact@soskardec.com',
-        'flaviacarolyne@hotmail.com',
     ]
 
     send_mail(

@@ -5,6 +5,7 @@ urlpatterns = [
     path('', views.index, name='index'), # This is the home page path
     path('sobre', views.sobre, name='sobre'),
     path('assistencial', views.assistencial, name='assistencial'),
+    path('assistencia', views.assistencia, name='assistencia'),
     path('espiritismo', views.espiritismo, name='espiritismo'),
     path('atividades', views.atividades, name='atividades'),
     path('eventos', views.eventos, name='eventos'),
