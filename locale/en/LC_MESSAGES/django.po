@@ -85,6 +85,12 @@ msgstr ""
 msgid "Assistência Social"
 msgstr "Social Assitance"
 
+msgid ""
+"Veja a lista dos produtos que mais necessitamos"
+
+msgstr ""
+"Check out the list of the most needed products"
+
 # assistecia/donations
 msgid "Como fazer doações"
 msgstr "How to donate"
@@ -98,6 +104,15 @@ msgstr ""
 "For the purchase of perishable products, such as milk, eggs, breads, meats, "
 "fruits and vegetables, we are asking for the donation of gift cards that will "
 "be donated directly to families"
+
+msgid ""
+"A lista abaixo está organizada por prioridade e mostra os produtos que mais necessitamos nesse momento. "
+"A lista é constantemente atualizada de acordo com o a quantidade de doações que recebemos e a medida que "
+"distribuímos para as famílias carentes"
+
+msgstr ""
+"The list below is organized by priority and shows the products we most need at the moment. "
+"The list is constantly updated according to the amount of donations we receive and distribute to needy families."
 
 msgid "Demanda"
 msgstr "Demand"
@@ -282,8 +297,8 @@ msgid "Messanges encontradas"
 msgstr "Messages found"
 
 #: templates/accounts/painel_usuario.html:47 templates/pages/sobre.html:70
-msgid "Messagem"
-msgstr "Messages"
+msgid "Suas Messagens"
+msgstr "Your Messages"
 
 #: templates/accounts/painel_usuario.html:57
 msgid "Abrir Mensagem"
@@ -546,6 +561,9 @@ msgstr ""
 
 msgid "Download Material da Aula"
 msgstr "Download Class Material"
+
+msgid "Download temporariamente indisponível"
+msgstr "Download temporarily unavailable"
 
 #: templates/pages/atividades.html:62
 msgid "Passes"
@@ -905,6 +923,28 @@ msgstr ""
 "that you can receive, with the awakening of each morning, a new rebirth in "
 "the physical house and, in the rest of each night, a rehearsal of a peaceful "
 "return to your true home, in Spiritual Life.\""
+
+
+msgid "Nossa Missão"
+msgstr "Our Mission"
+
+msgid ""
+"Nossa missão é disseminar, entre toda a humanidade, a necessidade de uma transformação interior "
+"sob a orientação da Doutrina Espírita em todas as suas três vertentes: a religiosa, a científica "
+"e a filosófica; como caminho para a conquista do Progresso Espiritual, Paz e Felicidade. O constante "
+"estudo e prática da Doutrina Espírita, conforme compilada por Allan Kardec, é possível com o desenvolvimento "
+"de grupos semanais de estudos espíritas, cursos e seminários, visando a divulgação do Espiritismo e educando "
+"as novas gerações utilizando os métodos revelados pelos Ensinamentos Cristãos Espirituais"
+
+msgstr ""
+"Our mission is to disseminate, among all mankind, the necessity of an inner transformation "
+"under the guidance of the Spiritist Doctrine in all its three aspects: the religious, scientific "
+"and philosophical; as a path to the conquest of Spiritual Progress, Peace and Happiness. The constant "
+"study and practice of the Spiritist Doctrine, as it was compiled by Allan Kardec, is made possible with "
+"the development of weekly Spiritist study groups, courses and seminars, envisioning the dissemination of "
+"Spiritism and educating new generations utilizing the methods revealed by the Christian-Spiritist teachings"
+
+
 
 #: templates/pages/index.html:60
 msgid "Autor"

@@ -11,7 +11,7 @@ class Evangelizacao(models.Model):
     class_date = models.DateTimeField(blank=True)
     class_type = models.CharField(max_length=200)
     is_published = models.BooleanField(default=True)
-    doc_file = models.FileField(upload_to="uploads/evangelizacao/%Y_%m_%d/", validators=[validate_file_extension])
+    doc_file = models.FileField(upload_to="uploads/evangelizacao/%Y_%m_%d/", validators=[validate_file_extension], blank=True)
 
     def __str__(self):
         return self.title # displays title as the main field in the admin area

@@ -48,7 +48,8 @@
               <thead>
                 <tr>
                   <th scope="col">#</th>
-                  <th scope="col"> {% trans "Messagem" %} </th>
+                  <th scope="col"> {% trans "Suas Messagens" %} </th>
+                  <!-- <th scope="col"> {% trans "User Id" %} </th> -->
                   <th></th>
                 </tr>
               </thead>
@@ -57,9 +58,10 @@
                   <tr>
                     <td>{{ contact.id }}</td>
                     <td>{{ contact.message }}</td>
-                    <td>
+                    <!-- <td>{{ user.id }}</td> -->
+                    <!-- <td>
                       <a class="btn btn-light" href="#"> {% trans "Abrir Mensagem" %} </a>
-                    </td>
+                    </td> -->
                   </tr>
                 {% endfor %}
             </tbody>
@@ -69,11 +71,11 @@
       {% endif %}
       </div>
     </div>
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-md-12">
         <p class="text-info">{% trans "Esta página ainda está em desenvolvimento..." %}</p>
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
 {% endblock %}

@@ -52,10 +52,12 @@
 
   <section id="message-home" class="bg-light text-dark text-center">
     <div class="container">
-      <h2 class="display-4">{% trans "Mensagem Espírita" %} </h2>
+      <h2 class="display-4">{% trans "Nossa Missão" %} </h2>
+      <p class="lead text-justify"> {% blocktrans %}Nossa missão é disseminar, entre toda a humanidade, a necessidade de uma transformação interior sob a orientação da Doutrina Espírita em todas as suas três vertentes: a religiosa, a científica e a filosófica; como caminho para a conquista do Progresso Espiritual, Paz e Felicidade. O constante estudo e prática da Doutrina Espírita, conforme compilada por Allan Kardec, é possível com o desenvolvimento de grupos semanais de estudos espíritas, cursos e seminários, visando a divulgação do Espiritismo e educando as novas gerações utilizando os métodos revelados pelos Ensinamentos Cristãos Espirituais{% endblocktrans %}</p>
+      <!-- <h2 class="display-4">{% trans "Mensagem Espírita" %} </h2>
       <p class="lead text-justify"> {% blocktrans %}"Irmão, faze: de cada ensinamento que recebes, uma instrução do Plano Superior; de cada tarefa, por mínima que seja, uma realização em que deixes os melhores sinais de tua presença; de cada conversão, um entendimento construtivo; de cada conversação, um mensageiro de tua cooperação, no levantamento da felicidade geral; de cada relação nova, uma sementeira de bênçãos; de cada necessitado, um irmão que te espera o auxílio, em nome da Divina Paternidade; de cada desapontamento, um teste de compreensão; de cada experiência, um ensejo de aprender; de cada hora, uma oportunidade de servir...
         Companheiro da Terra, és o viajor em trânsito na hospedaria do mundo!... Guarda o coração e a consciência, na prática do bem, de tal modo, que possas receber, com o despertar de cada manhã, um novo renascimento na casa física e, no descanso de cada noite, um ensaio de regresso tranquilo ao teu lar verdadeiro, na Vida Espiritual."{% endblocktrans %}</p>
-        <p class="lead text-right">{% trans "Autor" %}: Albino Teixeira<br> {% trans "Psicografado por" %} Chico Xavier</p>
+        <p class="lead text-right">{% trans "Autor" %}: Albino Teixeira<br> {% trans "Psicografado por" %} Chico Xavier</p> -->
       </div>
   </section>
 
@@ -148,7 +150,11 @@
                   </div>
                   <div class="row text-dark pb-2">
                     <div class="col-12">
-                      <i class="fas fa-download"></i><a href="{{ evang.doc_file.url }}"> {% trans "Download Material da Aula" %}</a>
+                      {% if evang.doc_file %}
+                        <i class="fas fa-download"></i><a href="{{ evang.doc_file.url }}"> {% trans "Download Material da Aula" %}</a>
+                        {% else %}
+                        <i class="fas fa-download"></i> {% trans "Download temporariamente indisponível" %}</a>
+                      {% endif %}
                     </div>
                   </div>
                 </div>
@@ -228,7 +234,9 @@
         </a>
       </div>
       <div class="col-md-4">
-          <img src="{% static 'img/cantina_img_2.jpeg' %}" class="img-fluid mt-3 rounded" width="400px" height="300px">
+        <a href="https://www.plasticfreeocean.us/" target="_blank">
+          <img src="{% static 'img/plastic_free_img_1.png' %}" class="img-fluid mt-3 rounded" data-toggle="tooltip" data-placement="top" title="Our Sponsor"
+          width="400px" height="300px">
         </a>
       </div>
     </div>
