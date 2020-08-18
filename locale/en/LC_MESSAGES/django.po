@@ -872,7 +872,7 @@ msgid "Evangelização Infantil e Jovens"
 msgstr "Children and Youth"
 
 msgid "Evangelização"
-msgstr "Evangelism"
+msgstr "Children and Youth"
 
 msgid "Evangelizador"
 msgstr "Envangelizer"
