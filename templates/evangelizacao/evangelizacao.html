@@ -91,7 +91,11 @@
                     </div>
                     <div class="row text-dark pb-2">
                       <div class="col-12">
+                        {% if evang.doc_file %}
                         <i class="fas fa-download"></i><a href="{{ evang.doc_file.url }}"> {% trans "Download Material da Aula" %}</a>
+                        {% else %}
+                        <i class="fas fa-download"></i> {% trans "Download temporariamente indisponível" %}</a>
+                      {% endif %}
                       </div>
                     </div>
                   </div>
