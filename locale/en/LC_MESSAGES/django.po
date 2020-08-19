@@ -36,9 +36,6 @@ msgstr "Dear Members of Spiritist Organization of Seattle"
 msgid "Obras Básicas"
 msgstr "Spiritist Pentateuch"
 
-msgid "Biblioteca"
-msgstr "Library"
-
 msgid "Uma associação filantrópica, voluntária e sem fins lucrativos"
 msgstr "A philanthropic, voluntary and non-profit association"
 
@@ -1106,11 +1103,11 @@ msgid "Sair"
 msgstr "Logout"
 
 #: templates/library/library.html
-msgid "Biblioteca Espírita Online"
-msgstr "Online Spiritist Library"
+msgid "Biblioteca Espírita"
+msgstr "Spiritist Library"
 
-msgid "Biblioteca Online"
-msgstr "Online Library"
+msgid "Biblioteca"
+msgstr "Library"
 
 msgid ""
 "Amai-vos, eis o primeiro ensinamento. Instruí-vos, eis o segundo."
