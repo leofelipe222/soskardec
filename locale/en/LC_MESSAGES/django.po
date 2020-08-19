@@ -95,6 +95,11 @@ msgstr ""
 msgid "Como fazer doações"
 msgstr "How to donate"
 
+# assitencia/donations
+msgid "Não estamos recebendo doações neste momento"
+msgstr "We are not taking donations at the moment"
+
+
 msgid ""
 "Para aquisição de produtos perecíveis, como leite, ovos, pães, carnes, "
 "frutas e verduras, estamos pedindo a doação de gift cards que serão "

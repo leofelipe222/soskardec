@@ -77,7 +77,6 @@
                   <th scope="col">{% trans "Demanda" %}</th>
                   <th scope="col">{% trans "Produto" %}</th>
                   <th scope="col">{% trans "Detalhes" %}</th>
-                  
                 </tr>
               </thead>
               <tbody>
@@ -92,7 +91,9 @@
               </tbody>
             </table>
           {% else %}
-            <h5>No donation products found</h5>
+          <div>
+            <h5>{% trans "Não estamos recebendo doações neste momento" %}.</h5>
+          </div>
           {% endif %}
         </div>
       </div>
