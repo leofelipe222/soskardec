@@ -19,7 +19,7 @@ def contact(request):
         user_id = request.user.id
         has_contacted = Contact.objects.all().filter(user_id=user_id)
         if has_contacted:
-            messages.info(request, 'Mensagem anterior econtrada, entraremos em contato os breve possível')
+            messages.info(request, "You have already sent a message, we'll get back to you as soon as possible")
             return redirect('index')
 
     contact = Contact(name=name, email=email, phone=phone, message=message, user_id=user_id)
