@@ -6,13 +6,14 @@ from evangelizacao.models import Evangelizacao
 from assistencia.models import Assistencia
 from eventos.choices import state_choices
 from django.utils.translation import gettext
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 # Create your views here.
 def index(request):
     # Render index template, shows 3 eventos only
     eventos = Evento.objects.order_by('-event_date').filter(is_published=True)[:3]
-    programas = Programa.objects.order_by('-program_date').filter(is_published=True)[:4]
-    evangelizacao = Evangelizacao.objects.order_by('-class_date').filter(is_published=True)[:4]
+    programas = Programa.objects.order_by('program_date').filter(is_published=True)[:4]
+    evangelizacao = Evangelizacao.objects.order_by('class_date').filter(is_published=True)[:4]
     
     context = {
         'programas': programas,
@@ -22,10 +23,16 @@ def index(request):
     return render(request, 'pages/index.html', context)
 
 def evangelizacao(request):
-    # This is only needed if we had a separated page for
-    evangelizacao = Evangelizacao.objects.order_by('-class_date').filter(is_published=True)
+    # Fecth all classes from DB, filter new ones first and is_published
+    evangelizacao = Evangelizacao.objects.all().order_by('-class_date').filter(is_published=True)
+
+    # Adding pagination to the view
+    paginator = Paginator(evangelizacao, 10) # 10 items per page
+    page = request.GET.get('page')
+    paged_classes = paginator.get_page(page)
+    
     context = {
-        'evangelizacao': evangelizacao
+        'evangelizacao': paged_classes
     }
     return render(request, 'evangelizacao/evangelizacao.html', context)
 
