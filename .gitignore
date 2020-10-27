@@ -12,7 +12,7 @@ soskardec/settings.py
 db.sqlite3
 db.sqlite3_backup
 db.sqlite3-journal
-# /media
+/media
 venv
 /static
 /staticfiles
