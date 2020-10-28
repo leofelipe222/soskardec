@@ -80,7 +80,7 @@ msgstr ""
 
 # assistecia/donations
 msgid "Assistência Social"
-msgstr "Social Assitance"
+msgstr "Social Assistance"
 
 msgid ""
 "Veja a lista dos produtos que mais necessitamos"
